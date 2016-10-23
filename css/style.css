@@ -1,3 +1,35 @@
+@import 'grid.css';
+
 body, html{
-	background-color: red;
+	
+}
+
+.center{
+	margin: auto;
+	display: block;
+    float: none;
+}
+
+img{
+	/* background-size: cover; */
+	/* width: 100%; */
+}
+
+.row *{
+    height: 300px;
+    overflow:hidden;
+  	position:relative;
+  	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.member_block{
+	text-align: center;
+}
+
+.contener_member{
+	width: 80%;
+}
+.title{
+	display: block;
 }
