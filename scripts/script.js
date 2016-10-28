@@ -2,10 +2,16 @@ const TEMPLATE_PATH = "templates/"
 
 $(document).ready(function()
 {
+
 	// chargement des pages header et footer (probleme google chrome)
 
-	//$("#block-footer").load(TEMPLATE_PATH+'footer.html');
-	$("header").load(TEMPLATE_PATH+'header.html');
+	$("footer").load(TEMPLATE_PATH+'footer.html');
+	var test =$("header").attr("data-title");
+	$("header").load(TEMPLATE_PATH+'header.html', function(){
+		$("#title_logo").append(test);
+	});
+	$("nav").load(TEMPLATE_PATH+'nav.html');
+	
 
 	// smooth scroll menu
 
