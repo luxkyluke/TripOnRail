@@ -42,13 +42,21 @@ a{
 	letter-spacing: 5px;
 }
 
-#nav
+#menu
 {
 	position: absolute;
 	width: auto;
 	height: 50px;
 	top: 0;
 	right: 0;
+	background-color: yellow;
+	list-style: none;
+	margin: 0;
+}
+
+#menu li
+{
+	display: inline-block;
 }
 
 .center{
