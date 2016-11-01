@@ -10,7 +10,7 @@ $('input[type="text"], input[type="email"]')
     .each(resizeInput);
 
 
-console.clear();
+//console.clear();
 // Adapted from georgepapadakis.me/demo/expanding-textarea.html
 (function(){
   
