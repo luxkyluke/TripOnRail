@@ -1,7 +1,14 @@
-#header
-{
-  background: url(../img/background.jpg) no-repeat center top;
+#home #header{
+  background: url(../img/background.jpg) no-repeat center center;
   background-size: cover;
+}
+
+#article_header #header{
+  background: url(../img/background_article.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#header {
   position: fixed;
   height: 100%;
   bottom: 0%;

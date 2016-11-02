@@ -1,42 +1,23 @@
+@import 'font.css';
 @import 'normalize.css';
 @import 'skeleton.css';
 @import 'parallax.css';
-#import 'article.css';
+@import 'article.css';
 @import 'contactform.css';
 
-@font-face
-{
-	font-family: Arenq;
-	src: url(../fonts/arenq.otf);
-}
 
-@font-face
-{
-	font-family: Montserrat;
-	src: url(../fonts/Montserrat-UltraLight.otf);
-}
-
-@font-face
-{
-	font-family: Montserrat Semi-Bold;
-	src: url(../fonts/Montserrat-SemiBold.otf);
-}
-
-html, body
-{
+html, body{
 	width: 100%;
 	height: 100%;
 	margin: 0;
 }
 
-a
-{
+a{
 	text-decoration: none;
 	color: inherit;
 }
 
-p
-{
+p{
 	margin: 0;
 }
 
@@ -44,20 +25,9 @@ p
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	background-image: url(../img/background.jpg);
-	background-size: cover;
 }
 
-#article_header{
-	width: 100%;
-	height: 85%;
-	margin: 0;
-	background-image: url(../img/background_article.jpg);
-	background-size: cover;
-}
-
-#title_logo
-{
+#title_logo{
 	position: absolute;
 	font-family: Arenq;
 	color: white;
@@ -66,10 +36,14 @@ p
 	font-size: 5em;
 	transform: translateX(-50%) translateY(-50%);
 	text-align: center;
-	line-height: 100%;
+	line- ight: 100%;
 	margin: 0;
 	text-shadow: 5px 5px 10px #000000;
 	letter-spacing: 5px;
+}
+
+#article_header  #header #title_logo{
+	top: 40%;
 }
 
 #menu
@@ -87,8 +61,8 @@ p
 #menu li
 {
 	display: inline-block;
-	font-family: Montserrat;
-	color: black;
+	font-family: Montserrat_Light;
+	color: #FFF;
 	font-size: 1.2em;
 	margin-right: 15px;
 	position: relative;
@@ -105,7 +79,7 @@ p
 {
 	margin-top: 100px;
 	text-align: center;
-	font-family: Montserrat Semi-Bold;
+	font-family: Montserrat_Semi-Bold;
 	font-size: 3em;
 }
 
@@ -166,7 +140,7 @@ p
 
 .title
 {
-	font-family: Montserrat Semi-Bold;
+	font-family: Montserrat_Semi-Bold;
 	font-size: 3.5em;
 	overflow: hidden;
 	margin: 0;

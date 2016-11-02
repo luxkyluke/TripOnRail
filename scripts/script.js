@@ -1,16 +1,13 @@
 
 
-$(document).ready(function()
-{	
+$(document).ready(function(){	
 	// chargement des pages header et footer
-	load_page("index", "titre");
-	basic_load();
+	load_page("index", "THE RAILWAY CHRONICLES");
 
 
 	// parallax script
 
-	$(document).scroll(function() 
-	{
+	$(document).scroll(function()	{
   		var st = $(this).scrollTop();
   		$("#header").css({
     		"background-position-y": (-st/80)
