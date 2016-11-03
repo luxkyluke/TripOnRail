@@ -19,6 +19,8 @@
 			return false;
 		});
 	});
+
+	document.getElementById("logo_type").src = "img/logos/foret.png";
 }
 
  function load_page(page, title){

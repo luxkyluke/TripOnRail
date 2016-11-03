@@ -9,11 +9,19 @@
 }
 
 .conteneur_logo_desc ul{
-	
+	margin: auto;
+	text-align: center;;
 }
 
 .conteneur_logo_desc li{
 	text-decoration: none;
 	display: inline-block;
-	margin: 30px;
+	margin: 15px 4%;
 }
+
+p.logo_desc{
+	font-family: Montserrat_Light;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5em;
+;}
