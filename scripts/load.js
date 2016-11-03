@@ -1,5 +1,4 @@
  const TEMPLATE_PATH = "templates/"
- var nav_stack =[];
 
 
  function basic_load(){
@@ -23,9 +22,11 @@
 }
 
  function load_page(page, title){
-    document.title = title;
-	    $('content').load(TEMPLATE_PATH+page+'.html', function(){
+    	document.title = title;
+    	var file = TEMPLATE_PATH+page+'.html';
+	    $('content').load(file, function(){
 	    	basic_load();
+	    	//alert("chargement " + file);
 	    	window.history.pushState({"page":page, "pageTitle":title},"", "");
 	    });
 	} 
@@ -41,7 +42,7 @@ window.onpopstate = function(e){
 };
 
 function affArticle(name){
-	
+	//myscript.123.js;
 	switch(name){
 		case "test":
 			
