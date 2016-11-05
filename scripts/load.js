@@ -1,13 +1,21 @@
  const TEMPLATE_PATH = "templates/"
+ var articles;
+ var experiences = {};
 
 
- function basic_load(){
-	$("footer").load(TEMPLATE_PATH+'footer.html');
-	var title = $("header").attr("data-title");
-
+ function basic_load(_callback){
+ 	var done = 3;
 	
+ 	$("footer").load(TEMPLATE_PATH+'footer.html', function(){
+		console.log("load footer OK");
+		--done;
+	});
+
+	var title = $("header").attr("data-title");
 	$("header").load(TEMPLATE_PATH+'header.html', function(){
 		$("#title_logo").append(title);
+		console.log("load header OK");
+		--done;
 	});
 	
 
@@ -18,17 +26,25 @@
 		$('html, body').animate( { scrollTop: $(page).offset().top }, speed );
 			return false;
 		});
+		console.log("load nav OK");
+		--done;
+		if(done == 0)
+			_callback();
 	});
 
-	document.getElementById("logo_type").src = "img/logos/foret.png";
+	
+	//alert("OK");
 }
 
- function load_page(page, title){
+ function load_template_page(page, title, _callback){
     	document.title = title;
     	var file = TEMPLATE_PATH+page+'.html';
 	    $('content').load(file, function(){
-	    	basic_load();
-	    	//alert("chargement " + file);
+	    	basic_load(function(){
+		    	console.log("bacic load OK");
+		    	_callback();
+	    	});
+			
 	    	window.history.pushState({"page":page, "pageTitle":title},"", "");
 	    });
 	} 
@@ -44,11 +60,14 @@ window.onpopstate = function(e){
 };
 
 function affArticle(name){
-	//myscript.123.js;
 	switch(name){
 		case "test":
-			
-			load_page("article", "article");
+			load_template_page("article", "article", function(){
+				document.getElementById("nuits_desc").innerHTML="4 Nuits";
+		    	document.getElementById("logo_type").src = "img/logos/foret.png";
+		    	console.log(document.getElementById("header"));
+		    	document.getElementById("header").style.backgroundImage = "url('img/background_article.jpg')";
+			});
 			break;
 		default :
 			break;

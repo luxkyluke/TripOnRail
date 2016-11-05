@@ -1,8 +1,8 @@
 
 
 $(document).ready(function(){	
-	// chargement des pages header et footer
-	load_page("index", "THE RAILWAY CHRONICLES");
+	// chargement de la page index
+	load_template_page("index", "THE RAILWAY CHRONICLES", function(){});
 
 
 	// parallax script
