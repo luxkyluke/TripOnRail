@@ -40,7 +40,7 @@
 }
 
 
-.article .title {   
+.article .title {
 	font-family: Arenq;
     font-size: 3.5em;
     overflow: hidden;
@@ -65,14 +65,30 @@
 	background: url(../img/noodles.jpg) no-repeat center center;
   	background-size: cover;
   	border: 2px #000 solid;
-	
+
 
 }
 
 .food_conteneur{
 	display: table;
 	position: relative;
-}	
+}
+
+.food_conteneur .food_img, .food_conteneur .food_txt{
+    float: none;
+}
+
+.food_conteneur--left {
+    margin-top: 50px;
+}
+
+.food_conteneur--left .food_txt{
+    padding-left: 4%;
+}
+
+.food_conteneur--right .food_txt{
+    padding-right: 4%;
+}
 
 .food_txt {
 	display: table-cell;
