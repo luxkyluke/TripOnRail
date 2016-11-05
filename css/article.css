@@ -59,17 +59,25 @@
 }
 
 .food_img{
+	display: table-cell;
+ 	vertical-align:middle;
 	padding-top: 22%;
 	background: url(../img/noodles.jpg) no-repeat center center;
   	background-size: cover;
   	border: 2px #000 solid;
-  	display: inline-block;
+	
+
 }
 
-.food_txt{
-	display: inline-block;
+.food_conteneur{
+	display: table;
+	position: relative;
 }	
 
+.food_txt {
+	display: table-cell;
+ 	vertical-align:middle;
+}
 .article .video{
 	height: 500px;
 }
