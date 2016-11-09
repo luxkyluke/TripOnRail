@@ -1,38 +1,44 @@
  const TEMPLATE_PATH = "templates/"
  var articles;
- var experiences = {};
+ var articles = [
+ 	"karunda scenic railway"
+
+ ];
 
 
- function basic_load(_callback){
+ function basic_load(page, _callback){
  	var done = 3;
 	
  	$("footer").load(TEMPLATE_PATH+'footer.html', function(){
-		console.log("load footer OK");
+		console.log("load footer "+page+" OK");
 		--done;
 	});
 
 	var title = $("header").attr("data-title");
 	$("header").load(TEMPLATE_PATH+'header.html', function(){
 		$("#title_logo").append(title);
-		console.log("load header OK");
+		console.log("load header "+page+" OK");
 		--done;
 	});
 	
 
 	$("nav").load(TEMPLATE_PATH+'nav.html', function()	{
 		$('.js-scrollTo').on('click', function() { 
-		var page = $(this).attr('href'); 
+		var ref = $(this).attr('href'); 
 		var speed = 750; 
-		$('html, body').animate( { scrollTop: $(page).offset().top }, speed );
+		$('html, body').animate( { scrollTop: $(ref).offset().top }, speed );
 			return false;
 		});
-		console.log("load nav OK");
+		console.log("load nav "+page+" OK");
 		--done;
-		if(done == 0)
-			_callback();
-	});
+		if(done == 0){
+			loadImgsBackGrounds(page);
 
-	
+			_callback();
+			
+		}
+	});
+		
 	//alert("OK");
 }
 
@@ -40,11 +46,10 @@
     	document.title = title;
     	var file = TEMPLATE_PATH+page+'.html';
 	    $('content').load(file, function(){
-	    	basic_load(function(){
-		    	console.log("bacic load OK");
+	    	basic_load(page, function(){
+		    	console.log("bacic load "+page+" OK");
 		    	_callback();
 	    	});
-			
 	    	window.history.pushState({"page":page, "pageTitle":title},"", "");
 	    });
 	} 
@@ -53,7 +58,7 @@
 window.onpopstate = function(e){
     if(e.state){
         $('content').load(TEMPLATE_PATH+e.state.page+'.html', function(){
-    		basic_load();
+    		basic_load(e.state.page, function(){});
     	});
         document.title = e.state.pageTitle;
     }
@@ -62,14 +67,34 @@ window.onpopstate = function(e){
 function affArticle(name){
 	switch(name){
 		case "test":
-			load_template_page("article", "article", function(){
-				document.getElementById("nuits_desc").innerHTML="4 Nuits";
-		    	document.getElementById("logo_type").src = "img/logos/foret.png";
-		    	console.log(document.getElementById("header"));
-		    	document.getElementById("header").style.backgroundImage = "url('img/background_article.jpg')";
-			});
+			load_template_page("article", "article", function(){});
 			break;
+
+		case "home":
+			load_template_page("index", "The Railway Chronicales", function(){});
+
+		case "exp":
+			load_template_page("experiences", "Experiences", function(){});
+		
 		default :
 			break;
 	}
 }
+
+function loadImgsBackGrounds(page){
+   	switch(page){
+		case "article":
+			document.getElementById("header").style.backgroundImage = "url('img/articles/"+$("#page").data("id")+"/background.jpg')";;
+			break;
+
+		case "experiences":
+
+			document.getElementById("header").style.backgroundImage = "url('img/experiences/background.jpg')";
+			document.getElementById("header").style.backgroundPosition = "bottom";
+			break;
+
+		default :
+			break;
+	}
+}
+

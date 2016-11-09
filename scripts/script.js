@@ -2,7 +2,7 @@
 
 $(document).ready(function(){	
 	// chargement de la page index
-	load_template_page("index", "THE RAILWAY CHRONICLES", function(){});
+	load_template_page("index", "The Railway Chronicales", function(){});
 
 
 	// parallax script
