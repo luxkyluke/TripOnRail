@@ -31,9 +31,8 @@
 		});
 
 		$('#menu a').click(function(){
-			$(".current").removeClass('current');
+			$("#menu a.current").removeClass('current');
 			$(this).addClass('current');
-			return false;
 		})
 
 		console.log("load nav "+page+" OK");
@@ -63,7 +62,7 @@
 window.onpopstate = function(e){
     if(e.state){
         $('content').load(TEMPLATE_PATH+e.state.page+'.html', function(){
-    		basic_load(e.state.page, function(){});
+    		affArticle(e.state.page);
     	});
         document.title = e.state.pageTitle;
     }
@@ -71,19 +70,23 @@ window.onpopstate = function(e){
 
 function affArticle(name){
 	switch(name){
-		case "test":
+		case "article":
 			load_template_page("article", "article", function(){});
 			break;
 
-		case "home":
+		case "index":
 			load_template_page("index", "The Railway Chronicales", function(){
 				$("#menu a").first().addClass('current');
 			});
 			break;
-		case "exp":
-			load_template_page("experiences", "Experiences", function(){});
+		case "experiences":
+			load_template_page("experiences", "Experiences", function(){
+				experienceAnim();
+				$("#cat_decouverte a li").first().click();
+			});
 			break;
 		default :
+			console.log("erreur page non reconnu !");
 			break;
 	}
 }
@@ -110,3 +113,27 @@ function loadImgsBackGrounds(page){
 	}
 }
 
+
+function experienceAnim(){
+
+	$("#cat_decouverte a li").click(function(){
+		//maj du current
+		$("#cat_decouverte a li.current").removeClass('current');
+		$(this).addClass('current');
+
+
+		//tri des expériences
+		var idExp = $(this).data('exp');
+		$("#article_conteneur a").each(function(){
+			$(this).css('display', 'none');
+		});
+
+
+		$(".exp_"+idExp).each(function(){
+			$(this).css('display', 'inline-block');
+		});
+
+		return false;
+
+	});
+}

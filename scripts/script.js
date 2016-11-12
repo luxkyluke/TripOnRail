@@ -2,7 +2,7 @@
 
 $(document).ready(function(){	
 	// chargement de la page index
-	affArticle('home');
+	affArticle('index');
 
 	// parallax script
 	$(document).scroll(function()	{

@@ -9,6 +9,20 @@
 }
 
 .conteneur_categories li{
+	display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    width: 8%;
+    padding: 15px 4%;
+    margin-right: 0.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .conteneur_categories li{
 	background: url(../img/experiences/decouverte.jpg) no-repeat center center;
   	background-size: cover;
 	text-decoration: none;
@@ -19,64 +33,44 @@
     margin-bottom: 1.5em;
 	opacity: 1;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-}
-/* 
-#cat_decouverte a {
-    display: inline-block;
-    vertical-align: top;
-    text-decoration: none;
-    text-align: center;
-    width: 19.5%;
-    margin: .25%;
-    line-height: 183px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
-} */
-
-/* .conteneur_categories .middle{
-	display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-    -webkit-transition: all 200ms ease-out;
-    -moz-transition: all 200ms ease-out;
-    -ms-transition: all 200ms ease-out;
-    -o-transition: all 200ms ease-out;
-    transition: all 200ms ease-out;
-    position: relative;
-    z-index: 2;
-    margin: 0 10px;
-}
- */
-/* .conteneur_categories .middle img{
-	margin: 0, auto;
-	display: block;
-} */
-
-.box_cat{
-	height: 120px;
-}
-
-.box_cat_layout{
-	position: absolute;
+ }*/
+.conteneur_categories li .bg{
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #000000;
-    opacity: 0.3;
+    background: url(../img/experiences/decouverte.jpg) no-repeat center center transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
-.conteneur_categories ul a:hover{
-	background: rgba(0, 0, 0, 0.0);
-	-webkit-transition: background 1s linear;
-	   -moz-transition: background 1s linear;
-	     -o-transition: background 1s linear;
-	        transition: background 1s linear;
+.conteneur_categories a .overlay {
+    opacity: 0.25;
+}
+
+.conteneur_categories a:hover > li > .overlay{
+	opacity: 0;
+}
+
+.conteneur_categories a:hover > li > .middle{
+	-moz-transform: translateY(15px); 
+    -webkit-transform: translateY(15px); 
+    -ms-transform: translateY(15px); 
+    -o-transform: translateY(15px);  
+    transform: translateY(15px); 
+
+	opacity: 0;
+}
+
+.conteneur_categories a li.current{
+	border-bottom: 10px;
+    border-bottom-style: solid;
+    border-color: #2fbd55;
 }
 
 
@@ -103,13 +97,13 @@
 	font-size: 1em;
 }
 
-.article_conteneur {
+#article_conteneur {
     font-size: 0; 
     margin: 0 -0.75%;
     padding-bottom: 150px;
 }
 
-.article_conteneur a {
+#article_conteneur a {
     display: inline-block;
     vertical-align: top;
     text-align: center;
@@ -125,7 +119,7 @@
     display: none!important;
 }
 
-.article_conteneur a .bg {
+.experience .bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -140,8 +134,12 @@
     backface-visibility: hidden;
 }
 
-.article_conteneur a .overlay {
-    position: absolute;
+#article_conteneur a .overlay {
+    opacity: 0.5;
+}
+
+a .overlay{
+	position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -156,11 +154,11 @@
     transition: all 200ms ease-out;
 }
 
-.article_conteneur a:hover > .overlay{
+#article_conteneur a:hover > .overlay{
 	opacity: 0;
 }
 
-.article_conteneur a:hover > .bg{
+#article_conteneur a:hover > .bg{
 	-moz-transform: scale(1.25);
     -webkit-transform: scale(1.25);
     -ms-transform: scale(1.25);
@@ -173,7 +171,7 @@
     transition: transform 10s ease-out; 
 }
 
-.article_conteneur a:hover > .middle{
+#article_conteneur a:hover > .middle{
 	-moz-transform: scale(0.9);
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
@@ -183,7 +181,7 @@
 	opacity: 0;
 }
 
-.article_conteneur a .middle {
+a .middle {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -197,7 +195,7 @@
     transition: all 200ms ease-out;
 }
 
-.article_conteneur a .middle h2 {
+a .middle h2 {
     font-size: 17px;
     text-transform: uppercase;
     color: #FFFFFF;
