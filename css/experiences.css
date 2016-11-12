@@ -14,8 +14,9 @@
 	text-decoration: none;
 	display: inline-block;
 	padding: 15px 4%;
-	margin-top: 3em;
-	margin-right: 2px;
+    margin-right: 0.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 	opacity: 1;
 	transform: matrix(1, 0, 0, 1, 0, 0);
 }
@@ -182,4 +183,5 @@
     color: #FFFFFF;
     font-weight: 900;
     margin: 0 20px;
+    padding-top: 10px;
 }
