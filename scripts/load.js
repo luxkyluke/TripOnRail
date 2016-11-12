@@ -95,9 +95,14 @@ function loadImgsBackGrounds(page){
 			break;
 
 		case "experiences":
-
 			document.getElementById("header").style.backgroundImage = "url('img/experiences/background.jpg')";
 			document.getElementById("header").style.backgroundPosition = "center";
+			$(".bg").each(function(){
+				var src = $(this).data('src');
+				if(src != undefined){
+					$(this).css('background-image', 'url('+src+')');
+				}
+			});
 			break;
 
 		default :

@@ -136,18 +136,8 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    -webkit-transition: all 200ms ease-out;
-    -moz-transition: all 200ms ease-out;
-    -ms-transition: all 200ms ease-out;
-    -o-transition: all 200ms ease-out;
-    transition: all 200ms ease-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
 }
 
 .article_conteneur a .overlay {
