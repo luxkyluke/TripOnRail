@@ -72,10 +72,10 @@ function affArticle(name){
 
 		case "home":
 			load_template_page("index", "The Railway Chronicales", function(){});
-
+			break;
 		case "exp":
 			load_template_page("experiences", "Experiences", function(){});
-		
+			break;
 		default :
 			break;
 	}
@@ -90,7 +90,7 @@ function loadImgsBackGrounds(page){
 		case "experiences":
 
 			document.getElementById("header").style.backgroundImage = "url('img/experiences/background.jpg')";
-			document.getElementById("header").style.backgroundPosition = "bottom";
+			document.getElementById("header").style.backgroundPosition = "center";
 			break;
 
 		default :

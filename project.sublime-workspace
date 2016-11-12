@@ -127,7 +127,7 @@
 			"file": "templates/index.html",
 			"settings":
 			{
-				"buffer_size": 3760,
+				"buffer_size": 3774,
 				"line_ending": "Windows"
 			}
 		},
@@ -151,7 +151,7 @@
 			"file": "templates/experiences.html",
 			"settings":
 			{
-				"buffer_size": 4268,
+				"buffer_size": 4256,
 				"line_ending": "Windows"
 			}
 		},
@@ -164,20 +164,10 @@
 			}
 		},
 		{
-			"contents": "Searching 46 files for \"decourverte.jpg\"\n\n0 matches\n\nSearching 46 files for \"decouverte.jpg\"\n\nD:\\wamp64\\www\\TripOnRail\\css\\experiences.css:\n    1  /* #cat_decouverte {\n    2: 	background: url(../img/experiences/decouverte.jpg) no-repeat center center;\n    3    	background-size: cover;\n    4  } */\n    .\n   10  \n   11  .conteneur_categories li{\n   12: 	background: url(../img/experiences/decouverte.jpg) no-repeat center center;\n   13    	background-size: cover;\n   14  	text-decoration: none;\n   ..\n  208      right: 0;\n  209      bottom: 0;\n  210:     background: url(../img/experiences/decouverte.jpg) no-repeat center center transparent;\n  211      -webkit-background-size: cover;\n  212      -moz-background-size: cover;\n\nD:\\wamp64\\www\\TripOnRail\\templates\\experiences.html:\n   73  				<div class=\"article_conteneur\">\n   74  					<a class=\"continent_1\" href=\"javascript:\" onclick=\"affArticle('test')\">\n   75: 						<img src=\"../img/experiences/decouverte.jpg\" class=\"loadImageHide\">\n   76  						<div class=\"bg\"></div>\n   77  						<div class=\"overlay\"></div>\n   ..\n   82  					</a>\n   83  					<a class=\"continent_1\" href=\"javascript:\" onclick=\"affArticle('test')\">\n   84: 						<img src=\"../img/experiences/decouverte.jpg\" class=\"loadImageHide\">\n   85  						<div class=\"bg\"></div>\n   86  						<div class=\"overlay\"></div>\n   ..\n   91  					</a>\n   92  					<a class=\"continent_1\" href=\"javascript:\" onclick=\"affArticle('test')\">\n   93: 						<img src=\"../img/experiences/decouverte.jpg\" class=\"loadImageHide\">\n   94  						<div class=\"bg\"></div>\n   95  						<div class=\"overlay\"></div>\n   ..\n  100  					</a>\n  101  					<a class=\"continent_1\" href=\"javascript:\" onclick=\"affArticle('test')\">\n  102: 						<img src=\"../img/experiences/decouverte.jpg\" class=\"loadImageHide\">\n  103  						<div class=\"bg\"></div>\n  104  						<div class=\"overlay\"></div>\n\n7 matches across 2 files\n",
-			"settings":
-			{
-				"buffer_size": 1885,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
 			"file": "scripts/script.js",
 			"settings":
 			{
-				"buffer_size": 514,
+				"buffer_size": 920,
 				"line_ending": "Windows"
 			}
 		},
@@ -185,7 +175,7 @@
 			"file": "scripts/load.js",
 			"settings":
 			{
-				"buffer_size": 2249,
+				"buffer_size": 2265,
 				"line_ending": "Windows"
 			}
 		},
@@ -193,7 +183,7 @@
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 2752,
+				"buffer_size": 2958,
 				"line_ending": "Windows"
 			}
 		},
@@ -409,6 +399,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"page",
+			"/img/experiences/decouverte.jpg",
+			"img/experiences/background",
+			"img/experiences/decouverte.jpg",
+			"menu",
 			"decouverte.jpg",
 			"decourverte.jpg",
 			"    color: #1EAEDB;",
@@ -501,7 +496,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -530,7 +525,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -539,15 +534,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3760,
+						"buffer_size": 3774,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								867,
-								867
+								431,
+								0
 							]
 						],
 						"settings":
@@ -559,7 +554,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -587,7 +582,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -603,8 +598,8 @@
 						"selection":
 						[
 							[
-								45,
-								67
+								8,
+								8
 							]
 						],
 						"settings":
@@ -616,7 +611,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -625,15 +620,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4268,
+						"buffer_size": 4256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								548,
-								548
+								2863,
+								2863
 							]
 						],
 						"settings":
@@ -642,10 +637,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2970.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -673,100 +668,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1885,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										211,
-										225
-									],
-									[
-										388,
-										402
-									],
-									[
-										589,
-										603
-									],
-									[
-										948,
-										962
-									],
-									[
-										1213,
-										1227
-									],
-									[
-										1478,
-										1492
-									],
-									[
-										1743,
-										1757
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								684,
-								684
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ 	].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "scripts/script.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 514,
+						"buffer_size": 920,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								137,
-								137
+								849,
+								849
 							]
 						],
 						"settings":
@@ -779,24 +704,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "scripts/load.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2249,
+						"buffer_size": 2265,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2207,
-								2207
+								1788,
+								1788
 							]
 						],
 						"settings":
@@ -806,27 +731,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 504.0,
+						"translation.y": 1448.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2752,
+						"buffer_size": 2958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								461,
-								461
+								2433,
+								2433
 							]
 						],
 						"settings":
@@ -835,14 +760,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2520.0,
+						"translation.y": 3120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "css/experiences.css",
 					"semi_transient": false,
 					"settings":
@@ -854,8 +779,8 @@
 						"selection":
 						[
 							[
-								5279,
-								5279
+								4061,
+								4061
 							]
 						],
 						"settings":
@@ -864,14 +789,14 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 5361.0,
+						"translation.y": 4240.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "css/article.css",
 					"semi_transient": false,
 					"settings":
@@ -892,14 +817,14 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 990.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "css/parallax.css",
 					"semi_transient": false,
 					"settings":
@@ -925,11 +850,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "css/skeleton.css",
 					"semi_transient": false,
 					"settings":
@@ -952,10 +877,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3050.0,
+						"translation.y": 2796.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -963,7 +888,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -989,7 +914,7 @@
 		"cols":
 		[
 			0.0,
-			0.515552995392,
+			0.428571428572,
 			1.0
 		],
 		"rows":
@@ -1007,7 +932,7 @@
 	"project": "project.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
