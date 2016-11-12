@@ -2,31 +2,23 @@
 
 $(document).ready(function(){	
 	// chargement de la page index
-	load_template_page("index", "The Railway Chronicales", function(){});
+	affArticle('home');
 
 	// parallax script
-
 	$(document).scroll(function()	{
   		var st = $(this).scrollTop();
-  		// $("#header").css({
-    // 		"background-position-y": (-$('#header').height()/2 -st/80)
-  		// })
   		$("#headerc").css({
     		"top": (-st/4),
     		"bottom": (st/4)
   		});
-      // $("#footerc").css({
-      //   "bottom": (-st/4),
-      //   "top": (st/4)
-      // });
 
-      //console.log('st = '+st);
+
+      //Scroll menu
       var header_h = $('header').height();
       var nav_h = $('#menu').height();  
       
-      var scrollMenu = st-header_h+nav_h+40;
-      //console.log("scrollM = "+scol)
-      var navOpacity = scrollMenu/(nav_h+40);
+      var scrollMenu = st-header_h+nav_h;
+      var navOpacity = scrollMenu/(nav_h);
 
       if(navOpacity >1)
         navOpacity=1;
@@ -45,12 +37,8 @@ $(document).ready(function(){
         $('#menu li').css('color', '#FFF');
       }
       $('#menu').css('background-color', navBackColor);
-       
-      //}
-      //else{
-        //$('#menu').css('background-color', 'transparent');
-      //}
 	});
 
 
 });
+

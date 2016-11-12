@@ -29,13 +29,18 @@
 		$('html, body').animate( { scrollTop: $(ref).offset().top }, speed );
 			return false;
 		});
+
+		$('#menu a').click(function(){
+			$(".current").removeClass('current');
+			$(this).addClass('current');
+			return false;
+		})
+
 		console.log("load nav "+page+" OK");
 		--done;
 		if(done == 0){
 			loadImgsBackGrounds(page);
-
 			_callback();
-			
 		}
 	});
 		
@@ -71,7 +76,9 @@ function affArticle(name){
 			break;
 
 		case "home":
-			load_template_page("index", "The Railway Chronicales", function(){});
+			load_template_page("index", "The Railway Chronicales", function(){
+				$("#menu a").first().addClass('current');
+			});
 			break;
 		case "exp":
 			load_template_page("experiences", "Experiences", function(){});

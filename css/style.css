@@ -85,6 +85,11 @@ ul#menu{
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	border-color: #FFF;
+}
+
+#menu a.current > li{
+	border-bottom: 1px, solid,inherit;
 }
 
 #menu li:hover{
