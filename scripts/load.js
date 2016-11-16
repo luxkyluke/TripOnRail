@@ -1,5 +1,6 @@
  const TEMPLATE_PATH = "templates/"
  var articles;
+ var nav_current;
  var articles = [
  	"karunda scenic railway"
 
@@ -29,12 +30,10 @@
 		$('html, body').animate( { scrollTop: $(ref).offset().top }, speed );
 			return false;
 		});
-
 		$('#menu a').click(function(){
-			$("#menu a.current").removeClass('current');
-			$(this).addClass('current');
+			/*$("#menu a.current").removeClass('current');
+			nav_current = $(this);*/
 		})
-
 		console.log("load nav "+page+" OK");
 		--done;
 		if(done == 0){
@@ -47,49 +46,71 @@
 }
 
  function load_template_page(page, title, _callback){
-    	document.title = title;
-    	var file = TEMPLATE_PATH+page+'.html';
-	    $('content').load(file, function(){
-	    	basic_load(page, function(){
-		    	console.log("bacic load "+page+" OK");
-		    	_callback();
-	    	});
-	    	window.history.pushState({"page":page, "pageTitle":title},"", "");
+	document.title = title;
+	var file = TEMPLATE_PATH+page+'.html';
+    $('content').load(file, function(){	    	
+		basic_load(page, function(){
+		    console.log("bacic load "+page+" OK");
+		    window.history.pushState({"page":page, "pageTitle":title},"", "");
+	    	$(document).scrollTop(0);
+	    	_callback();
 	    });
-	} 
+    });
+} 
 
 
 window.onpopstate = function(e){
     if(e.state){
         $('content').load(TEMPLATE_PATH+e.state.page+'.html', function(){
     		affArticle(e.state.page);
+
     	});
         document.title = e.state.pageTitle;
     }
 };
 
+function updateCurrent(){
+	if(nav_current != null){
+		$(nav_current).addClass('current');
+		console.log( $(nav_current));
+	}
+}
+
 function affArticle(name){
 	switch(name){
 		case "article":
-			load_template_page("article", "article", function(){});
+			load_template_page("article", "article", function(){
+				nav_current = '#nav_article';
+				updateCurrent();
+			});
 			break;
 
 		case "index":
 			load_template_page("index", "The Railway Chronicales", function(){
-				$("#menu a").first().addClass('current');
-			});
+				nav_current = '#nav_index';
+				updateCurrent();
+			})
+    		
 			break;
+
 		case "experiences":
 			load_template_page("experiences", "Experiences", function(){
+				nav_current = '#nav_experiences';
 				experienceAnim();
 				$("#cat_decouverte a li").first().click();
+				updateCurrent();
 			});
 			break;
+
 		default :
 			console.log("erreur page non reconnu !");
 			break;
 	}
+	
+	//alert(nav_current);
 }
+
+
 
 function loadImgsBackGrounds(page){
    	switch(page){
@@ -133,7 +154,12 @@ function experienceAnim(){
 			$(this).css('display', 'inline-block');
 		});
 
-		return false;
+		var srcLogoBlanc = $(this).find(".middle").children('img').prop('src');
+		var srcLogoNoir = srcLogoBlanc.split('_')[0]+".png";
+		alert (srcLogoNoir);
 
+		$('top_title').children('img').attr("src", srcLogo);
+
+		return false;
 	});
 }

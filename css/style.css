@@ -89,11 +89,11 @@ ul#menu{
 }
 
 #menu a.current > li{
-	border-bottom: 1px, solid,inherit;
+	border-bottom: 2px solid #FFF;
 }
 
-#menu li:hover{
-	color: #c60000;
+#menu a:hover > li{
+	color:#dc6a1a;
 }
 
 #actuality

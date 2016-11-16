@@ -70,7 +70,7 @@
 .conteneur_categories a li.current{
 	border-bottom: 10px;
     border-bottom-style: solid;
-    border-color: #2fbd55;
+    border-color: #306f31;;
 }
 
 
@@ -85,6 +85,7 @@
 
 #top_title{
 	text-align: center;
+	padding: 50px;
 }
 
 #top_title .title{
@@ -101,6 +102,7 @@
     font-size: 0; 
     margin: 0 -0.75%;
     padding-bottom: 150px;
+    border: 1px solid #dc6a1a;
 }
 
 #article_conteneur a {

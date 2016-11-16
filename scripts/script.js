@@ -3,6 +3,8 @@
 $(document).ready(function(){	
 	// chargement de la page index
 	affArticle('index');
+  
+  
 
 	// parallax script
 	$(document).scroll(function()	{
@@ -13,12 +15,13 @@ $(document).ready(function(){
   		});
 
 
-      //Scroll menu
+      //Scroll menu degrader
       var header_h = $('header').height();
       var nav_h = $('#menu').height();  
       
-      var scrollMenu = st-header_h+nav_h;
-      var navOpacity = scrollMenu/(nav_h);
+      var scrollMenu = st-header_h+nav_h+0;
+      var navOpacity = scrollMenu/(nav_h+0);
+
 
       if(navOpacity >1)
         navOpacity=1;
@@ -27,15 +30,33 @@ $(document).ready(function(){
 
       var navBackColor = 'rgba(255, 255, 255,' + navOpacity + ')';
       var defaultLiColor = $('#menu li').css("color");
+      var menuLiColorHeader = '#000';
+      var menuLiColorHover = "#dc6a1a";
+      var menuLiColorPage = "#FFF";
+
+      
 
       if(st-header_h+nav_h > 0){
         //$('#menu').css('border-bottom', '3px solid black');
-        $('#menu li').css('color', '#000');
+        $('#menu li').css('color', menuLiColorHeader);
+        $('#menu a.current > li').css('border-color', menuLiColorHeader);
+        $('#menu a').hover(function(){
+          $(this).children('li').css('color', menuLiColorHover);
+        }, function(){
+          $(this).children('li').css('color', menuLiColorHeader);
+        });
       }
       else{
         //$('#menu').css('border-bottom', 'none');
-        $('#menu li').css('color', '#FFF');
+        $('#menu li').css('color', menuLiColorPage);
+        $('#menu a.current > li').css('border-color', menuLiColorPage);
+        $('#menu a').hover(function(){
+          $(this).children('li').css('color', menuLiColorHover);
+        }, function(){
+          $(this).children('li').css('color', menuLiColorPage);
+        });
       }
+      
       $('#menu').css('background-color', navBackColor);
 	});
 
