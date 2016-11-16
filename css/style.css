@@ -133,22 +133,55 @@ ul#menu{
 	margin-bottom: 30px;
 }
 
+#members i 
+{
+	color: #696969;
+	font-size: 0.6em;
+}
+
 .avatar
 {
 	width: 150px;
 	height: 150px !important;
 	border-radius: 50%;
-	background-color: black;
 	position: relative;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translateX(-50%) scale(1);
 	margin-bottom: 30px;
+	transition: .3s;
+}
+
+.avatar:hover
+{
+	transform: translateX(-50%) scale(1.1);
+	box-shadow: 10px 10px 20px rgba(1, 1, 1, .4);
+}
+
+#avatar1
+{
+	background-image: url(../img/alex.PNG);
+	background-size: cover;
+	background-position: center center;
+}
+
+#avatar2
+{
+	background-image: url(../img/lisa.PNG);
+	background-size: cover;
+	background-position: center center;
+}
+
+#avatar3
+{
+	background-image: url(../img/antoine.PNG);
+	background-size: cover;
+	background-position: center center;
 }
 
 .row
 {
 	height: auto;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .member_block{
@@ -168,8 +201,6 @@ ul#menu{
 	text-align: left;
     padding: 0;
 }
-
-
 
 .title {
 	font-family: Arenq;
@@ -197,6 +228,49 @@ ul#menu{
 .images
 {
 	height: 300px;
+	display: inline-block;
+}
+
+#levoyagedesacha
+{
+	background-image: url(../img/levoyagedesacha.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+#galerie
+{
+	background-image: url(../img/galerie.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+#experiences
+{
+	background-image: url(../img/experiences.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+#destinations
+{
+	background-image: url(../img/destinations.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.articletext
+{
+	font-family: Montserrat_Semi-Bold;
+	font-size: 2.6em;
+	color: white;
+	text-shadow: 5px 5px 10px rgba(1, 1, 1, .6);
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+	margin: 0;
 }
 
 .onethird1
@@ -221,6 +295,16 @@ ul#menu{
 	width: 66.666%;
 }
 
+.images
+{
+	transition: .5s;
+}
+
+.images:hover
+{
+	transform: scale(0.95);
+}
+
 #contactus
 {
 	margin-top: 50px;
@@ -238,6 +322,3 @@ ul#menu{
 	background: rgba(0, 0, 0, 0.25);
   	text-align: center;
 }
-
-
-
