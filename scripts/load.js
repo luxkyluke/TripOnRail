@@ -147,7 +147,7 @@ function affArticle(name){
 			break;
 
 		default :
-			console.log("erreur page non reconnu !");
+			console.log("ERROR, page non reconnue.");
 			break;
 	}
 	

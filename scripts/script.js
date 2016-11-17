@@ -32,7 +32,7 @@ $(document).ready(function(){
       var defaultLiColor = $('#menu li').css("color");
       var menuLiColorHeader = '#000';
       var menuLiColorHover = "#dc6a1a";
-      var menuLiColorPage = "#FFF";
+      var menuLiColorPage = "#ffffff";
 
       
 
