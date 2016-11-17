@@ -40,12 +40,13 @@
 			loadImgsBackGrounds(page);
 			_callback();
 		}
+
 	});
 		
 	//alert("OK");
 }
 
- function load_template_page(page, title, _callback){
+ function load_template_page(page, title, _callback, refresh){
 	document.title = title;
 	var file = TEMPLATE_PATH+page+'.html';
     $('content').load(file, function(){	    	
@@ -55,6 +56,8 @@
 	    	$(document).scrollTop(0);
 	    	_callback();
 	    });
+	   	if(refresh !== undefined)
+	   		return false;
     });
 } 
 
@@ -72,7 +75,6 @@ window.onpopstate = function(e){
 function updateCurrent(){
 	if(nav_current != null){
 		$(nav_current).addClass('current');
-		console.log( $(nav_current));
 	}
 }
 
@@ -89,17 +91,59 @@ function affArticle(name){
 			load_template_page("index", "The Railway Chronicales", function(){
 				nav_current = '#nav_index';
 				updateCurrent();
-			})
-    		
+			});
 			break;
 
 		case "experiences":
 			load_template_page("experiences", "Experiences", function(){
-				nav_current = '#nav_experiences';
 				experienceAnim();
 				$("#cat_decouverte a li").first().click();
+				nav_current = '#nav_experiences';
 				updateCurrent();
 			});
+			break;
+
+		case "about":
+			if(nav_current === '#nav_index' || nav_current === '#nav_contact'
+					|| nav_current === '#ourteam'){
+				$('html, body').animate({
+					scrollTop: $("#ourteam").offset().top-50
+				}, 2000, false);
+				$(nav_current).removeClass('current');
+				nav_current='#nav_about';
+				updateCurrent();
+			}
+			else{
+				load_template_page("index", "The Railway Chronicales", function(){
+					nav_current='#nav_about';
+					updateCurrent();
+					$('html, body').animate({
+						scrollTop: $("#ourteam").offset().top-50
+					}, 1500, false);
+				});
+			}
+			break;
+
+		case "contact":
+			if(nav_current === '#nav_index' || nav_current === '#nav_about'
+					|| nav_current === '#nav_contact'){
+				$('html, body').animate({
+					scrollTop: $("#contactus").offset().top-50
+				}, 2000, false);
+				$(nav_current).removeClass('current');
+				nav_current= '#nav_contact';
+				updateCurrent();
+			}
+			else{
+				load_template_page("index", "The Railway Chronicales", function(){
+					nav_current= '#nav_contact';
+					updateCurrent();
+					$('html, body').animate({
+						scrollTop: $("#contactus").offset().top-50
+					}, 1500);
+				}, false);
+			}
+
 			break;
 
 		default :
@@ -155,10 +199,13 @@ function experienceAnim(){
 		});
 
 		var srcLogoBlanc = $(this).find(".middle").children('img').prop('src');
-		var srcLogoNoir = srcLogoBlanc.split('_')[0]+".png";
-		alert (srcLogoNoir);
+		var srcLogoNoir = String (srcLogoBlanc.split('_')[0]+".png");
 
-		$('top_title').children('img').attr("src", srcLogo);
+		$('#main_logo_cat').attr('src', srcLogoNoir);
+
+		var titreExp = $(this).find(".middle").children('h2').text();
+		console.log(titreExp);
+		$('#top_title').find('p').html(titreExp);
 
 		return false;
 	});

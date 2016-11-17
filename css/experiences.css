@@ -13,8 +13,8 @@
     vertical-align: top;
     text-align: center;
     text-decoration: none;
-    width: 8%;
-    padding: 15px 4%;
+    width: 12%;
+    padding: 15px 0.9%;;
     margin-right: 0.5em;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -79,13 +79,13 @@
 	width: 100px;
 }
 
-.main_logo_cat{
+#main_logo_cat{
 	width: 200px;
 }
 
 #top_title{
 	text-align: center;
-	padding: 50px;
+	padding: 20px;
 }
 
 #top_title .title{
@@ -99,9 +99,9 @@
 }
 
 #article_conteneur {
-    font-size: 0; 
     margin: 0 -0.75%;
-    padding-bottom: 150px;
+    margin-bottom: 50px;
+	padding: 8px;
     border: 1px solid #dc6a1a;
 }
 
