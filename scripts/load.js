@@ -14,13 +14,15 @@
 		console.log("load footer "+page+" OK");
 		--done;
 	});
-
-	var title = $("header").attr("data-title");
-	$("header").load(TEMPLATE_PATH+'header.html', function(){
-		$("#title_logo").append(title);
-		console.log("load header "+page+" OK");
-		--done;
-	});
+ 	if(page != "destinations"){
+		var title = $("header").attr("data-title");
+		$("header").load(TEMPLATE_PATH+'header.html', function(){
+			$("#title_logo").append(title);
+			console.log("load header "+page+" OK");
+			--done;
+		});
+	}
+	else{--done;}
 	
 
 	$("nav").load(TEMPLATE_PATH+'nav.html', function()	{
@@ -100,6 +102,15 @@ function affArticle(name){
 				$("#cat_decouverte a li").first().click();
 				nav_current = '#nav_experiences';
 				updateCurrent();
+			});
+			break;
+
+		case "dest":
+			load_template_page("destinations", "Destinations", function(){
+				nav_current = '#nav_destinations';
+				updateCurrent();
+				initMap();
+
 			});
 			break;
 
