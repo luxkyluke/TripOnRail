@@ -1,8 +1,276 @@
 .contentHeader{
-	background: #b7d7d1;
+	background: #ABCCCF;
 }
 
 #destinations_map{
 	height: 500px;
 	width: 100%;
 }
+
+.destinations{
+	background: url(../img/destinations_bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 0;
+}
+}
+
+.destinations .regions {
+    line-height: 70px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    background: #FFFFFF;
+}
+
+
+.destinations .regions {
+	line-height: 70px;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	background: #FFFFFF;
+}
+
+.destinations .regions .label {
+    font-size: 19px;
+    color: #b18857;
+    font-family: Montserrat_Semi-Bold;
+    float: left;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.destinations .regions .items {
+    float: right;
+}
+
+.destinations .regions .items a.selected {
+    color: #454242;
+}
+
+.destinations .regions .items a:hover {
+    color: #454242;
+}
+
+
+.destinations .regions .items a {
+    display: inline-block;
+    font-size: 20px;
+    font-family: Montserrat_Regular;
+    position: relative;
+    color: #b4b4b4;
+    text-decoration: none;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+    margin-left: 25px;
+    padding: 0 14px;
+}
+
+.destinations span.count {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+    font-size: 11px;
+    width: 25px;
+    text-align: center;
+    font-family: Montserrat_Regular;
+    font-weight: 900;
+    color: #b18857;
+    border: 1px solid #b18857;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-left: 6px;
+}
+
+.destinations .regions .items a:after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 50%;
+    right: 50%;
+    bottom: -4px;
+    background: #d5d5d5;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+.destinations .regions .items a.selected:after {
+    left: 0%;
+    right: 0%;
+}
+
+.destinations .inner {
+    padding-top: 75px;
+}
+
+.destinations .inner aside {
+    width: 27%;
+    float: left;
+}
+
+.destinations .inner aside .block.continents {
+    font-family: Montserrat_Regular;
+    background: #ffffff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 25px 40px;
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+.destinations .inner aside .block.continents h2 {
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    font-size: 17px;
+    text-transform: uppercase;
+    position: relative;;
+}
+
+.destinations .inner aside .block.continents h2 a {
+    color: #212120;
+}
+
+.destinations .inner aside .block.continents ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.destinations .inner aside .block.continents ul li:first-child {
+    border-top: none;
+}
+
+.destinations .inner aside .block.continents ul li a {
+    display: block;
+    line-height: 42px;
+    position: relative;
+    color: #b4b4b4;
+    font-size: 17px;
+    text-decoration: none;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+.destinations .inner aside .block.continents ul li {
+    border-top: 1px solid #f2f2f2;
+}
+
+.destinations .inner .sidecontent {
+    float: right;
+    width: 67%;
+    overflow: hidden;
+    font-family: Montserrat_Regular;
+}
+
+.destinations .inner .sidecontent h1 {
+    font-size: 43px;
+    text-transform: none;
+    color: #212120;
+    margin-bottom: 25px;
+    float: left;
+}
+
+.destinations .inner .sidecontent h1 span.count {
+    padding: 0px 18px;
+    line-height: 21px;
+    margin-top: -2px;
+    width: auto;
+    word-spacing: 3px;
+    margin-left: 20px;
+}
+
+.destinations .inner .sidecontent #article_conteneur {
+    font-size: 0;
+    padding-bottom: 200px;
+    float: left;
+    width: 105.5%;
+    border: none;
+}
+
+.destinations .inner .sidecontent #article_conteneur a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+    line-height: 212px;
+    margin-right: 3.5%;
+    margin-bottom: 3.5%;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.destinations .inner aside .block.continents ul li a:hover {
+    color: #b18857;
+}
+
+.destinations .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/experiences/decouverte.jpg) no-repeat center center transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.destinations .inner aside .block.continents ul li a.selected {
+    color: #212120;
+}
+
+.destinations .inner aside .block.continents ul li a.selected span.count {
+    background: #b18857;
+    color: #FFFFFF;
+}
+
+.destinations .inner aside .block.continents ul li a span.count {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -9px;
+}
+
+.destinations .inner aside .block.continents h2 span.count {
+	background: #b18857;
+	color: #FFFFFF;
+}
+
+
+.destinations .inner aside .block.continents span.count {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -9px;
+}
+
+.labels {
+     color: red;
+     background-color: white;
+     font-family: "Lucida Grande", "Arial", sans-serif;
+     font-size: 10px;
+     font-weight: bold;
+     text-align: center;
+     width: 40px;
+     border: 2px solid black;
+     white-space: nowrap;
+   }

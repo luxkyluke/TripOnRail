@@ -5,7 +5,19 @@
  	"karunda scenic railway"
 
  ];
+var continents =[
+	"Europe", 
+	"Asie",
+	"Oceanie",
+	"Amérique"
+];
 
+var pays = [
+	"France", //ordre important se réferer aux 
+	"Italy",  //index des pays de l'onglet gauche (id = i+1)
+	"Russie", //avec i indice du tableau pays
+	"Australie"
+];
 
  function basic_load(page, _callback){
  	var done = 3;
@@ -110,7 +122,7 @@ function affArticle(name){
 				nav_current = '#nav_destinations';
 				updateCurrent();
 				initMap();
-
+				destinationsLoad()
 			});
 			break;
 
@@ -184,6 +196,15 @@ function loadImgsBackGrounds(page){
 			});
 			break;
 
+		case "destinations":
+			$(".bg").each(function(){
+				var src = $(this).data('src');
+				if(src != undefined){
+					$(this).css('background-image', 'url('+src+')');
+				}
+			});
+			break;
+
 		default :
 			break;
 	}
@@ -191,7 +212,6 @@ function loadImgsBackGrounds(page){
 
 
 function experienceAnim(){
-
 	$("#cat_decouverte a li").click(function(){
 		//maj du current
 		$("#cat_decouverte a li.current").removeClass('current');
@@ -202,7 +222,7 @@ function experienceAnim(){
 		var idExp = $(this).data('exp');
 		$("#article_conteneur a").each(function(){
 			$(this).css('display', 'none');
-		});
+		});	
 
 
 		$(".exp_"+idExp).each(function(){
@@ -220,4 +240,128 @@ function experienceAnim(){
 
 		return false;
 	});
+}
+
+function destinationsLoad(){
+	//initialisation des indicateurs de nombre 
+	//le nb d'exp par région
+	var nbExp = $('.article_bloc').size();
+	$('.inject h2 a span').text(nbExp);
+	$('#continent_0 span').text(nbExp);
+
+	var exp = " Expérience"
+	if(parseInt(nbExp)>1)
+		exp +="s";
+
+	$('#region_title').html("Tout <span class='count'>"+ nbExp + exp +"</span>");
+		
+
+	var nbExpByContinents = [];
+	for(var i=0; i < continents.length; i++){
+		var nb = $(".continent_"+String(i+1)).size()
+		nbExpByContinents[i] = nb;
+		$('#continent_'+String(i+1)+' span').text(nb);
+	}
+
+	//le nb d'exp par pays
+	var nbExpByPays = [];
+	for(var i=0; i < pays.length; i++){
+		var nb = $(".country_"+String(i+1)).size();
+		nbExpByPays[i] = nb;
+		$('#pays_'+String(i+1)+' a span').text(nb);
+	}
+	//on charge les pays correspondant au click sur un continent
+	$('.id_continent').click(function(){
+		//changement du curseur de selection
+		$(".id_continent.selected").removeClass('selected');
+		$(this).addClass('selected');
+		resetSelectedCountry();
+
+		var idContinent = $(this).data('id');
+
+		//On copie les infos données par l'onglet continent
+		var text = 	$(this).text();
+		text = text.split(" ");
+		var nom = text[0];
+		var nb = text[1];
+
+		var exp = " Expérience"
+		if(parseInt(nb)>1)
+			exp +="s";
+
+		$('#region_title').html(nom + "<span class='count'>"+ nb + exp +"</span>");
+		$('.inject h2 a').html(nom + "<span class='count'>"+nb+"</span>");
+		
+		if(idContinent == 0){
+			$(".article_bloc").css("display", "inline-block");
+			$('.inject ul li').css("display", "block");
+		}
+		else{
+			//on efface tous les blocs articles
+			$(".article_bloc").css("display", "none");
+			
+			//on efface tous les pays dans la fenetre de gauche
+			$('.inject ul li').css("display", "none");
+			
+
+			$(".continent_"+idContinent).each(function(){
+				var idPays = $(this).data('pays');
+				$('#pays_'+idPays).css('display', 'block');
+				//console.log($(' li').find("data-id='"+idPays+"'"));
+			
+				$(this).css('display', 'inline-block');
+			});
+
+		}
+		$('html, body').animate({
+	        scrollTop: $("#page").offset().top-50
+	    }, 1000);
+		return false;
+	});
+
+	$('.inject a').click(function(){
+		var idPays = $(this).data('id');
+
+		//on changer le current curseur
+
+		resetSelectedCountry(this);
+
+		//on change le titre et le nbExp
+		var text = 	$(this).text();
+		text = text.split(" ");
+		var nom = text[0];
+		var nb = text[1];
+
+		var exp = " Expérience"
+		if(parseInt(nb)>1)
+			exp +="s";
+
+		$('#region_title').html(nom + "<span class='count'>"+nb+exp+"</span>");
+
+
+		//on efface tous les blocs articles
+		$(".article_bloc").css("display", "none");
+		$(".country_"+idPays).each(function(){
+			$(this).css('display', 'inline-block');
+		});
+
+		$('html, body').animate({
+	        scrollTop: $("#page").offset().top-50
+	    }, 1000);
+		return false;
+	});
+}
+
+function resetSelectedCountry(selector){
+	$('.inject a.selected').removeClass('selected');
+	if(selector != undefined);
+		$(selector).addClass('selected');	
+	$('.inject .items').first().addClass('selected');
+}
+
+function markerClickEvent(id){
+	if(id == undefined)
+		return false;
+	$("#pays_"+id + " a").click();
+
 }

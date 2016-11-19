@@ -27,7 +27,7 @@ function initMap(){
       mapTypeControl: false,
       //scaleControl: false,
       mapTypeControl : false, 
-      streetViewControl: false, 
+      streetViewControl: false,   
       mapTypeControlOptions: {
         mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
       }
@@ -43,15 +43,24 @@ function initMap(){
     var marker, pos;
     points.forEach(function(point) {
       pos = {lat:parseFloat(point.latitude), lng: parseFloat(point.longitude)};
+      id = parseInt(point.id);
+      
       marker = new google.maps.Marker({
           position: pos,
           map: map,
+          id : id,  
           icon: 'img/logos/location_marker.png'
         }
       );
+      google.maps.event.addListener(marker, 'click', function(){
+          markerClickEvent(this.id);
+      });
     });
 
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
+
+   
+    
   }
 }

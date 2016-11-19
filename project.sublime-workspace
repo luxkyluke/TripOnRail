@@ -120,14 +120,6 @@
 	"buffers":
 	[
 		{
-			"file": "templates/index.html",
-			"settings":
-			{
-				"buffer_size": 4118,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "templates/article.html",
 			"settings":
 			{
@@ -136,10 +128,10 @@
 			}
 		},
 		{
-			"file": "templates/experiences.html",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6306,
+				"buffer_size": 675,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,7 +139,7 @@
 			"file": "templates/destinations.html",
 			"settings":
 			{
-				"buffer_size": 6239,
+				"buffer_size": 6288,
 				"line_ending": "Windows"
 			}
 		},
@@ -163,7 +155,7 @@
 			"file": "scripts/script.js",
 			"settings":
 			{
-				"buffer_size": 1725,
+				"buffer_size": 1728,
 				"line_ending": "Windows"
 			}
 		},
@@ -171,7 +163,7 @@
 			"file": "scripts/load.js",
 			"settings":
 			{
-				"buffer_size": 5195,
+				"buffer_size": 5205,
 				"line_ending": "Windows"
 			}
 		},
@@ -179,16 +171,32 @@
 			"file": "scripts/maps.js",
 			"settings":
 			{
-				"buffer_size": 1729,
+				"buffer_size": 1463,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/json/map_locations.json",
+			"settings":
+			{
+				"buffer_size": 2438,
 				"line_ending": "Windows",
-				"name": "var style = [{\"featureType\":\"all\",\"elementType\":\"l"
+				"name": "["
+			}
+		},
+		{
+			"file": "scripts/json/map_style.json",
+			"settings":
+			{
+				"buffer_size": 3347,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 4461,
+				"buffer_size": 4489,
 				"line_ending": "Windows"
 			}
 		},
@@ -196,7 +204,7 @@
 			"file": "css/destinations.css",
 			"settings":
 			{
-				"buffer_size": 39,
+				"buffer_size": 91,
 				"line_ending": "Windows"
 			}
 		},
@@ -214,22 +222,6 @@
 			"settings":
 			{
 				"buffer_size": 1358,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/parallax.css",
-			"settings":
-			{
-				"buffer_size": 542,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/skeleton.css",
-			"settings":
-			{
-				"buffer_size": 9958,
 				"line_ending": "Windows"
 			}
 		}
@@ -278,6 +270,13 @@
 	],
 	"file_history":
 	[
+		"/D/wamp64/www/TripOnRail/scripts/json/map_style.json",
+		"/D/wamp64/www/TripOnRail/templates/experiences.html",
+		"/D/wamp64/www/TripOnRail/scripts/maps.js",
+		"/D/wamp64/www/TripOnRail/templates/index.html",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/D/wamp64/www/TripOnRail/css/parallax.css",
+		"/D/wamp64/www/TripOnRail/css/skeleton.css",
 		"/D/wamp64/www/TripOnRail/css/destination.css",
 		"/D/wamp64/www/TripOnRail/templates/header.html",
 		"/D/wamp64/www/TripOnRail/templates/destination.html",
@@ -285,7 +284,6 @@
 		"/D/wamp64/www/TripOnRail/css/style.css",
 		"/D/wamp64/www/TripOnRail/index.html",
 		"/D/wamp64/www/TripOnRail/css/font.css",
-		"/D/wamp64/www/TripOnRail/templates/index.html",
 		"/D/wamp64/www/TripOnRail/scripts/contactform.js",
 		"/D/wamp64/www/TripOnRail/templates/article.html",
 		"/D/wamp64/www/TripOnRail/css/contactform.css",
@@ -417,6 +415,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" '../",
+			"country",
+			"administrative.country",
+			"alert",
 			"main_logo_cat",
 			"main_logo_at",
 			"src",
@@ -539,40 +541,11 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "templates/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4118,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2593,
-								2602
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 64.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "templates/article.html",
 					"semi_transient": false,
 					"settings":
@@ -601,20 +574,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "templates/experiences.html",
+					"buffer": 1,
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6306,
+						"buffer_size": 675,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								6306
+								539,
+								539
 							]
 						],
 						"settings":
@@ -623,27 +596,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "templates/destinations.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6239,
+						"buffer_size": 6288,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4497,
-								4497
+								354,
+								354
 							]
 						],
 						"settings":
@@ -652,14 +625,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3100.0,
+						"translation.y": 78.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "templates/nav.html",
 					"semi_transient": false,
 					"settings":
@@ -683,22 +656,22 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "scripts/script.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1725,
+						"buffer_size": 1728,
 						"regions":
 						{
 						},
@@ -715,28 +688,28 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 1.0,
-						"translation.y": 587.0,
+						"translation.x": 0.0,
+						"translation.y": 631.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "scripts/load.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5195,
+						"buffer_size": 5205,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								528,
-								528
+								2515,
+								2515
 							]
 						],
 						"settings":
@@ -746,48 +719,110 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2935.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "scripts/maps.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1729,
+						"buffer_size": 1463,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								1729
+								760,
+								760
 							]
 						],
 						"settings":
 						{
-							"auto_name": "var style = [{\"featureType\":\"all\",\"elementType\":\"l",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 16165.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 328.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "scripts/json/map_locations.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								563,
+								571
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 523.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
+					"file": "scripts/json/map_style.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1024,
+								1024
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1531.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4461,
+						"buffer_size": 4489,
 						"regions":
 						{
 						},
@@ -807,24 +842,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "css/destinations.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 39,
+						"buffer_size": 91,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								39,
-								39
+								69,
+								74
 							]
 						],
 						"settings":
@@ -835,11 +870,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "css/experiences.css",
 					"semi_transient": false,
 					"settings":
@@ -861,14 +896,14 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1625.0,
+						"translation.y": 1889.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "css/article.css",
 					"semi_transient": false,
 					"settings":
@@ -892,67 +927,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "css/parallax.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "css/skeleton.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4860,
-								4860
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2796.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -986,7 +961,7 @@
 		"cols":
 		[
 			0.0,
-			0.486605583192,
+			0.332227703008,
 			1.0
 		],
 		"rows":

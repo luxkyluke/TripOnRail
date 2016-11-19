@@ -34,7 +34,7 @@
 	opacity: 1;
 	transform: matrix(1, 0, 0, 1, 0, 0);
  }*/
-.conteneur_categories li .bg{
+/* .conteneur_categories li .bg{
     position: absolute;
     top: 0;
     left: 0;
@@ -47,7 +47,7 @@
     background-size: cover;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
+} */
 
 .conteneur_categories a .overlay {
     opacity: 0.25;
