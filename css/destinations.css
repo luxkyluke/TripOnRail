@@ -59,7 +59,7 @@
     font-size: 20px;
     font-family: Montserrat_Regular;
     position: relative;
-    color: #b4b4b4;
+    color: #9d9d9d;
     text-decoration: none;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
@@ -155,7 +155,6 @@
     display: block;
     line-height: 42px;
     position: relative;
-    color: #b4b4b4;
     font-size: 17px;
     text-decoration: none;
     -webkit-transition: all 200ms ease-out;
@@ -163,6 +162,7 @@
     -ms-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
+    color: #9d9d9d;
 }
 
 .destinations .inner aside .block.continents ul li {
