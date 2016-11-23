@@ -44,7 +44,7 @@
     "featureType": "landscape",
     "stylers": [
       {
-        "color": "#daac61"
+        "color": "#b18857"
       }
     ]
   },
@@ -85,7 +85,7 @@
     "featureType": "water",
     "stylers": [
       {
-        "color": "#ABCCCF"
+        "color": "#c7dbed"
       }
     ]
   }

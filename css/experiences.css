@@ -205,3 +205,17 @@ a .middle h2 {
     margin: 0 20px;
     padding-top: 10px;
 }
+
+@media (max-width: 1150px){
+    .conteneur_categories li {
+        width : 15%;
+        padding: 10px 1.8%;
+    }
+    a .middle h2 {
+        font-size: 13.5px;
+    }
+    #article_conteneur a {
+        width: 48%;
+    }
+}
+

@@ -5,18 +5,26 @@
  	"karunda scenic railway"
 
  ];
+
+///!\ NE PAS CHANGER DE PLACE LES CONTINENTS EXISTANTS
+// 	NE PAS AJOUTER DE NOUVEAU CONTINENT
 var continents =[
-	"Europe", 
-	"Asie",
-	"Oceanie",
-	"Amérique"
+	"Europe", 	//id 1
+	"Asie",		//id 2
+	"Oceanie",	//id 3
+	"Amérique"	//id 4
 ];
 
+//ordre important se réferer aux 
+//index des pays de l'onglet gauche (id = i+1)
+//avec i indice du tableau pays
+///!\ NE PAS CHANGER DE PLACE LES PAYS EXISTANT
+//AJOUTER LES NOUVEAUX PAYS A LA FIN DU TABLEAU
 var pays = [
-	"France", //ordre important se réferer aux 
-	"Italy",  //index des pays de l'onglet gauche (id = i+1)
-	"Russie", //avec i indice du tableau pays
-	"Australie"
+	"France", 	//id 1
+	"Italy",  	//id 2
+	"Russie", 	//id 3
+	"Australie"	//id 4
 ];
 
  function basic_load(page, _callback){
@@ -111,7 +119,7 @@ function affArticle(name){
 		case "experiences":
 			load_template_page("experiences", "Experiences", function(){
 				experienceAnim();
-				$("#cat_decouverte a li").first().click();
+				clickCatExpAnim($("#cat_decouverte a li").first(), false);
 				nav_current = '#nav_experiences';
 				updateCurrent();
 			});
@@ -210,35 +218,43 @@ function loadImgsBackGrounds(page){
 	}
 }
 
+function clickCatExpAnim(current, scroll){
+	//maj du current
+	$("#cat_decouverte a li.current").removeClass('current');
+	current.addClass('current');
+
+
+	//tri des expériences
+	var idExp = current.data('exp');
+	$("#article_conteneur a").each(function(){
+		$(this).css('display', 'none');
+	});	
+
+
+	$(".exp_"+idExp).each(function(){
+		$(this).css('display', 'inline-block');
+	});
+
+	var srcLogoBlanc = current.find(".middle").children('img').prop('src');
+	var srcLogoNoir = String (srcLogoBlanc.split('_')[0]+".png");
+
+	$('#main_logo_cat').attr('src', srcLogoNoir);
+
+	var titreExp = current.find(".middle").children('h2').text();
+	$('#top_title').find('p').html(titreExp);
+
+	if(scroll == false)
+		return false;
+	$('html, body').animate({
+        scrollTop: $("#page").offset().top-50
+    }, 1000);
+
+	return false;
+}
 
 function experienceAnim(){
 	$("#cat_decouverte a li").click(function(){
-		//maj du current
-		$("#cat_decouverte a li.current").removeClass('current');
-		$(this).addClass('current');
-
-
-		//tri des expériences
-		var idExp = $(this).data('exp');
-		$("#article_conteneur a").each(function(){
-			$(this).css('display', 'none');
-		});	
-
-
-		$(".exp_"+idExp).each(function(){
-			$(this).css('display', 'inline-block');
-		});
-
-		var srcLogoBlanc = $(this).find(".middle").children('img').prop('src');
-		var srcLogoNoir = String (srcLogoBlanc.split('_')[0]+".png");
-
-		$('#main_logo_cat').attr('src', srcLogoNoir);
-
-		var titreExp = $(this).find(".middle").children('h2').text();
-		console.log(titreExp);
-		$('#top_title').find('p').html(titreExp);
-
-		return false;
+		clickCatExpAnim($(this), true);
 	});
 }
 
@@ -319,6 +335,7 @@ function destinationsLoad(){
 		return false;
 	});
 
+	//clique sur pays dans l'onglet gauche
 	$('.inject a').click(function(){
 		var idPays = $(this).data('id');
 

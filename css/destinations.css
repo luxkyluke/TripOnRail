@@ -53,6 +53,10 @@
     color: #454242;
 }
 
+#page.destinations{
+	border: none;
+}
+
 
 .destinations .regions .items a {
     display: inline-block;

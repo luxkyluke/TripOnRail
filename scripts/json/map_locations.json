@@ -3,28 +3,24 @@
       "id":"1",
       "latitude":"46",
       "longitude":"1.5",
-      "continentId":"2",
       "title":"France"
    },
    {  
       "id":"2",
       "latitude":"42.772179",
       "longitude":"12.873817", 
-      "continentId":"4",
       "title":"Italie"
    },
    {  
       "id":"3",
       "latitude":"59.961808",
       "longitude":"85.454384",
-      "continentId":"4",
       "title":"Russie"
    },
    {  
       "id":"4",
       "latitude":"-21.353368",
       "longitude":"133.795000",
-      "continentId":"2",
       "title":"Australie"
    }
 ]
