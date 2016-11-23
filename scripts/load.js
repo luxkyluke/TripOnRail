@@ -52,10 +52,11 @@ var pays = [
 		$('html, body').animate( { scrollTop: $(ref).offset().top }, speed );
 			return false;
 		});
-		$('#menu a').click(function(){
-			/*$("#menu a.current").removeClass('current');
-			nav_current = $(this);*/
-		})
+		$('.burger-menu').on('click', function() {
+		  $(this).toggleClass("burger-menu--opened");
+		  $(this).toggleClass("burger-menu--closed");
+		  $("#menu").toggleClass("burger");
+		});
 		console.log("load nav "+page+" OK");
 		--done;
 		if(done == 0){
