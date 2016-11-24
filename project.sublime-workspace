@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
 				"bu",
 				"burger_menu"
 			],
@@ -18,10 +26,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"back",
-				"background-position"
 			],
 			[
 				"ba",
@@ -152,18 +156,18 @@
 			}
 		},
 		{
-			"file": "scripts/script.js",
+			"file": "scripts/load.js",
 			"settings":
 			{
-				"buffer_size": 1727,
+				"buffer_size": 9557,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "scripts/load.js",
+			"file": "scripts/script.js",
 			"settings":
 			{
-				"buffer_size": 9325,
+				"buffer_size": 1813,
 				"line_ending": "Windows"
 			}
 		},
@@ -176,10 +180,13 @@
 			}
 		},
 		{
+			"contents": "@import 'font.css';\n@import 'normalize.css';\n@import 'skeleton.css';\n@import 'parallax.css';\n@import 'article.css';\n@import 'contactform.css';\n@import 'experiences.css';\n@import 'destinations.css';\n\n\nhtml, body{\n	width: 100%;\n	height: 100%;\n	margin: 0;\n}\n\na{\n	text-decoration: none;\n	color: inherit;\n}\n\np{\n	margin: 0;\n}\n/***********	HOME	************/\n#home {\n	width: 100%;\n	height: 100%;\n	margin: 0;\n}\n\n#home #header{\n  background: url(../img/background.jpg);\n  background-size: cover;\n  background-position: center;\n}\n\n* {\n    margin: 0;\n    padding: 0;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n#title_logo{\n	position: absolute;\n	font-family: Arenq;\n	color: white;\n	left: 50%;\n	top: 50%;\n	font-size: 5em;\n	transform: translateX(-50%) translateY(-50%);\n	text-align: center;\n	line- ight: 100%;\n	margin: 0;\n	width: 80%;\n	text-shadow: 5px 5px 10px #000000;\n	letter-spacing: 5px;\n}\n\n\n\n#actuality\n{\n	margin-top: 100px;\n	text-align: center;\n	font-family: Montserrat_Semi-Bold;\n	font-size: 3em;\n}\n\n#actualityc\n{\n	margin-top: 10px;\n	border: 5px solid black;\n	padding: 20px;\n	height: auto;\n	font-family: Montserrat;\n	margin-bottom: 100px;\n}\n\n#actualityc p\n{\n	text-align: justify;\n}\n\n#ourteam\n{\n	margin-top: 50px;\n	margin-bottom: 20px;\n}\n\n#members\n{\n	text-align: center;\n	font-size: 1.5em;\n	line-height: 1em;\n	margin-bottom: 30px;\n}\n\n#members i \n{\n	color: #696969;\n	font-size: 0.6em;\n}\n\n.avatar\n{\n	width: 150px;\n	height: 150px !important;\n	border-radius: 50%;\n	position: relative;\n	left: 50%;\n	transform: translateX(-50%) scale(1);\n	margin-bottom: 30px;\n	transition: .3s;\n}\n\n.avatar:hover\n{\n	transform: translateX(-50%) scale(1.1);\n	box-shadow: 10px 10px 20px rgba(1, 1, 1, .3);\n}\n\n#avatar1\n{\n	background-image: url(../img/alex.PNG);\n	background-size: cover;\n	background-position: center center;\n}\n\n#avatar2\n{\n	background-image: url(../img/lisa.PNG);\n	background-size: cover;\n	background-position: center center;\n}\n\n#avatar3\n{\n	background-image: url(../img/antoine.PNG);\n	background-size: cover;\n	background-position: center center;\n}\n\n.row\n{\n	height: auto;\n	margin-bottom: 10px;\n}\n\n.member_block{\n	text-align: center;\n}\n\n.contener_member{\n	width: 80%;\n}\n\n#homepage .title\n{\n	font-family: Montserrat_Semi-Bold;\n	font-size: 3.5em;\n	overflow: hidden;\n	margin: 0;\n	text-align: left;\n    padding: 0;\n}\n\n.title {\n	font-family: Montserrat_Regular;\n    overflow: hidden;\n    margin: 0;\n    text-align: center;\n    padding: 0.75em;\n    text-transform: uppercase;\n	font-size: 5.5em;\n}\n\n.title h1\n{\n	line-height: 0;\n}\n\n.center\n{\n	position: relative;\n	left: 50%;\n	transform: translateX(-50%);\n}\n\n.images\n{\n	height: 300px;\n	display: inline-block;\n}\n\n#levoyagedesacha\n{\n	background-image: url(../img/levoyagedesacha.jpg);\n	background-size: cover;\n	background-position: center center;\n	float: left;\n}\n\n#galerie\n{\n	background-image: url(../img/galerie.jpg);\n	background-size: cover;\n	background-position: center center;\n}\n\n#experiences\n{\n	background-image: url(../img/experiences.jpg);\n	background-size: cover;\n	background-position: center center;\n	float: left;\n}\n\n#destinations\n{\n	background-image: url(../img/destinations.jpg);\n	background-size: cover;\n	background-position: center center;\n}\n\n.articletext\n{\n	font-family: Montserrat_Semi-Bold;\n	font-size: 2.6em;\n	color: white;\n	text-shadow: 5px 5px 10px rgba(1, 1, 1, .6);\n	position: relative;\n	left: 50%;\n	top: 50%;\n	transform: translateX(-50%) translateY(-50%);\n	text-align: center;\n	margin: 0;\n}\n\n.onethird1\n{\n	width: 33.333%;\n}\n\n.twothirds1\n{\n	width: calc(66.666% - 10px);\n	margin-right: 10px;\n}\n\n.onethird2\n{\n	width: calc(33.333% - 10px);\n	margin-right: 10px;\n}\n\n.twothirds2\n{\n	width: 66.666%;\n}\n\n.images\n{\n	transition: .5s;\n}\n\n.images:hover\n{\n	transform: scale(0.95);\n}\n\n#contactus\n{\n	margin-top: 50px;\n	margin-bottom: 20px;\n}\n\n#contact\n{\n	margin-bottom: 100px;\n}\n\n\n#footer{\n	height: 300px;\n	background: rgba(0, 0, 0, 0.25);\n  	text-align: center;\n}\n\n\n/************MENU**********/\nul#menu{\n    margin: 0;\n} \n\n#burger_menu ul#menu{\n	width: 100%;\n	text-align: right;\n	/* background-color: rgb(0., 0., 0., 0.); */\n	position: fixed;\n	list-style: none;\n	z-index: 2;\n	height: 50px;\n	top: 0;\n	right: 0;\n	transition: background, transform 0.5s;\n	-webkit-transition: background, transform 0.5s;\n}\n\nul#menu a:last-child{\n	padding-right: 10px;\n}\n\n#menu li{\n	display: inline-block;\n	font-family: Montserrat_Light;\n	color: #FFF;\n	font-size: 1.2em;\n	margin-right: 15px;\n	position: relative;\n	top: 50%;\n	transform: translateY(-50%);\n	border-color: #FFF;\n}\n\n#menu a.current > li{\n	border-bottom: 2px solid;\n	border-color: #FFF;\n}\n\n#menu a:hover > li{\n	color:#dc6a1a;\n}\n\n#menu.dark{\n	background-color: #FFF;\n	-webkit-transition: all 0.5s;\n	transition: all 0.5s;\n}\n\n#menu.dark li{\n	color:#000;\n}\n\n#menu.dark a.current > li{\n	border-color: #000;\n}\n\n\n\n/*------------BURGER MENU------------*/\n\n\n\nnav #burger_menu #burger{\n	/* display: none; */\n	visibility: hidden;\n	top: 0;\n	right: 0;\n	z-index: 3;\n	background-color: black;\n	padding: 1em;\n	/* display: none; */\n	position: fixed;\n	/* display: none; */\n	transition: all 0.5s;\n	/* display: none; */\n	-webkit-transition: all 0.5s;\n}\n\n\n.burger-menu {\n  \n  cursor: pointer;\n  height: 35px;\n  width: 40px;\n  margin: 0 auto;\n  display: block;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n.burger-menu .bar {\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n  height: 2px;\n  width: 100%;\n  display: block;\n  background-color: white;\n}\n.burger-menu .bar:nth-of-type(2) {\n  margin: 12px 0;\n}\n.burger-menu--closed {\n  -webkit-transition-delay: 0.3s;\n          transition-delay: 0.3s;\n}\n.burger-menu--closed .bar {\n  float: right;\n}\n.burger-menu--closed .bar:nth-of-type(2) {\n  width: 75%;\n  -webkit-transition-property: margin, height, width;\n  transition-property: margin, height, width;\n  -webkit-transition-delay: 0.3s, 0.3s, 0s;\n          transition-delay: 0.3s, 0.3s, 0s;\n}\n.burger-menu--closed .bar:nth-of-type(3) {\n  width: 50%;\n}\n .burger-menu--closed:hover .bar:nth-of-type(2) {\n  width: 100%;\n}\n.burger-menu--closed:hover .bar:nth-of-type(3) {\n  width: 100%;\n}\n.burger-menu--opened {\n	transform: translateY(12px);\n}\n.burger-menu--opened .bar:nth-of-type(1) {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  -webkit-transition-delay: 0.3s;\n          transition-delay: 0.3s;\n  height: 3px;\n}\n.burger-menu--opened .bar:nth-of-type(2) {\n  opacity: 0;\n  height: 0;\n  margin: -3px;\n}\n.burger-menu--opened .bar:nth-of-type(3) {\n  -webkit-transform: rotate(-45deg);\n          transform: rotate(-45deg);\n  -webkit-transition-delay: 0.3s;\n          transition-delay: 0.3s;\n  height: 3px;\n}\n\n\n@media (max-width: 1200px){\n	nav #burger_menu #burger{\n		/* display: block; */\n		visibility: visible;\n		/* -webkit-transition: all 0.5s;\n		transition: all 0.5s; */\n	}\n\n	nav #burger_menu #menu{\n		/* display: none; */\n		visibility: hidden;\n		/* display: none; */\n		transform: translateY(-100%);\n		/* display: none; */\n		transition: all 0.5s;\n		\n	}\n\n	nav #burger_menu #menu.burger{\n		/* display: block; */\n		visibility: visible;\n		background-color: black;\n		margin: 0px;\n		top: 0px;\n		/* display: block; */\n		text-align: center;\n		/* display: block; */\n		height: 100%;\n		/* display: block; */\n		transform: translateY(0%);;\n		/* -webkit-transition: all 0.5s;\n		transition: all 0.5s; */\n	}\n	nav #burger_menu #menu.burger li{\n		font-size: 1.8em;\n		margin-bottom: 1em;\n		border: none;\n		color: #FFF;\n		margin-left: 2EM;\n		margin-right: 2em;\n		/* right: 0; */;\n		\n	}\n\n	nav #burger_menu #menu.burger a{\n	}\n\n	nav #burger_menu #menu.burger a:hover > li{\n		border-bottom: 2px solid #FFF;\n	}\n\n	nav #burger_menu #menu.burger a:last-child{\n		padding: 0;\n	}\n}\n\n",
 			"file": "css/style.css",
+			"file_size": 8188,
+			"file_write_time": 131244976083040957,
 			"settings":
 			{
-				"buffer_size": 6635,
+				"buffer_size": 7678,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,7 +194,7 @@
 			"file": "css/experiences.css",
 			"settings":
 			{
-				"buffer_size": 4593,
+				"buffer_size": 4708,
 				"line_ending": "Windows"
 			}
 		},
@@ -393,7 +400,7 @@
 	],
 	"find":
 	{
-		"height": 86.0
+		"height": 104.0
 	},
 	"find_in_files":
 	{
@@ -410,6 +417,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
+			"		\n",
+			"headerc",
+			"top",
+			"exp",
+			"clickCatExpAnim",
+			"#menu",
 			"menu",
 			"click",
 			"affa",
@@ -556,7 +570,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -630,8 +644,8 @@
 						"selection":
 						[
 							[
-								274,
-								274
+								779,
+								779
 							]
 						],
 						"settings":
@@ -643,30 +657,53 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 3,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 3,
-					"file": "scripts/script.js",
+					"file": "scripts/load.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1727,
+						"buffer_size": 9557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1727,
-								1727
+								3930,
+								3930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2838.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scripts/script.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
 							]
 						],
 						"settings":
@@ -676,41 +713,18 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 132.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "scripts/load.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1474,
-								1474
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 874.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
 				{
 					"buffer": 5,
 					"file": "scripts/maps.js",
@@ -738,7 +752,7 @@
 						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -747,15 +761,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6635,
+						"buffer_size": 7678,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6568,
-								6568
+								2488,
+								2507
 							]
 						],
 						"settings":
@@ -763,10 +777,10 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 8963.0,
+						"translation.y": 3351.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -775,15 +789,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4593,
+						"buffer_size": 4708,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4398,
-								4371
+								4706,
+								4706
 							]
 						],
 						"settings":
@@ -793,10 +807,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4105.0,
+						"translation.y": 4437.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -812,8 +826,8 @@
 						"selection":
 						[
 							[
-								181,
-								199
+								348,
+								348
 							]
 						],
 						"settings":
@@ -825,7 +839,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -855,7 +869,7 @@
 						"translation.y": 7838.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -917,7 +931,7 @@
 		"cols":
 		[
 			0.0,
-			0.45217117684,
+			0.454059156702,
 			1.0
 		],
 		"rows":

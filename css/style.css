@@ -32,6 +32,7 @@ p{
 #home #header{
   background: url(../img/background.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 * {
@@ -299,21 +300,20 @@ ul#menu{
 	text-align: right;
 	/* background-color: rgb(0., 0., 0., 0.); */
 	position: fixed;
-	right: 0;
 	list-style: none;
-	margin-right: 6px;
 	z-index: 2;
 	height: 50px;
 	top: 0;
-	/* transition: background-color 400ms ease-out; */
+	right: 0;
+	transition: background, transform 0.5s;
+	-webkit-transition: background, transform 0.5s;
 }
 
 ul#menu a:last-child{
 	padding-right: 10px;
 }
 
-#menu li
-{
+#menu li{
 	display: inline-block;
 	font-family: Montserrat_Light;
 	color: #FFF;
@@ -326,12 +326,28 @@ ul#menu a:last-child{
 }
 
 #menu a.current > li{
-	border-bottom: 2px solid #FFF;
+	border-bottom: 2px solid;
+	border-color: #FFF;
 }
 
 #menu a:hover > li{
 	color:#dc6a1a;
 }
+
+#menu.dark{
+	background-color: #FFF;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#menu.dark li{
+	color:#000;
+}
+
+#menu.dark a.current > li{
+	border-color: #000;
+}
+
 
 
 /*------------BURGER MENU------------*/
@@ -339,24 +355,30 @@ ul#menu a:last-child{
 
 
 nav #burger_menu #burger{
-	display: none;
-	position: fixed;
+	/* display: none; */
+	visibility: hidden;
 	top: 0;
 	right: 0;
 	z-index: 3;
 	background-color: black;
-	padding: 1em;;
-	-webkit-transition: all 0.5s;
+	padding: 1em;
+	/* display: none; */
+	position: fixed;
+	/* display: none; */
 	transition: all 0.5s;
+	/* display: none; */
+	-webkit-transition: all 0.5s;
 }
 
+
 .burger-menu {
-  -webkit-transition: all 0.3s;
+  
   cursor: pointer;
   height: 35px;
   width: 40px;
   margin: 0 auto;
   display: block;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .burger-menu .bar {
@@ -419,20 +441,53 @@ nav #burger_menu #burger{
 
 @media (max-width: 1200px){
 	nav #burger_menu #burger{
-	display: block;
+		/* display: block; */
+		visibility: visible;
+		/* -webkit-transition: all 0.5s;
+		transition: all 0.5s; */
 	}
 
 	nav #burger_menu #menu{
-		display: none;
+		/* display: none; */
+		visibility: hidden;
+		/* display: none; */
+		transform: translateY(-100%);
+		/* display: none; */
+		transition: all 0.5s;
+		
 	}
 
 	nav #burger_menu #menu.burger{
-		display: block;
-		top: 90px;
+		/* display: block; */
+		visibility: visible;
+		background-color: black;
+		margin: 0px;
+		top: 0px;
+		/* display: block; */
+		text-align: center;
+		/* display: block; */
+		height: 100%;
+		/* display: block; */
+		transform: translateY(0%);;
+		/* -webkit-transition: all 0.5s;
+		transition: all 0.5s; */
 	}
 	nav #burger_menu #menu.burger li{
-		display: block;
+		font-size: 1.8em;
+		margin-bottom: 1em;
 		border: none;
+		color: #FFF;
+		margin-left: 2EM;
+		margin-right: 2em;
+		/* right: 0; */;
+		
+	}
+
+	nav #burger_menu #menu.burger a{
+	}
+
+	nav #burger_menu #menu.burger a:hover > li{
+		border-bottom: 2px solid #FFF;
 	}
 
 	nav #burger_menu #menu.burger a:last-child{

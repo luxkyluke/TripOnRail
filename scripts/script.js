@@ -15,7 +15,7 @@ $(document).ready(function(){
   		});
 
 
-      //Scroll menu degrader
+      //Scroll menu degradé
       var header_h = $('header').height();
       var nav_h = $('#menu').height();  
       
@@ -38,26 +38,28 @@ $(document).ready(function(){
 
       if(st-header_h+nav_h > 0){
         //$('#menu').css('border-bottom', '3px solid black');
-        $('#menu li').css('color', menuLiColorHeader);
+        /*$('#menu li').css('color', menuLiColorHeader);
         $('#menu a.current > li').css('border-color', menuLiColorHeader);
         $('#menu a').hover(function(){
           $(this).children('li').css('color', menuLiColorHover);
         }, function(){
           $(this).children('li').css('color', menuLiColorHeader);
-        });
+        });*/
+        $('#menu').addClass('dark');
       }
       else{
         //$('#menu').css('border-bottom', 'none');
-        $('#menu li').css('color', menuLiColorPage);
+        /*$('#menu li').css('color', menuLiColorPage);
         $('#menu a.current > li').css('border-color', menuLiColorPage);
         $('#menu a').hover(function(){
           $(this).children('li').css('color', menuLiColorHover);
         }, function(){
           $(this).children('li').css('color', menuLiColorPage);
-        });
+        });*/
+        $('#menu').removeClass('dark');
       }
       
-      $('#menu').css('background-color', navBackColor);
+      //$('#menu').css('background-color', navBackColor);
 	});
 
 

@@ -46,17 +46,25 @@ var pays = [
 	
 
 	$("nav").load(TEMPLATE_PATH+'nav.html', function()	{
-		$('.js-scrollTo').on('click', function() { 
+		/*$('.js-scrollTo').on('click', function() { 
 		var ref = $(this).attr('href'); 
-		var speed = 750; 
+		var endPos = $(ref).offset().top;
+		var beginPos = $(this).scrollTop();
+		var speed = abs(beginPos/endPos)*10000; 
+		console.log(speed);
 		$('html, body').animate( { scrollTop: $(ref).offset().top }, speed );
 			return false;
 		});
-		$('.burger-menu').on('click', function() {
-		  $(this).toggleClass("burger-menu--opened");
-		  $(this).toggleClass("burger-menu--closed");
-		  $("#menu").toggleClass("burger");
+*/		
+		$('.burger-menu').on('click', function(e) {
+			e.preventDefault();
+		  	$(this).toggleClass("burger-menu--opened");
+		  	$(this).toggleClass("burger-menu--closed");	
+		  	$("#menu").toggleClass("burger");
 		});
+		$('#burger').click(function(e){
+			e.preventDefault();
+		})
 		console.log("load nav "+page+" OK");
 		--done;
 		if(done == 0){
@@ -151,7 +159,7 @@ function affArticle(name){
 					updateCurrent();
 					$('html, body').animate({
 						scrollTop: $("#ourteam").offset().top-50
-					}, 1500, false);
+					}, 2000, false);
 				});
 			}
 			break;
@@ -256,6 +264,7 @@ function clickCatExpAnim(current, scroll){
 function experienceAnim(){
 	$("#cat_decouverte a li").click(function(){
 		clickCatExpAnim($(this), true);
+		return false;
 	});
 }
 

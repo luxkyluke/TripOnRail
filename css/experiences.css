@@ -80,7 +80,7 @@
 }
 
 #main_logo_cat{
-	width: 200px;
+	width: 50%;
 }
 
 #top_title{
@@ -201,9 +201,9 @@ a .middle h2 {
     font-size: 17px;
     text-transform: uppercase;
     color: #FFFFFF;
-    font-weight: 900;
     margin: 0 20px;
     padding-top: 10px;
+    font-weight: 900;
 }
 
 @media (max-width: 1150px){
@@ -217,5 +217,14 @@ a .middle h2 {
     #article_conteneur a {
         width: 48%;
     }
+    p.title{
+        font-size: 3.8em;
+    }
 }
 
+
+@media (max-width: 650px){
+    p.title{
+        font-size: 2em;
+    }
+}
