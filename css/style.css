@@ -6,7 +6,6 @@
 @import 'contactform.css';
 @import 'experiences.css';
 @import 'destinations.css';
-@import 'levoyagedesacha.css';
 
 
 html, body{
@@ -32,8 +31,8 @@ p{
 
 #home #header{
   background: url(../img/background.jpg);
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 * {
@@ -168,14 +167,13 @@ p{
 }
 
 .title {
-	font-family: Arenq;
-    font-size: 5.5em;
+	font-family: Montserrat_Regular;
     overflow: hidden;
     margin: 0;
     text-align: center;
-    font-weight: bold;
     padding: 0.75em;
     text-transform: uppercase;
+	font-size: 5.5em;
 }
 
 .title h1

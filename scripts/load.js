@@ -111,8 +111,8 @@ function updateCurrent(){
 
 function affArticle(name){
 	switch(name){
-		case "levoyagedesacha":
-			load_template_page("levoyagedesacha", "Le Voyage de Sacha", function()
+		case "sacha":
+			load_template_page("sacha", "Le Voyage de Sacha", function()
 			{
 				nav_current = '#nav_sacha';
 				updateCurrent();
@@ -207,42 +207,26 @@ function affArticle(name){
 function loadImgsBackGrounds(page){
    	switch(page){
 		case "article":
-			document.getElementById("header").style.backgroundImage = "url('img/articles/"+$("#page").data("id")+"/background.jpg')";;
+			document.getElementById("header").style.backgroundImage = "url('img/articles/"+$("#page").data("id")+"/background.jpg')";
 			break;
-
-		case "experiences":
-			document.getElementById("header").style.backgroundImage = "url('img/experiences/background.jpg')";
-			document.getElementById("header").style.backgroundPosition = "center";
-			$(".bg").each(function(){
-				var src = $(this).data('src');
-				if(src != undefined){
-					$(this).css('background-image', 'url('+src+')');
-				}
-			});
-			break;
-
-		case "destinations":
-			$(".bg").each(function(){
-				var src = $(this).data('src');
-				if(src != undefined){
-					$(this).css('background-image', 'url('+src+')');
-				}
-			});
-			break;
-
-		case "levoyagedesacha":
-			$(".bg").each(function()
-			{
-				var src = $(this).data('src');
-				if (src != undefined)
-				{
-					$(this).css('background-image', 'url('+src+')');
-				}
-			})
 
 		default :
+			loadBG();
 			break;
 	}
+}
+
+function loadBG(){
+	$(".bg").each(function(){	
+		var src = $(this).data('src');
+		if (src != undefined){
+			if($(this).hasClass('article_header')){
+				$('#header').css('background-image', 'url('+src+')');
+			}
+			else
+				$(this).css('background-image', 'url('+src+')');
+		}
+	})
 }
 
 function clickCatExpAnim(current, scroll){
