@@ -6,6 +6,7 @@
 @import 'contactform.css';
 @import 'experiences.css';
 @import 'destinations.css';
+@import 'levoyagedesacha.css';
 
 
 html, body{
@@ -334,7 +335,7 @@ ul#menu a:last-child{
 }
 
 #menu.dark{
-	background-color: #FFF;
+	background-color: transparent;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
