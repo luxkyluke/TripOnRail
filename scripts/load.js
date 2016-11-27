@@ -282,8 +282,8 @@ function destinationsLoad(){
 	if(parseInt(nbExp)>1)
 		exp +="s";
 
-	$('#region_title').html("Tout <span class='count'>"+ nbExp + exp +"</span>");
-		
+	$('#region_title').html("Tout "+"<span class='count'>"+ nbExp + exp +"</span>");
+	$('.inject h2 a').html("Tout " + "<span class='count'>"+nbExp +"</span>");	
 
 	var nbExpByContinents = [];
 	for(var i=0; i < continents.length; i++){
@@ -318,9 +318,10 @@ function destinationsLoad(){
 		if(parseInt(nb)>1)
 			exp +="s";
 
-		$('#region_title').html(nom + "<span class='count'>"+ nb + exp +"</span>");
-		$('.inject h2 a').html(nom + "<span class='count'>"+nb+"</span>");
-		
+		$('#region_title').html(nom + " <span class='count'>"+ nb + exp +"</span>");
+		$('.inject h2 a').html(nom + " <span class='count'>"+nb+"</span>");
+		$('.inject h2 a').data('cont', idContinent);
+
 		if(idContinent == 0){
 			$(".article_bloc").css("display", "inline-block");
 			$('.inject ul li').css("display", "block");
@@ -352,8 +353,8 @@ function destinationsLoad(){
 	$('.inject a').click(function(){
 		var idPays = $(this).data('id');
 
-		//on changer le current curseur
 
+		//on changer le current curseur
 		resetSelectedCountry(this);
 
 		//on change le titre et le nbExp
@@ -368,17 +369,27 @@ function destinationsLoad(){
 
 		$('#region_title').html(nom + "<span class='count'>"+nb+exp+"</span>");
 
-
-		//on efface tous les blocs articles
 		$(".article_bloc").css("display", "none");
-		$(".country_"+idPays).each(function(){
-			$(this).css('display', 'inline-block');
-		});
-
+		if(idPays == 0){
+			var idCont = $(this).data('cont');
+			if(idCont == 0)
+				$(".article_bloc").css("display", "inline-block");
+			else
+				$(".continent_"+idCont).each(function(){
+					$(this).css('display', 'inline-block');
+				});
+		}
+		else{
+			//on efface tous les blocs articles
+			$(".country_"+idPays).each(function(){
+				$(this).css('display', 'inline-block');
+			});
+		}	
 		$('html, body').animate({
 	        scrollTop: $("#page").offset().top-50
 	    }, 1000);
 		return false;
+
 	});
 }
 

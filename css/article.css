@@ -53,8 +53,7 @@
 .food_img{
 	display: table-cell;
  	vertical-align:middle;
-	padding-top: 22%;
-	background: url(../img/noodles.jpg) no-repeat center center;
+	padding-top: 24%;
   	background-size: cover;
   	border: 2px #000 solid;
 
