@@ -111,6 +111,14 @@ function updateCurrent(){
 
 function affArticle(name){
 	switch(name){
+		case "levoyagedesacha":
+			load_template_page("levoyagedesacha", "Le Voyage de Sacha", function()
+			{
+				nav_current = '#nav_sacha';
+				updateCurrent();
+			})
+			break;
+
 		case "article":
 			load_template_page("article", "article", function(){
 				nav_current = '#nav_article';
@@ -221,6 +229,16 @@ function loadImgsBackGrounds(page){
 				}
 			});
 			break;
+
+		case "levoyagedesacha":
+			$(".bg").each(function()
+			{
+				var src = $(this).data('src');
+				if (src != undefined)
+				{
+					$(this).css('background-image', 'url('+src+')');
+				}
+			})
 
 		default :
 			break;
