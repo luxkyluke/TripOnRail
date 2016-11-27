@@ -492,5 +492,11 @@ nav #burger_menu #burger{
 	nav #burger_menu #menu.burger a:last-child{
 		padding: 0;
 	}
+
+	.bg{
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 }
 

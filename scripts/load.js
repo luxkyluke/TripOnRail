@@ -208,6 +208,7 @@ function loadImgsBackGrounds(page){
    	switch(page){
 		case "article":
 			document.getElementById("header").style.backgroundImage = "url('img/articles/"+$("#page").data("id")+"/background.jpg')";
+			loadBG();
 			break;
 
 		default :
