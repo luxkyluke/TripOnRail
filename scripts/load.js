@@ -116,6 +116,9 @@ function affArticle(name){
 			{
 				nav_current = '#nav_sacha';
 				updateCurrent();
+				// CA MARCHE PO
+			    // var offset2 = $('#chapter2 .chaptertitle').offset().top;
+			    // $("#dot2").css("top", offset2);
 			})
 			break;
 

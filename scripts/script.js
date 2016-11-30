@@ -62,5 +62,14 @@ $(document).ready(function(){
       //$('#menu').css('background-color', navBackColor);
 	});
 
+    $(document).scroll(function()
+    {
+        if ($(this).scrollTop() > $(window).height())
+        {
+            $("#header").css("background-image", "url(img/experiences/background.jpg)");
+        }
+    })
+
+   
 
 });
