@@ -55,6 +55,12 @@ function initMap(){
       google.maps.event.addListener(marker, 'click', function(){
           markerClickEvent(this.id);
       });
+
+      $(window).on('resize', function() {
+          var currCenter = map.getCenter();
+          google.maps.event.trigger(map, 'resize');
+          map.setCenter(currCenter);
+      })
     });
 
     map.mapTypes.set('map_style', styledMap);

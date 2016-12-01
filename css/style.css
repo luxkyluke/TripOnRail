@@ -464,7 +464,7 @@ nav #burger_menu #burger{
 }
 
 
-@media (max-width: 1200px){
+@media screen and (max-width: 1024px){
 	nav #burger_menu #burger{
 	visibility: visible;
 	}

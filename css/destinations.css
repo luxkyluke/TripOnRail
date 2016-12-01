@@ -3,7 +3,7 @@
 }
 
 #destinations_map{
-	height: 500px;
+	height: 450px;
 	width: 100%;
 }
 
@@ -171,6 +171,7 @@
 
 .destinations .inner aside .block.continents ul li {
     border-top: 1px solid #f2f2f2;
+    display: none;
 }
 
 .destinations .inner .sidecontent {
@@ -238,6 +239,10 @@
     backface-visibility: hidden;
 }
 
+.destinations .inner aside .block.continents ul li.visible{
+    display: block;
+}
+
 .destinations .inner aside .block.continents ul li a.selected {
     color: #212120;
 }
@@ -251,7 +256,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    margin-top: -9px;
+    margin-top: -6.5px;
 }
 
 .destinations .inner aside .block.continents h2 span.count {
@@ -264,7 +269,7 @@
 	position: absolute;
 	right: 0;
 	top: 50%;
-	margin-top: -9px;
+	margin-top: -8px;
 }
 
 .labels {
@@ -277,4 +282,170 @@
      width: 40px;
      border: 2px solid black;
      white-space: nowrap;
-   }
+}
+
+
+@media screen and (max-width: 1024px){
+    #destinations_map {
+        height: 400px;
+    }
+    .destinations .regions .label{
+        font-size: 15px;
+        line-height: 35px;
+    }
+    .destinations .regions .items a{
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .destinations .regions .items{
+        margin: auto;
+        text-align: center;
+    }
+    
+    .destinations .inner .sidecontent h1{
+        font-size: 35px;
+    }
+
+    .destinations .inner .sidecontent h1 span.count{
+        padding: 0px 10px;
+        line-height: 17px;
+        margin-top: 0px;
+        width: auto;
+        word-spacing: 3px;
+        margin-left: 15px;
+    }
+
+    .destinations .inner .sidecontent #article_conteneur a{
+            line-height: 190px;
+    }
+
+    .gmnoprint{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .destinations .inner aside .block.continents ul li.visible{
+        display: inline-block;
+    }
+
+    .destinations .inner aside .block.continents h2 {
+        margin: auto;
+        text-align: center;
+        border-bottom: 1px solid #e7e7e7;
+        width: 70%;
+        padding-bottom: 5px;
+        margin-bottom: 2px;
+    }
+
+    .destinations .inner {
+        padding-top : 25px;
+    }
+
+    .destinations .inner aside {
+        width: 100%;
+    }
+
+    .destinations .inner aside .block.continents h2 a span.count{
+        right: inherit;
+        margin-left: 10px;
+        margin-top: -10px;
+    }
+
+    .destinations .regions {
+        padding-bottom: 5px;
+    }
+
+    .destinations .inner aside .block.continents ul li a span.count{
+        position: relative;
+        margin-top: 0px;
+    }
+
+    .destinations .inner aside .block.continents ul li a {
+        display: inline-block;
+        line-height: 25px;
+        position: relative;
+        font-size: 13px;
+    }
+
+    .destinations .inner aside .block.continents ul li{
+        border: none;
+        display: none;
+        margin-right: 7px;
+        margin-left: 7px;
+        margin-bottom: 0;
+
+    }
+
+    .destinations .inner aside .block.continents ul{
+        margin: auto;
+        text-align: center;
+        padding-bottom: 7px;
+    }
+
+    .destinations .inner aside .block.continents{
+        padding-top: 7px;
+    }
+
+    .destinations .inner .sidecontent{
+        width: 100%;
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (max-width: 750px){
+    .destinations .inner aside .block.continents h2 {
+        font-size: 15px;
+    }
+
+    .destinations .inner aside .block.continents h2 a span.count{
+        margin-top: -9px;
+    }
+
+    #destinations_map {
+        height: 350px;
+    }
+    .destinations .regions .items a{
+        margin: 0 3px;
+        font-size: 13px;
+    }
+    .destinations .regions .items{
+        line-height: 30px;
+    }
+
+    .destinations a span.count {
+        line-height: 11px;
+        font-size: 10px;
+        width: 18px;
+    }
+
+    .destinations .regions .items a.selected:after {
+        left: 100%;
+        right: 100%;
+    }
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 520px){
+    .destinations .inner .sidecontent #article_conteneur a{
+            line-height: 150px;
+    }
+
+    .logo_categorie, .logo{
+        width: 70px;
+    }
+
+    a .middle h2{
+        font-size: 11.5px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .destinations .inner .sidecontent #article_conteneur a{
+        width: 100%;
+    }
+}
+
+

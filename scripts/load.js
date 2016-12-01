@@ -274,6 +274,14 @@ function experienceAnim(){
 	});
 }
 
+function scrollToPage(){
+	if($(window).width()>1024){
+		$('html, body').animate({
+	        scrollTop: $("#page").offset().top-50
+	    }, 1000);
+	}
+}
+
 function destinationsLoad(){
 	//initialisation des indicateurs de nombre 
 	//le nb d'exp par région
@@ -327,28 +335,26 @@ function destinationsLoad(){
 
 		if(idContinent == 0){
 			$(".article_bloc").css("display", "inline-block");
-			$('.inject ul li').css("display", "block");
+			$('.inject ul li').addClass('visible');
 		}
 		else{
 			//on efface tous les blocs articles
 			$(".article_bloc").css("display", "none");
 			
 			//on efface tous les pays dans la fenetre de gauche
-			$('.inject ul li').css("display", "none");
+			$('.inject ul li').removeClass('visible');
 			
 
 			$(".continent_"+idContinent).each(function(){
 				var idPays = $(this).data('pays');
-				$('#pays_'+idPays).css('display', 'block');
+				$('#pays_'+idPays).addClass('visible');
 				//console.log($(' li').find("data-id='"+idPays+"'"));
 			
 				$(this).css('display', 'inline-block');
 			});
 
 		}
-		$('html, body').animate({
-	        scrollTop: $("#page").offset().top-50
-	    }, 1000);
+		scrollToPage();
 		return false;
 	});
 
@@ -388,9 +394,7 @@ function destinationsLoad(){
 				$(this).css('display', 'inline-block');
 			});
 		}	
-		$('html, body').animate({
-	        scrollTop: $("#page").offset().top-50
-	    }, 1000);
+		scrollToPage();
 		return false;
 
 	});
