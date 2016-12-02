@@ -266,10 +266,10 @@
 
 
 .destinations .inner aside .block.continents span.count {
-	position: absolute;
 	right: 0;
 	top: 50%;
 	margin-top: -8px;
+    position: absolute;
 }
 
 .labels {
@@ -284,6 +284,9 @@
      white-space: nowrap;
 }
 
+.gm-style > div:nth-child(7){
+    display:none;
+}
 
 @media screen and (max-width: 1024px){
     #destinations_map {
@@ -335,8 +338,8 @@
         text-align: center;
         border-bottom: 1px solid #e7e7e7;
         width: 70%;
-        padding-bottom: 5px;
-        margin-bottom: 2px;
+        padding-bottom: 8px;
+        margin-bottom: 7px;
     }
 
     .destinations .inner {
@@ -350,7 +353,8 @@
     .destinations .inner aside .block.continents h2 a span.count{
         right: inherit;
         margin-left: 10px;
-        margin-top: -10px;
+        margin-top: -3px;
+        position: relative;;
     }
 
     .destinations .regions {
@@ -381,7 +385,7 @@
     .destinations .inner aside .block.continents ul{
         margin: auto;
         text-align: center;
-        padding-bottom: 7px;
+        padding-bottom: 8px;
     }
 
     .destinations .inner aside .block.continents{
@@ -401,7 +405,7 @@
     }
 
     .destinations .inner aside .block.continents h2 a span.count{
-        margin-top: -9px;
+    margin-top: -2px;
     }
 
     #destinations_map {
@@ -419,6 +423,7 @@
         line-height: 11px;
         font-size: 10px;
         width: 18px;
+        padding-bottom: 2px;
     }
 
     .destinations .regions .items a.selected:after {
@@ -444,7 +449,7 @@
 
 @media screen and (max-width: 450px){
     .destinations .inner .sidecontent #article_conteneur a{
-        width: 100%;
+        width: 90%;
     }
 }
 
