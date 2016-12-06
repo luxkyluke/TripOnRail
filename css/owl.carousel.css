@@ -1,6 +1,7 @@
 /* 
  *  Owl Carousel - Animate Plugin
  */
+
 .owl-carousel .animated {
   -webkit-animation-duration: 1000ms;
   animation-duration: 1000ms;
@@ -62,6 +63,7 @@
 .owl-carousel .owl-stage {
   position: relative;
   -ms-touch-action: pan-Y;
+  background-color: yellow;
 }
 .owl-carousel .owl-stage:after {
   content: ".";
