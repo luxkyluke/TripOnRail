@@ -8,6 +8,11 @@
   font-size: 16px;
   font-family: Montserrat_Semi-Bold;
   letter-spacing: 2px;
+  color: black;
+}
+
+.font:hover
+{
   color: white;
 }
 .form {
@@ -16,83 +21,72 @@
   -moz-animation: bounce 1.5s infinite;
   animation: bounce 1.5s infinite;
 }
-.shadow{
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .3);
-  opacity: 0.5;
-  border-radius: 100px;
-  width: 45%; 
-  margin: 40px auto 0 auto;
-  padding: 0 10px;  
-  -webkit-animation: shadow 1.5s infinite;
-}
+
 .field-in {
   display: block;
   margin: 10px auto;
   padding: 10px;
-  border-radius: 5px;
   border: none;
   width: 60%;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  transition: all 0.2s ease 0s;
 }
-.name {
-  background-color: rgba(23, 110, 60, .6);  
-  border-bottom: 5px solid rgba(23, 110, 60, 1);
+.name {  
+  border: 5px solid black;
+  color: black;
 }
 .name:hover{
-  background-color: rgba(23, 110, 60, .8);
-  border-bottom: 5px solid rgba(23, 110, 60, 1);
+  background-color: black;
+  color: white;
 }
 .name:focus, .email:focus, .message:focus{
   outline: none;
   padding:15px;
 }
-.email {
-  background-color: rgba(198, 187, 79, .8);  
-  border-bottom: 5px solid rgba(198, 187, 79, 1);
+.email {  
+  border: 5px solid black;
 }
 .email:hover{
-  background-color: rgba(198, 187, 79, .99);
-  border-bottom: 5px solid rgba(198, 187, 79, 1);
+  background-color: black;
+  color: white;
 }
 .message {   
-  background-color: rgba(110, 36, 33, .6);
-  border-bottom: 5px solid rgba(110, 36, 33, .1);
-  overflow: hidden;
+  border: 5px solid black;
   height: 50px;
+  overflow: hidden;
 }
 .message:hover{
-  background-color: rgba(110, 36, 33, .8);
-  border-bottom: 5px solid rgba(110, 36, 33, 1);
+  color: white;
+  background-color: black;
   height: 150px;
 }
 .submit{
-  border-radius:5px;
-  padding: 0px 20px;
-  background-color: #bcbcbc;  
-  border: none;
-  border-bottom: 5px solid #888888;  
+  background-color: white;
+  height: 50px;
+  padding: 0px 20px; 
+  border: 5px solid black;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 .submit:hover{
-  transform: translate(0, 4px);  
+  color: white;
   cursor: pointer;
+  background-color: black;
 }
 ::-webkit-input-placeholder {
-   color: white;
+   color: black;
 }
 
 :-moz-placeholder { 
-   color: white;
+   color: black;
 }
 
 ::-moz-placeholder { 
-   color: white; 
+   color: black; 
 }
 
 :-ms-input-placeholder {  
-   color: white;  
+   color: black;  
 }
