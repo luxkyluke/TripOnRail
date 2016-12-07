@@ -24,12 +24,20 @@ var pays = [
 	"France", 	//id 1
 	"Italy",  	//id 2
 	"Russie", 	//id 3
-	"Australie",	//id 4
+	"Australie",//id 4
 	"Mexique",	//id 5
-	"South Africa", //id 6
-	"Pérou",		//id 7
+	"Afrique du Sud", //id 6
+	"Pérou",	//id 7
 	"Alaska",	//id 8
-	"Japon"		//id 9
+	"Japon",	//id 9
+	"Inde",		//id 10
+	"Portugal",	//id 11
+	"Nevada",	// id 12
+	"Royaume-Uni", //id 13
+	"Californie", //id 14
+	"Tunisie",	//id 15
+	"Suisse",	//id 16
+	"Bolivie"	//id 17
 ];
 
  function basic_load(page, _callback){

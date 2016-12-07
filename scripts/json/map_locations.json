@@ -52,5 +52,53 @@
       "latitude":"37.827013",
       "longitude":"140.009856",
       "title":"Japon"
+   },
+   {
+      "id":"10",
+      "latitude":"29.962288",
+      "longitude":"77.510572",
+      "title":"Inde"
+   },
+   {
+      "id":"11",
+      "latitude":"38.736920",
+      "longitude":"-9.007566",
+      "title":"Portugal"
+   },
+   {
+      "id":"12",
+      "latitude":"40.668955",
+      "longitude":"-116.815079",
+      "title":"Nevada"
+   },
+   {
+      "id":"13",
+      "latitude":"52.980099",
+      "longitude":"-1.655842",
+      "title":"Royaume-Uni"
+   },
+   { 
+      "id":"14",
+      "latitude":"37.169017",
+      "longitude":"-122.229747",
+      "title":"Californie"
+   },
+   {
+      "id":"15",
+      "latitude":"33.699738",
+      "longitude":"9.375625",
+      "title":"Tunisie"
+   },
+   {
+      "id":"16",
+      "latitude":"46.663134",
+      "longitude":"7.892202",
+      "title":"Suisse"
+   },
+   {
+      "id":"17",
+      "latitude":"-16.385726",
+      "longitude":"-63.197411",
+      "title":"Bolivie"
    }
-] 
+]
