@@ -1,8 +1,8 @@
 [  
    {  
       "id":"1",
-      "latitude":"46",
-      "longitude":"1.5",
+      "latitude":"48.857934",
+      "longitude":"2.414349",
       "title":"France"
    },
    {  
@@ -22,5 +22,35 @@
       "latitude":"-21.353368",
       "longitude":"133.795000",
       "title":"Australie"
+   },
+   {
+      "id":"5",
+      "latitude":"25.767977",
+      "longitude":"-108.963261",
+      "title":"Mexique"
+   },
+   {
+      "id":"6",
+      "latitude":"-25.791473",
+      "longitude":"28.179005",
+      "title":"Afrique du Sud"
+   },
+      {
+      "id":"7",
+      "latitude":"-13.495003",
+      "longitude":"-72.043039",
+      "title":"Pérou"
+   },
+   {
+      "id":"8",
+      "latitude":"59.453775",
+      "longitude":"-135.319414",
+      "title":"Alaska"
+   },
+   {
+      "id":"9",
+      "latitude":"37.827013",
+      "longitude":"140.009856",
+      "title":"Japon"
    }
-]
+] 

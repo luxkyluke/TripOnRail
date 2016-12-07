@@ -35,6 +35,9 @@ function initMap(){
 
     var points = getJSON('scripts/json/map_locations.json');
 
+    if(points == null)
+      return false;
+
     var map = new google.maps.Map(document.getElementById('destinations_map')
       , mapOptions);
 
