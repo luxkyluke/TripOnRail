@@ -2,7 +2,7 @@
  var articles;
  var nav_current;
  var articles = [
- 	"karunda scenic railway"
+ 	"el chepe"
 
  ];
 
@@ -24,7 +24,12 @@ var pays = [
 	"France", 	//id 1
 	"Italy",  	//id 2
 	"Russie", 	//id 3
-	"Australie"	//id 4
+	"Australie",	//id 4
+	"Mexique",	//id 5
+	"South Africa", //id 6
+	"Pérou",		//id 7
+	"Alaska",	//id 8
+	"Japon"		//id 9
 ];
 
  function basic_load(page, _callback){
@@ -118,7 +123,37 @@ function affArticle(name){
 			break;
 
 		case "article":
-			load_template_page("article", "article", function(){
+			load_template_page("article", "Title", function(){
+				nav_current = '#nav_article';
+				updateCurrent();
+			});
+			break;
+		case "El_Chepe":
+			load_template_page("El_Chepe", "El Chepe - Mexique", function(){
+				nav_current = '#nav_article';
+				updateCurrent();
+			});
+			break;
+		case "Blue_Train":
+			load_template_page("Blue_Train", "Blue Train - South Africa", function(){
+				nav_current = '#nav_article';
+				updateCurrent();
+			});
+			break;
+		case "Hiram_Bingham":
+			load_template_page("Hiram_Bingham", "Hiram Bingham - Pérou", function(){
+				nav_current = '#nav_article';
+				updateCurrent();
+			});
+			break;
+		case "Petite_Ceinture":
+			load_template_page("Petite_Ceinture", "Petite Ceinture - France", function(){
+				nav_current = '#nav_article';
+				updateCurrent();
+			});
+			break;
+		case "White_Pass":
+			load_template_page("White_Pass", "White Pass and Yukon Route - Alaska", function(){
 				nav_current = '#nav_article';
 				//$(".owl-carousel").owlCarousel();
 				loadCaroussel();
@@ -413,8 +448,8 @@ function markerClickEvent(id){
 function loadCaroussel(){
 	var owl = $('.owl-carousel');
 	owl.owlCarousel({
-	    items:6,
-	    loop:true,
+	    items: 6,
+	    loop: true,
 	    autoWidth:true
 	});
 	owl.on('click', function (e) {

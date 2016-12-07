@@ -1,13 +1,14 @@
 /*******	HEADER	******/
 
-.article_header{
+#caroussel
+{
 	width: 100%;
-	height: 75%;
-	margin: 0;
+	height: 100%;
 }
 
-.article_header #header #title_logo{
-	top: 35%;
+.owl-carousel
+{
+	background-color: red;
 }
 
 .logo_desc{
