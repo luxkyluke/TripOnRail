@@ -39,8 +39,8 @@ var pays = [
 		console.log("load footer "+page+" OK");
 		--done;
 	});
- 	if(page != "destinations"){
-		var title = $("header").attr("data-title");
+ 	var title = $("header").attr("data-title");
+ 	if(title != undefined){
 		$("header").load(TEMPLATE_PATH+'header.html', function(){
 			$("#title_logo").append(title);
 			console.log("load header "+page+" OK");
@@ -50,17 +50,7 @@ var pays = [
 	else{--done;}
 	
 
-	$("nav").load(TEMPLATE_PATH+'nav.html', function()	{
-		/*$('.js-scrollTo').on('click', function() { 
-		var ref = $(this).attr('href'); 
-		var endPos = $(ref).offset().top;
-		var beginPos = $(this).scrollTop();
-		var speed = abs(beginPos/endPos)*10000; 
-		console.log(speed);
-		$('html, body').animate( { scrollTop: $(ref).offset().top }, speed );
-			return false;
-		});
-*/		
+	$("nav").load(TEMPLATE_PATH+'nav.html', function()	{	
 		$('.burger-menu').on('click', function(e) {
 			e.preventDefault();
 		  	$(this).toggleClass("burger-menu--opened");
@@ -79,7 +69,6 @@ var pays = [
 
 	});
 		
-	//alert("OK");
 }
 
  function load_template_page(page, title, _callback, refresh){
@@ -160,6 +149,8 @@ function affArticle(name){
 		case "White_Pass":
 			load_template_page("White_Pass", "White Pass and Yukon Route - Alaska", function(){
 				nav_current = '#nav_article';
+				//$(".owl-carousel").owlCarousel();
+				loadCaroussel();
 				updateCurrent();
 			});
 			break;
@@ -245,7 +236,7 @@ function affArticle(name){
 function loadImgsBackGrounds(page){
    	switch(page){
 		case "article":
-			document.getElementById("header").style.backgroundImage = "url('img/articles/"+$("#page").data("id")+"/background.jpg')";
+			//document.getElementById("header").style.backgroundImage = "url('img/articles/"+$("#page").data("id")+"/background.jpg')";
 			loadBG();
 			break;
 
@@ -446,5 +437,17 @@ function markerClickEvent(id){
 	if(id == undefined)
 		return false;
 	$("#pays_"+id + " a").click();
+}
 
+function loadCaroussel(){
+	var owl = $('.owl-carousel');
+	owl.owlCarousel({
+	    items:6,
+	    loop:true,
+	    autoWidth:true
+	});
+	owl.on('click', function (e) {
+        owl.trigger('next.owl');
+	    e.preventDefault();
+	});
 }
