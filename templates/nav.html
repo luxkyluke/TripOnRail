@@ -7,13 +7,16 @@
 		<div class="bar"></div>
 	</div>
 	</a>
-	<ul id="menu" class="">
-		<a id="nav_index" class="" href="javascript:" onclick="affArticle('index')"><li>Accueil</li></a>
-		<a id="nav_sacha" class=""  href="javascript:" onclick="affArticle('sacha')"><li>Voyage de Sacha</li></a>
-		<a id="nav_destinations" class=""  href="javascript:" onclick="affArticle('dest')"><li>Destinations</li></a>
-		<a id="nav_experiences" class=""  href="javascript:" onclick="affArticle('experiences')"><li>Expériences</li></a>
-		<a id="nav_about" class=""  href="javascript:" onclick="affArticle('about')"><li>A propos</li></a>
-		<a id="nav_contact" class=""  href="javascript:" onclick="affArticle('contact')"><li>Contact</li></a>
-		<!-- <a id="nav_article" class=""  href="javascript:" onclick="affArticle('article')"><li>Article</li></a> -->
-	</ul>
+	<div id="box_menu">
+		<ul id="menu" class="">
+			<li class="menu__item"><a id="nav_index" class="menu__link" href="javascript:" onclick="affArticle('index'); false">Accueil</a></li>
+			<li class="menu__item"><a id="nav_sacha" class="menu__link"  href="javascript:" onclick="affArticle('sacha'); return false;">Voyage de Sacha</a></li>
+			<li class="menu__item"><a id="nav_destinations" class="menu__link"  href="javascript:" onclick="affArticle('destinations')">Destinations</a></li>
+			<li class="menu__item"><a id="nav_experiences" class="menu__link"  href="javascript:" onclick="affArticle('experiences')">Expériences</a></li>
+			<li class="menu__item"><a id="nav_about" class="menu__link"  href="javascript:" onclick="affArticle('about')">A propos</a></li>
+			<li class="menu__item"><a id="nav_contact" class="menu__link"  href="javascript:" onclick="affArticle('contact')">Contact</a></li>
+		</ul>
+	</div>
 </div>
+
+

@@ -21,7 +21,7 @@ function initMap(){
 
     var mapOptions = {
       zoom: 2,
-      center: new google.maps.LatLng(25.574946, -25.914465),
+      center: new google.maps.LatLng(33.574946, -25.914465),
       scrollwheel: false,
       navigationControl: false,
       mapTypeControl: false,

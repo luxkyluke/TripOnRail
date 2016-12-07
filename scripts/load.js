@@ -52,6 +52,12 @@ var pays = [
 		  	$(this).toggleClass("burger-menu--closed");	
 		  	$("#menu").toggleClass("burger");
 		});
+		$('#menu a').on('click', function(e) {
+			e.preventDefault();
+			/*var id = $(this).attr('id');
+			var tmp = splite(id, '_');*/
+
+		});
 		$('#burger').click(function(e){
 			e.preventDefault();
 		})
@@ -136,7 +142,7 @@ function affArticle(name){
 			});
 			break;
 
-		case "dest":
+		case "destinations":
 			load_template_page("destinations", "Destinations", function(){
 				nav_current = '#nav_destinations';
 				updateCurrent();

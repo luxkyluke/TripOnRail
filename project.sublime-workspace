@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"font-",
+				"font-size"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
 				"bord",
 				"border-bottom"
 			],
@@ -132,18 +148,10 @@
 	"buffers":
 	[
 		{
-			"file": "templates/destinations.html",
+			"file": "templates/index.html",
 			"settings":
 			{
-				"buffer_size": 4231,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "templates/experiences.html",
-			"settings":
-			{
-				"buffer_size": 7490,
+				"buffer_size": 4237,
 				"line_ending": "Windows"
 			}
 		},
@@ -151,15 +159,23 @@
 			"file": "templates/nav.html",
 			"settings":
 			{
-				"buffer_size": 1038,
+				"buffer_size": 1173,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "scripts/load.js",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 9557,
+				"buffer_size": 813,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/sacha.html",
+			"settings":
+			{
+				"buffer_size": 4524,
 				"line_ending": "Windows"
 			}
 		},
@@ -167,7 +183,7 @@
 			"file": "scripts/script.js",
 			"settings":
 			{
-				"buffer_size": 1813,
+				"buffer_size": 2028,
 				"line_ending": "Windows"
 			}
 		},
@@ -175,18 +191,39 @@
 			"file": "scripts/maps.js",
 			"settings":
 			{
-				"buffer_size": 1646,
+				"buffer_size": 1831,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "@import 'font.css';\n@import 'normalize.css';\n@import 'skeleton.css';\n@import 'parallax.css';\n@import 'article.css';\n@import 'contactform.css';\n@import 'experiences.css';\n@import 'destinations.css';\n\n\nhtml, body{\n	width: 100%;\n	height: 100%;\n	margin: 0;\n}\n\na{\n	text-decoration: none;\n	color: inherit;\n}\n\np{\n	margin: 0;\n}\n/***********	HOME	************/\n#home {\n	width: 100%;\n	height: 100%;\n	margin: 0;\n}\n\n#home #header{\n  background: url(../img/background.jpg);\n  background-size: cover;\n  background-position: center;\n}\n\n* {\n    margin: 0;\n    padding: 0;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n#title_logo{\n	position: absolute;\n	font-family: Arenq;\n	color: white;\n	left: 50%;\n	top: 50%;\n	font-size: 5em;\n	transform: translateX(-50%) translateY(-50%);\n	text-align: center;\n	line- ight: 100%;\n	margin: 0;\n	width: 80%;\n	text-shadow: 5px 5px 10px #000000;\n	letter-spacing: 5px;\n}\n\n\n\n#actuality\n{\n	margin-top: 100px;\n	text-align: center;\n	font-family: Montserrat_Semi-Bold;\n	font-size: 3em;\n}\n\n#actualityc\n{\n	margin-top: 10px;\n	border: 5px solid black;\n	padding: 20px;\n	height: auto;\n	font-family: Montserrat;\n	margin-bottom: 100px;\n}\n\n#actualityc p\n{\n	text-align: justify;\n}\n\n#ourteam\n{\n	margin-top: 50px;\n	margin-bottom: 20px;\n}\n\n#members\n{\n	text-align: center;\n	font-size: 1.5em;\n	line-height: 1em;\n	margin-bottom: 30px;\n}\n\n#members i \n{\n	color: #696969;\n	font-size: 0.6em;\n}\n\n.avatar\n{\n	width: 150px;\n	height: 150px !important;\n	border-radius: 50%;\n	position: relative;\n	left: 50%;\n	transform: translateX(-50%) scale(1);\n	margin-bottom: 30px;\n	transition: .3s;\n}\n\n.avatar:hover\n{\n	transform: translateX(-50%) scale(1.1);\n	box-shadow: 10px 10px 20px rgba(1, 1, 1, .3);\n}\n\n#avatar1\n{\n	background-image: url(../img/alex.PNG);\n	background-size: cover;\n	background-position: center center;\n}\n\n#avatar2\n{\n	background-image: url(../img/lisa.PNG);\n	background-size: cover;\n	background-position: center center;\n}\n\n#avatar3\n{\n	background-image: url(../img/antoine.PNG);\n	background-size: cover;\n	background-position: center center;\n}\n\n.row\n{\n	height: auto;\n	margin-bottom: 10px;\n}\n\n.member_block{\n	text-align: center;\n}\n\n.contener_member{\n	width: 80%;\n}\n\n#homepage .title\n{\n	font-family: Montserrat_Semi-Bold;\n	font-size: 3.5em;\n	overflow: hidden;\n	margin: 0;\n	text-align: left;\n    padding: 0;\n}\n\n.title {\n	font-family: Montserrat_Regular;\n    overflow: hidden;\n    margin: 0;\n    text-align: center;\n    padding: 0.75em;\n    text-transform: uppercase;\n	font-size: 5.5em;\n}\n\n.title h1\n{\n	line-height: 0;\n}\n\n.center\n{\n	position: relative;\n	left: 50%;\n	transform: translateX(-50%);\n}\n\n.images\n{\n	height: 300px;\n	display: inline-block;\n}\n\n#levoyagedesacha\n{\n	background-image: url(../img/levoyagedesacha.jpg);\n	background-size: cover;\n	background-position: center center;\n	float: left;\n}\n\n#galerie\n{\n	background-image: url(../img/galerie.jpg);\n	background-size: cover;\n	background-position: center center;\n}\n\n#experiences\n{\n	background-image: url(../img/experiences.jpg);\n	background-size: cover;\n	background-position: center center;\n	float: left;\n}\n\n#destinations\n{\n	background-image: url(../img/destinations.jpg);\n	background-size: cover;\n	background-position: center center;\n}\n\n.articletext\n{\n	font-family: Montserrat_Semi-Bold;\n	font-size: 2.6em;\n	color: white;\n	text-shadow: 5px 5px 10px rgba(1, 1, 1, .6);\n	position: relative;\n	left: 50%;\n	top: 50%;\n	transform: translateX(-50%) translateY(-50%);\n	text-align: center;\n	margin: 0;\n}\n\n.onethird1\n{\n	width: 33.333%;\n}\n\n.twothirds1\n{\n	width: calc(66.666% - 10px);\n	margin-right: 10px;\n}\n\n.onethird2\n{\n	width: calc(33.333% - 10px);\n	margin-right: 10px;\n}\n\n.twothirds2\n{\n	width: 66.666%;\n}\n\n.images\n{\n	transition: .5s;\n}\n\n.images:hover\n{\n	transform: scale(0.95);\n}\n\n#contactus\n{\n	margin-top: 50px;\n	margin-bottom: 20px;\n}\n\n#contact\n{\n	margin-bottom: 100px;\n}\n\n\n#footer{\n	height: 300px;\n	background: rgba(0, 0, 0, 0.25);\n  	text-align: center;\n}\n\n\n/************MENU**********/\nul#menu{\n    margin: 0;\n} \n\n#burger_menu ul#menu{\n	width: 100%;\n	text-align: right;\n	/* background-color: rgb(0., 0., 0., 0.); */\n	position: fixed;\n	list-style: none;\n	z-index: 2;\n	height: 50px;\n	top: 0;\n	right: 0;\n	transition: background, transform 0.5s;\n	-webkit-transition: background, transform 0.5s;\n}\n\nul#menu a:last-child{\n	padding-right: 10px;\n}\n\n#menu li{\n	display: inline-block;\n	font-family: Montserrat_Light;\n	color: #FFF;\n	font-size: 1.2em;\n	margin-right: 15px;\n	position: relative;\n	top: 50%;\n	transform: translateY(-50%);\n	border-color: #FFF;\n}\n\n#menu a.current > li{\n	border-bottom: 2px solid;\n	border-color: #FFF;\n}\n\n#menu a:hover > li{\n	color:#dc6a1a;\n}\n\n#menu.dark{\n	background-color: #FFF;\n	-webkit-transition: all 0.5s;\n	transition: all 0.5s;\n}\n\n#menu.dark li{\n	color:#000;\n}\n\n#menu.dark a.current > li{\n	border-color: #000;\n}\n\n\n\n/*------------BURGER MENU------------*/\n\n\n\nnav #burger_menu #burger{\n	/* display: none; */\n	visibility: hidden;\n	top: 0;\n	right: 0;\n	z-index: 3;\n	background-color: black;\n	padding: 1em;\n	/* display: none; */\n	position: fixed;\n	/* display: none; */\n	transition: all 0.5s;\n	/* display: none; */\n	-webkit-transition: all 0.5s;\n}\n\n\n.burger-menu {\n  \n  cursor: pointer;\n  height: 35px;\n  width: 40px;\n  margin: 0 auto;\n  display: block;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n.burger-menu .bar {\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n  height: 2px;\n  width: 100%;\n  display: block;\n  background-color: white;\n}\n.burger-menu .bar:nth-of-type(2) {\n  margin: 12px 0;\n}\n.burger-menu--closed {\n  -webkit-transition-delay: 0.3s;\n          transition-delay: 0.3s;\n}\n.burger-menu--closed .bar {\n  float: right;\n}\n.burger-menu--closed .bar:nth-of-type(2) {\n  width: 75%;\n  -webkit-transition-property: margin, height, width;\n  transition-property: margin, height, width;\n  -webkit-transition-delay: 0.3s, 0.3s, 0s;\n          transition-delay: 0.3s, 0.3s, 0s;\n}\n.burger-menu--closed .bar:nth-of-type(3) {\n  width: 50%;\n}\n .burger-menu--closed:hover .bar:nth-of-type(2) {\n  width: 100%;\n}\n.burger-menu--closed:hover .bar:nth-of-type(3) {\n  width: 100%;\n}\n.burger-menu--opened {\n	transform: translateY(12px);\n}\n.burger-menu--opened .bar:nth-of-type(1) {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  -webkit-transition-delay: 0.3s;\n          transition-delay: 0.3s;\n  height: 3px;\n}\n.burger-menu--opened .bar:nth-of-type(2) {\n  opacity: 0;\n  height: 0;\n  margin: -3px;\n}\n.burger-menu--opened .bar:nth-of-type(3) {\n  -webkit-transform: rotate(-45deg);\n          transform: rotate(-45deg);\n  -webkit-transition-delay: 0.3s;\n          transition-delay: 0.3s;\n  height: 3px;\n}\n\n\n@media (max-width: 1200px){\n	nav #burger_menu #burger{\n		/* display: block; */\n		visibility: visible;\n		/* -webkit-transition: all 0.5s;\n		transition: all 0.5s; */\n	}\n\n	nav #burger_menu #menu{\n		/* display: none; */\n		visibility: hidden;\n		/* display: none; */\n		transform: translateY(-100%);\n		/* display: none; */\n		transition: all 0.5s;\n		\n	}\n\n	nav #burger_menu #menu.burger{\n		/* display: block; */\n		visibility: visible;\n		background-color: black;\n		margin: 0px;\n		top: 0px;\n		/* display: block; */\n		text-align: center;\n		/* display: block; */\n		height: 100%;\n		/* display: block; */\n		transform: translateY(0%);;\n		/* -webkit-transition: all 0.5s;\n		transition: all 0.5s; */\n	}\n	nav #burger_menu #menu.burger li{\n		font-size: 1.8em;\n		margin-bottom: 1em;\n		border: none;\n		color: #FFF;\n		margin-left: 2EM;\n		margin-right: 2em;\n		/* right: 0; */;\n		\n	}\n\n	nav #burger_menu #menu.burger a{\n	}\n\n	nav #burger_menu #menu.burger a:hover > li{\n		border-bottom: 2px solid #FFF;\n	}\n\n	nav #burger_menu #menu.burger a:last-child{\n		padding: 0;\n	}\n}\n\n",
 			"file": "css/style.css",
-			"file_size": 8188,
-			"file_write_time": 131244976083040957,
 			"settings":
 			{
-				"buffer_size": 7678,
+				"buffer_size": 10490,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/owl.carousel.css",
+			"settings":
+			{
+				"buffer_size": 4614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/destinations.css",
+			"settings":
+			{
+				"buffer_size": 9603,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/load.js",
+			"settings":
+			{
+				"buffer_size": 10066,
 				"line_ending": "Windows"
 			}
 		},
@@ -194,7 +231,7 @@
 			"file": "css/experiences.css",
 			"settings":
 			{
-				"buffer_size": 4708,
+				"buffer_size": 5851,
 				"line_ending": "Windows"
 			}
 		},
@@ -218,7 +255,7 @@
 			"file": "css/article.css",
 			"settings":
 			{
-				"buffer_size": 1358,
+				"buffer_size": 1296,
 				"line_ending": "Windows"
 			}
 		}
@@ -269,23 +306,30 @@
 	],
 	"file_history":
 	[
+		"/D/wamp64/www/TripOnRail/css/levoyagedesacha.css",
+		"/D/wamp64/www/TripOnRail/templates/experiences.html",
+		"/D/wamp64/www/TripOnRail/templates/header.html",
+		"/D/wamp64/www/TripOnRail/templates/article.html",
+		"/D/wamp64/www/TripOnRail/templates/destinations.html",
+		"/D/wamp64/www/TripOnRail/templates/nav.html",
+		"/D/wamp64/www/TripOnRail/templates/sacha.html",
+		"/D/wamp64/www/TripOnRail/scripts/load.js",
+		"/D/wamp64/www/TripOnRail/scripts/owl.carousel.js",
+		"/D/wamp64/www/TripOnRail/templates/index.html",
+		"/D/wamp64/www/TripOnRail/css/article.css",
+		"/D/wamp64/www/TripOnRail/scripts/root.js",
+		"/D/wamp64/www/TripOnRail/fonts/arenq.otf",
 		"/D/wamp64/www/TripOnRail/css/destinations.css",
 		"/D/wamp64/www/TripOnRail/css/style.css",
-		"/D/wamp64/www/TripOnRail/templates/nav.html",
 		"/D/wamp64/www/TripOnRail/scripts/json/map_style.json",
 		"/D/wamp64/www/TripOnRail/scripts/json/map_locations.json",
 		"/D/wamp64/www/TripOnRail/scripts/maps.js",
-		"/D/wamp64/www/TripOnRail/scripts/load.js",
-		"/D/wamp64/www/TripOnRail/templates/article.html",
-		"/D/wamp64/www/TripOnRail/templates/experiences.html",
 		"/D/wamp64/www/TripOnRail/css/experiences.css",
 		"/D/wamp64/www/TripOnRail/index.html",
-		"/D/wamp64/www/TripOnRail/templates/index.html",
 		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/D/wamp64/www/TripOnRail/css/parallax.css",
 		"/D/wamp64/www/TripOnRail/css/skeleton.css",
 		"/D/wamp64/www/TripOnRail/css/destination.css",
-		"/D/wamp64/www/TripOnRail/templates/header.html",
 		"/D/wamp64/www/TripOnRail/templates/destination.html",
 		"/D/wamp64/www/TripOnRail/scripts/script.js",
 		"/D/wamp64/www/TripOnRail/css/font.css",
@@ -389,24 +433,18 @@
 		"/D/Documents/Synthese_image/Hovercraft/fond.txt",
 		"/D/Documents/C/Projet/src/main.c",
 		"/D/Documents/C/Projet/Makefile",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Vector3D.c",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Sphere.c",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Ray3D.c",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Point3D.c",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Intersection.c",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/geometry.c",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Cube.c",
-		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Color3f.c"
+		"/C/Users/Antoine/Dropbox/IMAC_1ere_Annee/OpenGL/TD5/Raytracer/src/geometry/Vector3D.c"
 	],
 	"find":
 	{
-		"height": 104.0
+		"height": 86.0
 	},
 	"find_in_files":
 	{
 		"height": 117.0,
 		"where_history":
 		[
+			"bmenu",
 			"",
 			"<current file>",
 			""
@@ -414,9 +452,40 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"box_menu",
+			"sacha",
+			"affArti",
+			"link",
+			"current",
+			"selected",
+			"#bmenu",
+			"Bmenu",
+			"true",
+			"bg",
+			"item",
+			"3000px",
+			" items:6,",
+			"1080px",
+			"1920px",
+			"loadImgsBackGrounds",
+			"loadBG",
+			"loadCaroussel",
+			"header",
+			"soupe",
+			"loadbg",
+			"setup",
+			"a .middle h2 ",
+			"800",
+			"conteneur_categories li",
+			"hover",
+			"920",
+			"<span class='count'>",
+			"bg",
+			"levoyagedesacha",
+			"loadImgsBackGrounds",
 			";\n",
 			"		\n",
 			"headerc",
@@ -513,33 +582,7 @@
 			");\n",
 			"like",
 			"Like",
-			"like",
-			"find",
-			"findby",
-			"get",
-			"create",
-			"add",
-			"addmessage",
-			"add",
-			"addm",
-			"like",
-			"image",
-			"publi",
-			"uniq",
-			"unique",
-			"foreign",
-			"foreig",
-			"malaise_user_publication\n",
-			"like_user_publication",
-			"ma",
-			"mal",
-			"malai",
-			"toArray",
-			"user",
-			"drawScene_GLIMAGIMP",
-			"reshapeFunc",
-			"MAX",
-			"CLAMP"
+			"like"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -547,6 +590,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"sacha",
 			"parseInt",
 			"id_continent",
 			"#article_conteneur",
@@ -570,24 +614,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "templates/destinations.html",
+					"file": "templates/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4231,
+						"buffer_size": 4237,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1348,
-								1348
+								66,
+								66
 							]
 						],
 						"settings":
@@ -599,24 +643,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "templates/experiences.html",
+					"file": "templates/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7490,
+						"buffer_size": 1173,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2328,
-								2341
+								271,
+								271
 							]
 						],
 						"settings":
@@ -625,19 +669,19 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1406.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "templates/nav.html",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1038,
+						"buffer_size": 813,
 						"regions":
 						{
 						},
@@ -657,33 +701,188 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "scripts/load.js",
+					"file": "templates/sacha.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9557,
+						"buffer_size": 4524,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3930,
-								3930
+								131,
+								131
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scripts/script.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2028,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								626,
+								626
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2838.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "scripts/maps.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 66.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9623,
+								9623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 13019.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "css/owl.carousel.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "css/destinations.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 28.0,
+						"translation.y": 88.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -695,15 +894,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1813,
+						"buffer_size": 2028,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								257
+								1700,
+								1700
 							]
 						],
 						"settings":
@@ -713,91 +912,57 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 132.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "scripts/load.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1035,
+								1035
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 619.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "scripts/maps.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1646,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								684,
-								684
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 8.0,
-						"translation.y": 594.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7678,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2488,
-								2507
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3351.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
+					"buffer": 10,
 					"file": "css/experiences.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4708,
+						"buffer_size": 5851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4706,
-								4706
+								5457,
+								5457
 							]
 						],
 						"settings":
@@ -807,14 +972,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4437.0,
+						"translation.y": 5182.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "css/font.css",
 					"semi_transient": false,
 					"settings":
@@ -839,11 +1004,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 12,
 					"file": "css/skeleton.css",
 					"semi_transient": false,
 					"settings":
@@ -869,35 +1034,36 @@
 						"translation.y": 7838.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "css/article.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1358,
+						"buffer_size": 1296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1325,
-								1330
+								604,
+								604
 							]
 						],
 						"settings":
 						{
+							"history_list_is_closing": true,
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1582.0,
+						"translation.y": 1056.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -931,7 +1097,7 @@
 		"cols":
 		[
 			0.0,
-			0.454059156702,
+			0.428209466909,
 			1.0
 		],
 		"rows":
@@ -959,16 +1125,56 @@
 		"selected_items":
 		[
 			[
+				"load",
+				"scripts\\load.js"
+			],
+			[
 				"lo",
 				"scripts\\load.js"
+			],
+			[
+				"art",
+				"css\\article.css"
+			],
+			[
+				"hea",
+				"templates\\header.html"
+			],
+			[
+				"inde",
+				"templates\\index.html"
+			],
+			[
+				"st",
+				"css\\style.css"
+			],
+			[
+				"des",
+				"templates\\destinations.html"
 			],
 			[
 				"scr",
 				"scripts\\script.js"
 			],
 			[
+				"nav",
+				"templates\\nav.html"
+			],
+			[
+				"",
+				"css\\experiences.css"
+			],
+			[
+				"articl",
+				"css\\article.css"
+			],
+			[
 				"loa",
 				"scripts\\load.js"
+			],
+			[
+				"o",
+				"fonts\\arenq.otf"
 			],
 			[
 				"sty",
@@ -981,10 +1187,6 @@
 			[
 				"here",
 				"templates\\header.html"
-			],
-			[
-				"load",
-				"scripts\\load.js"
 			],
 			[
 				"grid",
