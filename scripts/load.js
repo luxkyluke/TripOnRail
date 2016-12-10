@@ -50,7 +50,7 @@ var pays = [
  	var title = $("header").attr("data-title");
  	if(title != undefined){
 		$("header").load(TEMPLATE_PATH+'header.html', function(){
-			$("#title_logo").append(title);
+			$(".title_logo").append(title);
 			console.log("load header "+page+" OK");
 			--done;
 		});
@@ -77,7 +77,6 @@ var pays = [
 		console.log("load nav "+page+" OK");
 		--done;
 		if(done == 0){
-			loadImgsBackGrounds(page);
 			_callback();
 		}
 
@@ -93,6 +92,7 @@ var pays = [
 		    console.log("bacic load "+page+" OK");
 		    window.history.pushState({"page":page, "pageTitle":title},"", "");
 	    	$(document).scrollTop(0);
+	    	loadImgsBackGrounds(page);
 	    	_callback();
 	    });
 	   	if(refresh !== undefined)
@@ -132,28 +132,31 @@ function affArticle(name){
 
 		case "article":
 			load_template_page("article", "Title", function(){
+				loadCaroussel();
 			});
 			break;
 		case "El_Chepe":
 			load_template_page("El_Chepe", "El Chepe - Mexique", function(){
+				loadCaroussel();
 			});
 			break;
 		case "Blue_Train":
 			load_template_page("Blue_Train", "Blue Train - South Africa", function(){
+				loadCaroussel();
 			});
 			break;
 		case "Hiram_Bingham":
 			load_template_page("Hiram_Bingham", "Hiram Bingham - Pérou", function(){
+				loadCaroussel();
 			});
 			break;
 		case "Petite_Ceinture":
 			load_template_page("Petite_Ceinture", "Petite Ceinture - France", function(){
-
+				loadCaroussel();
 			});
 			break;
 		case "White_Pass":
 			load_template_page("White_Pass", "White Pass and Yukon Route - Alaska", function(){
-				//$(".owl-carousel").owlCarousel();
 				loadCaroussel();
 			});
 			break;
@@ -444,13 +447,34 @@ function markerClickEvent(id){
 
 function loadCaroussel(){
 	var owl = $('#carousel');
+	/*if(owl.lenght == undefined){
+		console.log("CAROUSEL LOAD ERROR");
+		return;
+	}*/
 	owl.owlCarousel({
-	    singleItem: true,
-	    loop: true,
-	    autoWidth:true
+		items: 1,
+		slideSpeed : 1000,
+		singleItem: true,
+		loop:true,
+		lazyLoad : true,
+		autoPlay: 5000
 	});
 	owl.on('click', function (e) {
         owl.trigger('next.owl');
 	    e.preventDefault();
 	});
+	console.log("CAROUSEL LOAD OK");
+	makeResponsiveCarousel();
+}
+
+function makeResponsiveCarousel(){
+  var imgH = $(".owl-stage-outer").height();
+  if(imgH == undefined)
+    return ;
+  var delta = imgH - $("#carousel").height();
+  if(delta>0)
+  	return;
+  $("#page").css('top', delta);
+
+  $("#articletitle").css("top", imgH/2);
 }

@@ -44,7 +44,7 @@ p{
     margin: 0;
 }
 
-#header_ #header #title_logo {
+#header_ #header .title_logo {
     top: 37.5%;
 }
 
@@ -55,7 +55,7 @@ p{
     -moz-osx-font-smoothing: grayscale;
 }
 
-#title_logo{
+.title_logo{
 	position: absolute;
 	font-family: Arenq;
 	color: white;
@@ -692,7 +692,7 @@ nav #burger_menu #burger{
 		height: 75%;
 	}
 
-	#title_logo{
+	.title_logo{
 		top:37.5%;
 	}
 	
@@ -709,7 +709,7 @@ nav #burger_menu #burger{
 		margin-bottom: 10px;
 	}
 	
-	#title_logo{
+	.title_logo{
 		font-size: 4em;
 		width: 90%;
 	}
@@ -718,7 +718,7 @@ nav #burger_menu #burger{
 
 @media (max-width: 650px) {
 	
-	#title_logo{
+	.title_logo{
 		font-size: 3em;
 	}
 
@@ -786,11 +786,11 @@ nav #burger_menu #burger{
 		height: 50%;
 	}
 	
-	#header_ #header #title_logo{
+	#header_ #header .title_logo{
 		top:25%;
 	}
 
-	#title_logo{
+	.title_logo{
 		font-size: 2.5em;
 		width: 95%;
 		top:25%;
