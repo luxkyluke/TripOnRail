@@ -37,6 +37,16 @@ p{
   background-size: cover;
 }
 
+#header_ {
+    width: 100%;
+    height: 75%;
+    margin: 0;
+}
+
+#header_ #header #title_logo {
+    top: 35%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -645,13 +655,10 @@ nav #burger_menu #burger{
 		/* /visibility: hidden; */
 	}
 
-	/* nav #box_menu.open{
-		visibility: visible;
-	} */
+	.bg{
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 }
 
-.bg{
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
