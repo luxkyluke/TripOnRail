@@ -443,9 +443,9 @@ function markerClickEvent(id){
 }
 
 function loadCaroussel(){
-	var owl = $('.owl-carousel');
+	var owl = $('#carousel');
 	owl.owlCarousel({
-	    items: 6,
+	    singleItem: true,
 	    loop: true,
 	    autoWidth:true
 	});
