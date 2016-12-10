@@ -41,6 +41,10 @@
   float: left;
   box-sizing: border-box; }
 
+#actuality{
+  font-size: 2em;
+}
+
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
@@ -285,13 +289,26 @@ there.
 @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+  .one-half.column {
+      width: 85%;
+  }
+
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+  .one-half.column {
+      width: 70%;
+  }
+}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+  .one-half.column {
+      width: 48%;
+  }
+}
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}

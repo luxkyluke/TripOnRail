@@ -11,8 +11,17 @@
   color: black;
 }
 
-.font:hover
-{
+.form .field-in{
+  border: 4px solid black;
+  color: black;
+}
+
+.form .field-in:hover{
+  background-color: black;
+  color: white;
+}
+
+.font:hover{
   color: white;
 }
 .form {
@@ -24,56 +33,36 @@
 
 .field-in {
   display: block;
-  margin: 10px auto;
   padding: 10px;
   border: none;
   width: 60%;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.2s ease 0s;
-}
-.name {  
-  border: 5px solid black;
-  color: black;
-}
-.name:hover{
-  background-color: black;
-  color: white;
+  margin: 10px auto;
 }
 .name:focus, .email:focus, .message:focus{
   outline: none;
   padding:15px;
 }
-.email {  
-  border: 5px solid black;
-}
-.email:hover{
-  background-color: black;
-  color: white;
-}
 .message {   
-  border: 5px solid black;
   height: 50px;
   overflow: hidden;
 }
 .message:hover{
-  color: white;
-  background-color: black;
   height: 150px;
 }
 .submit{
   background-color: white;
   height: 50px;
   padding: 0px 20px; 
-  border: 5px solid black;
+  border: 4px solid black;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.2s ease 0s;
 }
 .submit:hover{
-  color: white;
   cursor: pointer;
-  background-color: black;
 }
 ::-webkit-input-placeholder {
    color: black;
@@ -89,4 +78,45 @@
 
 :-ms-input-placeholder {  
    color: black;  
+}
+
+
+@media (max-width: 1200px) {
+  .wrapper{
+    width: 50%;
+  }
+
+  .field-in{
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper{
+    width: 65%;
+  }
+
+  .field-in{
+    width: 80%;
+  }
+}
+
+@media (max-width: 750px) {
+  .wrapper{
+    width: 80%;
+  }
+
+  .field-in{
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper{
+    width: 100%;
+  }
+
+  .field-in{
+    width: 90%;
+  }
 }
