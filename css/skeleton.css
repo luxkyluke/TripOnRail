@@ -286,7 +286,13 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+  
+  .nine.columns{
+    width: 100%;
+  }
+
+}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
@@ -294,12 +300,19 @@ there.
       width: 85%;
   }
 
+  .nine.columns{
+    width: 95%;
+  }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
   .one-half.column {
       width: 70%;
+  } 
+
+  .nine.columns{
+    width: 95%;
   }
 }
 

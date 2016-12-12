@@ -183,9 +183,9 @@ p{
     overflow: hidden;
     margin: 0;
     text-align: center;
-    padding: 0.75em;
     text-transform: uppercase;
 	font-size: 5.5em;
+	padding: 0.75em 0;
 }
 
 .title h1
@@ -304,23 +304,20 @@ p{
   	font-size: 1.2em;
 }
 
-.footercontent
-{
+.footercontent{
 	position: relative;
-	width: 500px;
+	width: 50%;;
 	height: 100%;
 	float: left;
 }
 
-.footercontent p
-{
+.footercontent p{
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-#footer2
-{
+#footer2{
 	float: right;
 }
 
@@ -331,7 +328,7 @@ ul#menu{
 
 #burger_menu ul#menu{
 	list-style: none;
-	z-index: 2;
+	z-index: 10;
 	position: fixed;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -474,13 +471,11 @@ nav #burger_menu #menu .menu__link {
     -webkit-user-select: none;
     user-select: none;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.15em;
     cursor: pointer;
 }
 
 #menu li.menu__item {
-    /* display: block; */
-    display: block;
     /* display: block; */
     text-align: center;
     /* display: block; */
@@ -496,7 +491,7 @@ nav #burger_menu #burger{
 	visibility: hidden;
 	top: 0;
 	right: 0;
-	z-index: 3;
+	z-index: 13;
 	background-color: #2a282b;
 	padding: 1em;
 	/* display: none; */
@@ -576,6 +571,11 @@ nav #burger_menu #burger{
 	background-repeat: no-repeat;
 }
 
+.menu__wrapper{
+	display: inherit;
+	width: 100%;
+}
+
 @media (min-width: 1200px){
 	 .burger-menu--closed:hover .bar:nth-of-type(2) {
 	  width: 100%;
@@ -588,6 +588,7 @@ nav #burger_menu #burger{
 @media screen and (max-width: 1255px){
 	nav #burger_menu #menu .menu__link{
 		font-size: 1em;
+		width: 100%;
 	}
 	
 	.images{
@@ -614,29 +615,32 @@ nav #burger_menu #burger{
 
 	#menu .menu__link.current::before {
 		top : 0px;
+		height : 3px;
 	}
 
 	#menu .menu__link.current::after {
 		before:  : 0px;
+		height:  3px;
 	}
 
 	nav #burger_menu #menu{
 		/* display: none; */
 		visibility: hidden;
 		/* display: none; */
-		transform: translateY(-100%);
-		/* display: none; */
 		transition: all 0.5s;
-		
+		/* display: none; */
+		transform: translateY(-100%);
+		margin: auto;
+		display: table;
+		height: 100%;
+		padding: 25%;
+		width: 51%;
 	}
 
 	nav #burger_menu #menu.burger{
 		transform: translateY(0%);
-		padding: 25%;
 		visibility: visible;
-		width: 50%;
-		margin: auto;
-		display: table;
+		
 	}
 
 	.menu__list{
@@ -644,26 +648,30 @@ nav #burger_menu #burger{
 		margin: 0 auto;
 	}
 
-	nav #burger_menu #menu.burger li{
+	nav #burger_menu #menu li{
 		border: none;
 		color: #FFF;
-		margin-right: 2em;
-		margin-bottom: 1em;
 		font-size: 1.8em;
-		margin-left: 2em;
 		position: relative;
+		right: 0;
+		margin-bottom: 0.5em;
+		line-height: 2em;
+		margin-right: 2em;
+		margin-left: 2em;
 		/* right: 0; */;
-		
 	}
 
-	nav #burger_menu #menu.burger a{
+	nav #burger_menu #menu li:nth-child(2){
+		margin: auto !important;
+    	margin-bottom: 1em !important;
 	}
 
-	nav #burger_menu #menu.burger a:hover > li{
+
+	nav #burger_menu #menu a:hover > li{
 		border-bottom: 2px solid #FFF;
 	}
 
-	nav #burger_menu #menu.burger a:last-child{
+	nav #burger_menu #menu a:last-child{
 		padding: 0;
 	}
 
@@ -672,14 +680,7 @@ nav #burger_menu #burger{
 		height: 100%;
 		background-color: #2a282b;
 		position: absolute;
-		/* /visibility: hidden; */
 	}
-
-	/* .bg{
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-	} */
 
 	.images{
 		height: 200px;
@@ -694,6 +695,14 @@ nav #burger_menu #burger{
 
 	.title_logo{
 		top:37.5%;
+	}
+
+	.menu__wrapper{
+		position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%,-50%);
+		width: inherit;
 	}
 	
 }
@@ -762,6 +771,9 @@ nav #burger_menu #burger{
 	  width: 100%;
 	}
 
+	nav #burger_menu #menu .menu__link{
+		font-size: 0.8em;
+	}
 
 }
 
@@ -822,5 +834,20 @@ nav #burger_menu #burger{
 
 	#ourteam{
 		margin-top: 0;
+	}
+
+	nav #burger_menu #menu .menu__link{
+		font-size: 0.8em;
+	}
+
+	.footercontent{
+		width: 100%;
+		height: 60%;
+	}
+}
+
+@media (max-width: 350px){
+	nav #burger_menu #menu .menu__link{
+		font-size: 0.7em;
 	}
 }

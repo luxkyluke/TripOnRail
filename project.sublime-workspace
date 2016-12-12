@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"max-",
+				"max-width"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
 				"font-",
 				"font-size"
 			],
@@ -40,10 +56,6 @@
 				"text-decoration"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
 				"ba",
 				"background-position"
 			],
@@ -66,10 +78,6 @@
 			[
 				"text-",
 				"text-decoration"
-			],
-			[
-				"fon",
-				"font-family"
 			],
 			[
 				"project",
@@ -151,7 +159,23 @@
 			"file": "templates/index.html",
 			"settings":
 			{
-				"buffer_size": 3357,
+				"buffer_size": 3477,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/article.html",
+			"settings":
+			{
+				"buffer_size": 4949,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/experiences.html",
+			"settings":
+			{
+				"buffer_size": 13204,
 				"line_ending": "Windows"
 			}
 		},
@@ -159,7 +183,7 @@
 			"file": "templates/header.html",
 			"settings":
 			{
-				"buffer_size": 141,
+				"buffer_size": 144,
 				"line_ending": "Windows"
 			}
 		},
@@ -167,7 +191,7 @@
 			"file": "templates/nav.html",
 			"settings":
 			{
-				"buffer_size": 1111,
+				"buffer_size": 1158,
 				"line_ending": "Windows"
 			}
 		},
@@ -180,68 +204,10 @@
 			}
 		},
 		{
-			"contents": "--- D:\\wamp64\\www\\TripOnRailCopie\\css\\style.css	Wed Dec  7 23:03:52 2016\n+++ D:\\wamp64\\www\\TripOnRail\\css\\style.css	Sat Dec 10 11:52:03 2016\n@@ -645,13 +645,10 @@\n 		/* /visibility: hidden; */\n 	}\n \n-	/* nav #box_menu.open{\n-		visibility: visible;\n-	} */\n-}\n-\n-.bg{\n-	background-size: cover;\n-	background-position: center;\n-	background-repeat: no-repeat;\n-}+	.bg{\n+		background-size: cover;\n+		background-position: center;\n+		background-repeat: no-repeat;\n+	}\n+}\n+\n",
-			"settings":
-			{
-				"buffer_size": 484,
-				"line_ending": "Windows",
-				"name": "style.css -> style.css",
-				"scratch": true
-			}
-		},
-		{
-			"file": "/D/wamp64/www/TripOnRailCopie/scripts/script.js",
-			"settings":
-			{
-				"buffer_size": 2028,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 10443,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/owl.carousel.css",
-			"settings":
-			{
-				"buffer_size": 4642,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/destinations.css",
-			"settings":
-			{
-				"buffer_size": 9603,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scripts/script.js",
-			"settings":
-			{
-				"buffer_size": 2028,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scripts/load.js",
-			"settings":
-			{
-				"buffer_size": 11173,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/experiences.css",
-			"settings":
-			{
-				"buffer_size": 5851,
+				"buffer_size": 12584,
 				"line_ending": "Windows"
 			}
 		},
@@ -257,7 +223,7 @@
 			"file": "css/skeleton.css",
 			"settings":
 			{
-				"buffer_size": 7061,
+				"buffer_size": 7346,
 				"line_ending": "Windows"
 			}
 		},
@@ -265,7 +231,7 @@
 			"file": "css/article.css",
 			"settings":
 			{
-				"buffer_size": 1273,
+				"buffer_size": 3486,
 				"line_ending": "Windows"
 			}
 		}
@@ -312,47 +278,47 @@
 		"/D/wamp64/www/TripOnRail/experiences",
 		"/D/wamp64/www/TripOnRail/scripts",
 		"/D/wamp64/www/TripOnRail/scripts/json",
-		"/D/wamp64/www/TripOnRailCopie",
-		"/D/wamp64/www/TripOnRailCopie/css",
-		"/D/wamp64/www/TripOnRailCopie/scripts"
+		"/D/wamp64/www/TripOnRail/templates"
 	],
 	"file_history":
 	[
-		"/D/wamp64/www/TripOnRailCopie/css/style.css",
-		"/D/wamp64/www/TripOnRail/templates/article.html",
+		"/D/wamp64/www/TripOnRail/css/experiences.css",
 		"/D/wamp64/www/TripOnRail/scripts/script.js",
-		"/D/wamp64/www/TripOnRail/templates/sacha.html",
+		"/D/wamp64/www/TripOnRail/scripts/load.js",
+		"/D/wamp64/www/TripOnRail/css/article.css",
+		"/D/wamp64/www/TripOnRail/css/parallax.css",
+		"/D/wamp64/www/TripOnRail/css/destinations.css",
+		"/D/wamp64/www/TripOnRail/css/owl.carousel.css",
+		"/D/wamp64/www/TripOnRail/css/contactform.css",
 		"/D/wamp64/www/TripOnRail/templates/White_Pass.html",
-		"/D/wamp64/www/TripOnRail/index.html",
+		"/D/wamp64/www/TripOnRail/templates/Hiram_Bingham.html",
+		"/D/wamp64/www/TripOnRail/templates/El_Chepe.html",
 		"/D/wamp64/www/TripOnRail/templates/Petite_Ceinture.html",
 		"/D/wamp64/www/TripOnRail/templates/Blue_Train.html",
-		"/D/wamp64/www/TripOnRail/templates/El_Chepe.html",
-		"/D/wamp64/www/TripOnRail/templates/Hiram_Bingham.html",
+		"/D/wamp64/www/TripOnRailCopie/.gitattributes",
+		"/D/wamp64/www/TripOnRailCopie/css/style.css",
+		"/D/wamp64/www/TripOnRail/templates/article.html",
+		"/D/wamp64/www/TripOnRail/templates/sacha.html",
+		"/D/wamp64/www/TripOnRail/index.html",
 		"/D/wamp64/www/TripOnRail/templates/destinations.html",
 		"/D/wamp64/www/TripOnRail/css/levoyagedesacha.css",
 		"/D/wamp64/www/TripOnRail/templates/experiences.html",
 		"/D/wamp64/www/TripOnRail/templates/header.html",
 		"/D/wamp64/www/TripOnRail/templates/nav.html",
-		"/D/wamp64/www/TripOnRail/scripts/load.js",
 		"/D/wamp64/www/TripOnRail/scripts/owl.carousel.js",
 		"/D/wamp64/www/TripOnRail/templates/index.html",
-		"/D/wamp64/www/TripOnRail/css/article.css",
 		"/D/wamp64/www/TripOnRail/scripts/root.js",
 		"/D/wamp64/www/TripOnRail/fonts/arenq.otf",
-		"/D/wamp64/www/TripOnRail/css/destinations.css",
 		"/D/wamp64/www/TripOnRail/css/style.css",
 		"/D/wamp64/www/TripOnRail/scripts/json/map_style.json",
 		"/D/wamp64/www/TripOnRail/scripts/json/map_locations.json",
 		"/D/wamp64/www/TripOnRail/scripts/maps.js",
-		"/D/wamp64/www/TripOnRail/css/experiences.css",
 		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/D/wamp64/www/TripOnRail/css/parallax.css",
 		"/D/wamp64/www/TripOnRail/css/skeleton.css",
 		"/D/wamp64/www/TripOnRail/css/destination.css",
 		"/D/wamp64/www/TripOnRail/templates/destination.html",
 		"/D/wamp64/www/TripOnRail/css/font.css",
 		"/D/wamp64/www/TripOnRail/scripts/contactform.js",
-		"/D/wamp64/www/TripOnRail/css/contactform.css",
 		"/D/wamp64/www/TripOnRail/templates/footer.html",
 		"/D/wamp64/logs/access.log",
 		"/D/Documents/sitePerso/templates/pages/projects/art.html",
@@ -443,19 +409,21 @@
 		"/D/Téléchargements/Raytracer/Raytracer/include/geometry/Cube.h",
 		"/D/Téléchargements/Raytracer/Raytracer/include/geometry/Point3D.h",
 		"/D/Téléchargements/Raytracer/Raytracer/include/geometry/Sphere.h",
-		"/D/Téléchargements/Raytracer/Raytracer/include/geometry/Vector3D.h",
-		"/D/Documents/Synthese_image/Hovercraft/Makefile",
-		"/D/Téléchargements/interface.txt"
+		"/D/Téléchargements/Raytracer/Raytracer/include/geometry/Vector3D.h"
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 86.0
 	},
 	"find_in_files":
 	{
-		"height": 117.0,
+		"height": 158.0,
 		"where_history":
 		[
+			"",
+			"<project>",
+			"",
+			"makeResponsiveCaroussel()",
 			"",
 			"bmenu",
 			"",
@@ -465,9 +433,32 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"video",
+			".food_conteneur--left",
+			".nine.columns",
+			"nine columns",
+			"page",
+			"nav #burger_menu #menu",
+			"nav #burger_menu #menu.burger",
+			"a .middle",
+			"0",
+			"#title_logo",
+			".title_logo",
+			"title_logo",
+			"#title_logo",
+			"title_logo",
+			"#title_logo",
+			"carousel",
+			"divers.png",
+			"carousel",
+			"loadCaroussel",
+			"makeResponsiveCaroussel",
+			"checkBackgroundArticle",
+			"actuality",
+			".one-half",
 			"headerc",
 			"box_menu",
 			"sacha",
@@ -572,30 +563,7 @@
 			"SLAOEP",
 			"c60000",
 			"montserrat",
-			"montserrat\n",
-			"montserrat",
-			"regula",
-			"header",
-			"\";\n",
-			"menu",
-			"background",
-			"    ",
-			"Monsterra-Hairline",
-			"Monsterra-Light",
-			"Monsterra-Thin",
-			"Monsterra-Ultralight",
-			"Monsterra-R",
-			"Monsterra-r",
-			"Monsterra-ultralight",
-			"Monsterra-light",
-			"transition",
-			"%;\n",
-			"t:150px;\n        -webkit-transition:500ms linear; \n        -webki",
-			"header",
-			"templa",
-			");\n",
-			"like",
-			"Like"
+			"montserrat\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -603,6 +571,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			".title_logo",
+			"insolite.png",
+			"makeResponsiveCarousel",
+			"makeResponsiveCaroussel",
 			"sacha",
 			"parseInt",
 			"id_continent",
@@ -619,7 +591,7 @@
 			"id_user"
 		],
 		"reverse": false,
-		"show_context": true,
+		"show_context": false,
 		"use_buffer2": true,
 		"whole_word": false,
 		"wrap": true
@@ -636,15 +608,74 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3357,
+						"buffer_size": 3477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13,
-								15
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/article.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4769,
+								4769
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2653.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "templates/experiences.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								47
 							]
 						],
 						"settings":
@@ -660,20 +691,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 3,
 					"file": "templates/header.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 141,
+						"buffer_size": 144,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								141,
-								141
+								144,
+								144
 							]
 						],
 						"settings":
@@ -684,24 +715,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "templates/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1111,
+						"buffer_size": 1158,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								165,
-								165
+								236,
+								236
 							]
 						],
 						"settings":
@@ -713,17 +744,17 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "scripts/maps.js",
 					"semi_transient": false,
 					"settings":
@@ -735,8 +766,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								252,
+								252
 							]
 						],
 						"settings":
@@ -746,67 +777,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 66.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 484,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								260,
-								260
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Diff/Diff.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/D/wamp64/www/TripOnRailCopie/scripts/script.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2028,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -815,15 +789,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10443,
+						"buffer_size": 12584,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10347,
-								10347
+								2706,
+								2706
 							]
 						],
 						"settings":
@@ -832,165 +806,14 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 11929.0,
+						"translation.y": 3680.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "css/owl.carousel.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4642,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3,
-								3
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "css/destinations.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9603,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								364,
-								364
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 28.0,
-						"translation.y": 96.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "scripts/script.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2028,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1674,
-								1674
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 967.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "scripts/load.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1681,
-								1681
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 905.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "css/experiences.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5851,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5457,
-								5457
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5415.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
 					"file": "css/font.css",
 					"semi_transient": false,
 					"settings":
@@ -1002,8 +825,8 @@
 						"selection":
 						[
 							[
-								348,
-								348
+								181,
+								199
 							]
 						],
 						"settings":
@@ -1015,24 +838,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 8,
 					"file": "css/skeleton.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7061,
+						"buffer_size": 7346,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								6861,
+								6861
 							]
 						],
 						"settings":
@@ -1042,39 +865,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5643.0,
+						"translation.y": 6235.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 9,
 					"file": "css/article.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1273,
+						"buffer_size": 3486,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1920,
+								1920
 							]
 						],
 						"settings":
 						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1114.0,
+						"translation.y": 2461.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1082,7 +905,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -1108,7 +931,7 @@
 		"cols":
 		[
 			0.0,
-			0.388315246712,
+			0.523156611822,
 			1.0
 		],
 		"rows":
@@ -1126,7 +949,7 @@
 	"project": "project.sublime-project",
 	"replace":
 	{
-		"height": 140.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1136,12 +959,60 @@
 		"selected_items":
 		[
 			[
-				"index",
-				"templates\\index.html"
+				"ske",
+				"css\\skeleton.css"
+			],
+			[
+				"st",
+				"css\\style.css"
 			],
 			[
 				"art",
-				"templates\\article.html"
+				"css\\article.css"
+			],
+			[
+				"pa",
+				"css\\parallax.css"
+			],
+			[
+				"sty",
+				"css\\style.css"
+			],
+			[
+				"na",
+				"templates\\nav.html"
+			],
+			[
+				"",
+				"templates\\header.html"
+			],
+			[
+				"font",
+				"css\\font.css"
+			],
+			[
+				"des",
+				"css\\destinations.css"
+			],
+			[
+				"peti",
+				"templates\\Petite_Ceinture.html"
+			],
+			[
+				"scri",
+				"scripts\\script.js"
+			],
+			[
+				"conta",
+				"TripOnRail\\css\\contactform.css"
+			],
+			[
+				"scr",
+				"TripOnRail\\scripts\\script.js"
+			],
+			[
+				"index",
+				"templates\\index.html"
 			],
 			[
 				"sa",
@@ -1168,24 +1039,8 @@
 				"templates\\index.html"
 			],
 			[
-				"st",
-				"css\\style.css"
-			],
-			[
-				"des",
-				"templates\\destinations.html"
-			],
-			[
-				"scr",
-				"scripts\\script.js"
-			],
-			[
 				"nav",
 				"templates\\nav.html"
-			],
-			[
-				"",
-				"css\\experiences.css"
 			],
 			[
 				"articl",
@@ -1198,10 +1053,6 @@
 			[
 				"o",
 				"fonts\\arenq.otf"
-			],
-			[
-				"sty",
-				"css\\style.css"
 			],
 			[
 				"sk",

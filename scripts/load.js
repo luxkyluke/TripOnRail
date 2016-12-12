@@ -464,6 +464,14 @@ function loadCaroussel(){
 	    e.preventDefault();
 	});
 	console.log("CAROUSEL LOAD OK");
+	$('.nextArrow').on('click', function (e) {
+        owl.trigger('next.owl');
+	    e.preventDefault();
+	});
+	$('.prevArrow').on('click', function (e) {
+        owl.trigger('prev.owl');
+	    e.preventDefault();
+	});
 	makeResponsiveCarousel();
 }
 
