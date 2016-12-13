@@ -266,7 +266,6 @@ function affArticle(name){
 function loadImgsBackGrounds(page, _callback){
    	switch(page){
 		case "article":
-			//document.getElementById("header").style.backgroundImage = "url('img/articles/"+$("#page").data("id")+"/background.jpg')";
 			loadBG(_callback);
 			break;
 
