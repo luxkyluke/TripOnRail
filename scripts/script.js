@@ -42,6 +42,10 @@ $(document).ready(function(){
         {
             $("#header").css("background-image", "url(img/experiences/background.jpg)");
         }
+        else
+        {
+            $("#header").css("background-image", "url(img/background3.gif")
+        }
     })
 
 });
