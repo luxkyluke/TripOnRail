@@ -752,7 +752,10 @@ nav #burger_menu #burger{
 }
 
 @media (max-width: 650px) {
-	
+	.menu__wrapper{
+		width: 65%;
+	}
+
 	.title_logo{
 		font-size: 3em;
 	}
@@ -816,6 +819,10 @@ nav #burger_menu #burger{
 }
 
 @media (max-width: 450px){
+	.menu__wrapper{
+		width: 90%;
+	}
+
 	#home{
 		height: 50%;
 	}
