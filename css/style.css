@@ -831,7 +831,6 @@ nav #burger_menu #burger{
 }
 
 @media (min-width: 550px) and (max-width: 650px){
-
 	.avatar{
 		width: 125px;
     	height: 125px !important;
