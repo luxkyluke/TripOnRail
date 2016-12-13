@@ -168,6 +168,11 @@ p{
 	background-size: cover;
 	background-position: center center;
 }
+.citation
+{
+	margin: 5%;
+	line-height: 12px;
+}
 
 .row
 {
@@ -802,7 +807,10 @@ nav #burger_menu #burger{
 	#members p{
 		margin-bottom: 15px;
 	}
-
+	.citation {
+		margin-top: -12px;
+		margin-bottom: 12px;
+	}
 	#contactus{
 		margin: 0 0px 10px 0;
 	}
@@ -838,6 +846,12 @@ nav #burger_menu #burger{
 
 	#members{
 		font-size: 1em;
+	}
+}
+
+@media (max-width: 550px){
+	#members p.citation {
+		margin-bottom: 28px;
 	}
 }
 
