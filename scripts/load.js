@@ -148,36 +148,47 @@ function affArticle(name){
 				nav_current = '#nav_sacha';
 				updateCurrent();
 				replaceSachaDots();
-				$(".se-pre-con").fadeOut("slow");
-			})
+				setTimeout(function(){
+				    $(".se-pre-con").fadeOut("slow");
+				}, 1000);
+			});
 			break;
 
 		case "article":
 			load_template_page("article", "Title", function(){
 				loadCaroussel(function(){
-					$(".se-pre-con").fadeOut("slow");
-				});
-				
+					setTimeout(function(){
+					    $(".se-pre-con").fadeOut("slow");
+					}, 1000);	
+					nav_current='#nav_article';
+				});			
 			});
 			break;
 		case "El_Chepe":
 			load_template_page("El_Chepe", "El Chepe - Mexique", function(){
 				loadCaroussel(function(){
-					$(".se-pre-con").fadeOut("slow");
+					setTimeout(function(){
+					    $(".se-pre-con").fadeOut("slow");
+					}, 1000);
+					nav_current='#nav_article';
 				});
 			});
 			break;
 		case "Blue_Train":
 			load_template_page("Blue_Train", "Blue Train - South Africa", function(){
-				loadCaroussel(function(){
-					$(".se-pre-con").fadeOut("slow");
-				});
+					setTimeout(function(){
+					    $(".se-pre-con").fadeOut("slow");
+					}, 1000);
+					nav_current='#nav_article';
 			});
 			break;
 		case "Hiram_Bingham":
 			load_template_page("Hiram_Bingham", "Hiram Bingham - Pérou", function(){
 				loadCaroussel(function(){
-					$(".se-pre-con").fadeOut("slow");
+					setTimeout(function(){
+					    $(".se-pre-con").fadeOut("slow");
+					}, 1000);
+					nav_current='#nav_article';		
 				});
 			});
 			break;
@@ -186,12 +197,16 @@ function affArticle(name){
 				loadCaroussel(function(){
 					$(".se-pre-con").fadeOut("slow");
 				});
+				nav_current='#nav_article';
 			});
 			break;
 		case "White_Pass":
 			load_template_page("White_Pass", "White Pass and Yukon Route - Alaska", function(){
 				loadCaroussel(function(){
-					$(".se-pre-con").fadeOut("slow");
+					setTimeout(function(){
+					    $(".se-pre-con").fadeOut("slow");
+					}, 1000);
+					nav_current='#nav_article';
 				});
 			});
 			break;
@@ -202,7 +217,9 @@ function affArticle(name){
 				clickCatExpAnim($("#cat_decouverte a li").first(), false);				
 				nav_current = '#nav_experiences';
 				updateCurrent();
-				$(".se-pre-con").fadeOut("slow");
+				setTimeout(function(){
+				    $(".se-pre-con").fadeOut("slow");
+				}, 1000);
 
 			});
 			break;
@@ -213,7 +230,9 @@ function affArticle(name){
 				updateCurrent();
 				initMap(function(){
 					destinationsLoad(function(){
-						$(".se-pre-con").fadeOut("slow");
+						setTimeout(function(){
+						    $(".se-pre-con").fadeOut("slow");
+						}, 1000);
 					});
 				});
 				
@@ -229,7 +248,9 @@ function affArticle(name){
 				$(nav_current).removeClass('current');
 				nav_current='#nav_about';
 				updateCurrent();
-				$(".se-pre-con").fadeOut("slow");
+				setTimeout(function(){
+				    $(".se-pre-con").fadeOut("slow");
+				}, 1000);
 			}
 			else{
 				load_template_page("index", "The Railway Chronicales", function(){
@@ -238,7 +259,9 @@ function affArticle(name){
 					$('html, body').animate({
 						scrollTop: $("#ourteam").offset().top-50
 					}, 2000, false);
-					$(".se-pre-con").fadeOut("slow");
+					setTimeout(function(){
+					    $(".se-pre-con").fadeOut("slow");
+					}, 1000);
 				});
 			}
 			break;
@@ -252,7 +275,9 @@ function affArticle(name){
 				$(nav_current).removeClass('current');
 				nav_current= '#nav_contact';
 				updateCurrent();
-				$(".se-pre-con").fadeOut("slow");
+				setTimeout(function(){
+				    $(".se-pre-con").fadeOut("slow");
+				}, 1000);
 			}
 			else{
 				load_template_page("index", "The Railway Chronicales", function(){
@@ -261,7 +286,9 @@ function affArticle(name){
 					$('html, body').animate({
 						scrollTop: $("#contactus").offset().top-50
 					}, 1500);
-					$(".se-pre-con").fadeOut("slow");
+					setTimeout(function(){
+					    $(".se-pre-con").fadeOut("slow");
+					}, 1000);
 				}, false);
 			}
 
@@ -544,8 +571,11 @@ function makeResponsiveCarousel(){
   if(imgH == undefined)
     return ;
   var delta = imgH - $("#carousel").height();
-  if(delta>0)
-  	return;
+  if(delta>0){
+  	$("#page").css('top', 0);
+  	$("#articletitle").css("top", '37.5%');
+  	return
+  }
   $("#page").css('top', delta);
 
   $("#articletitle").css("top", imgH/2);
