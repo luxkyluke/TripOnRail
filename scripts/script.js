@@ -3,9 +3,10 @@
 
 $(document).ready(function(){	
 	// chargement de la page index
-    $(document).scrollTop(0);
-    affArticle('index');
     
+    console.log("top");
+    affArticle('index');
+    $(document).scrollTop(0);
 });
 
 $(document).scroll(function() {

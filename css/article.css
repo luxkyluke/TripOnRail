@@ -70,9 +70,9 @@
 .article p.logo_desc{
 	font-family: Montserrat_Light;
     display: block;
-    margin-top: 10px;
     font-size: 1.25em;
 	width: 100%;
+	margin-top: 10px;
 }
 
 .article p{
@@ -280,6 +280,7 @@
 
 	.article p.logo_desc{
 		font-size: 80%;
+		margin: 0;
 	}
 
 	.article p{

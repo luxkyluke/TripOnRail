@@ -61,8 +61,8 @@ p{
     margin: 0;
 }
 
-#header_ #header .title_logo {
-    top: 37.5%;
+#articletitle .title_logo {
+    /* top: 37.5%; */
 }
 
 * {
@@ -848,6 +848,10 @@ nav #burger_menu #burger{
 		font-size: 0.8em;
 	}
 
+	#articletitle .title_logo{
+		width: 80%;
+	}
+
 }
 
 @media (min-width: 550px) and (max-width: 650px){
@@ -868,6 +872,15 @@ nav #burger_menu #burger{
 }
 
 @media (max-width: 450px){
+	#home #header.parallax{
+		background-position: 50% -100px;
+	}
+
+	#header.parallax{
+		background-position: 50% -150px;
+	}
+	
+
 	.menu__wrapper{
 		width: 90%;
 	}
@@ -880,18 +893,11 @@ nav #burger_menu #burger{
 		height: 50%;
 	}
 	
-	/* #header_ #header .title_logo{
-		top:25%;
-	} */
 
 	.title_logo{
 		font-size: 2.5em;
 		width: 95%;
 		top:25%;
-	}
-
-	#articletitle .title_logo{
-		width: 80%;
 	}
 
 	p{
