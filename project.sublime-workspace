@@ -247,7 +247,7 @@
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 14199,
+				"buffer_size": 14150,
 				"line_ending": "Windows"
 			}
 		},
@@ -497,6 +497,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".title_logo",
 			"$(\"#burger\")",
 			"#articletitle .title_logo",
 			".owl-carousel.owl-loaded",
@@ -623,8 +624,7 @@
 			"alert",
 			"click",
 			"nav",
-			"exp_1",
-			".article_conteneur"
+			"exp_1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -967,15 +967,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14199,
+						"buffer_size": 14150,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13246,
-								13246
+								1186,
+								1186
 							]
 						],
 						"settings":
@@ -984,7 +984,7 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 18857.0,
+						"translation.y": 1208.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
