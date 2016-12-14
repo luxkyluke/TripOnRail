@@ -27,7 +27,9 @@ p{
 }
 
 .no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.js #loader { 
+	display: block; position: absolute; left: 100px; top: 0; 
+}
 .se-pre-con {
 	position: fixed;
 	left: 0px;
@@ -36,6 +38,7 @@ p{
 	height: 100%;
 	z-index: 9999;
 	background: url(../img/loader3.gif) center no-repeat #fff;
+	overflow: hidden;
 }
 
 /***********	HOME	************/
@@ -61,6 +64,12 @@ p{
     margin: 0;
 }
 
+.mouse{
+	position: absolute;
+	top: 85%;
+	width: 50px;
+	right: 50%;
+}
 
 
 * {
@@ -386,6 +395,7 @@ p{
 /************MENU**********/
 ul#menu{
     margin: 0;
+    overflow: hidden;
 } 
 
 #burger_menu ul#menu{
@@ -396,7 +406,7 @@ ul#menu{
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 	padding: 0;
-	width: 100%;;
+	width: 100%;
 }
 
 ul#menu li:last-child{

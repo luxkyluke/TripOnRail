@@ -32,6 +32,13 @@ $(document).scroll(function() {
       $("#footer .parallax").removeClass('hidden');
       $('#menu').addClass('dark');
     }
+
+    /*$(".article_bloc").each(function(){
+      if(isInViewport($(this))){
+        $(this).addClass("visible");
+      }
+    })*/
+    
 });
 
 $(window).resize(function() {
@@ -46,3 +53,14 @@ $(window).resize(function() {
     }, 300);
   }
 });
+
+function isInViewport(elem){
+    console.log('IS IN VIEWPORT')
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
