@@ -100,9 +100,9 @@ var pays = [
 		basic_load(page, function(){
 		    console.log("bacic load "+page+" OK");
 		    window.history.pushState({"page":page, "pageTitle":title},"", "");
-	    	$(document).scrollTop(0);
 	    	loadImgsBackGrounds(page, function(){
-	    		_callback();
+	    	_callback();
+	    	$(document).scrollTop(0);
 	    	});
 	    	
 	    });
@@ -384,8 +384,13 @@ function experienceAnim(){
 }
 
 function scrollToPage(){
-	if($(window).width()>1024){
-		$('html, body').animate({
+	if($(window).width()<850){
+		$('html,body').stop(true, false).animate({
+	        scrollTop: $("#region_title").offset().top-50
+	    }, 1000);
+	}
+	else{
+		$('html,body').stop(true, false).animate({
 	        scrollTop: $("#page").offset().top-50
 	    }, 1000);
 	}

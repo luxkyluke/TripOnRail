@@ -877,14 +877,18 @@ nav #burger_menu #burger{
 		height: 50%;
 	}
 	
-	#header_ #header .title_logo{
+	/* #header_ #header .title_logo{
 		top:25%;
-	}
+	} */
 
 	.title_logo{
 		font-size: 2.5em;
 		width: 95%;
 		top:25%;
+	}
+
+	#articletitle .title_logo{
+		width: 80%;
 	}
 
 	p{

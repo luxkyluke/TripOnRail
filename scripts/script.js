@@ -3,8 +3,9 @@
 
 $(document).ready(function(){	
 	// chargement de la page index
+    $(document).scrollTop(0);
     affArticle('index');
-
+    
 });
 
 $(document).scroll(function() {
