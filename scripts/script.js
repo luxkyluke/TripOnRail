@@ -1,35 +1,15 @@
 
-
+/*window.onload = function(){
+  console.log("VA LA HAUT");
+  window.scrollTop=0;
+}*/
 
 $(document).ready(function(){	
 	// chargement de la page index
-  setTimeout(function(){
+    
+    console.log("top");
     affArticle('index');
-  }, 1000);
-
-  setTimeout(function(){
-    if(!indexIsLoad){
-        affArticle('index');
-        //$(".se-pre-con").fadeOut("slow");
-    }
-    console.log("fadeout forcé");
-  }, 2000);
-
-  setTimeout(function(){
-    if(!indexIsLoad){
-        affArticle('index');
-        //$(".se-pre-con").fadeOut("slow");
-    }
-    console.log("fadeout forcé");
-  }, 4000);
-
-  setTimeout(function(){
-    if(!indexIsLoad){
-        alert("loading error, please refresh");
-        //$(".se-pre-con").fadeOut("slow");
-    }
-    console.log("fadeout forcé");
-  }, 6000);
+    $(document).scrollTop(0);
 });
 
 $(document).scroll(function() {
@@ -52,11 +32,35 @@ $(document).scroll(function() {
       $("#footer .parallax").removeClass('hidden');
       $('#menu').addClass('dark');
     }
+
+    /*$(".article_bloc").each(function(){
+      if(isInViewport($(this))){
+        $(this).addClass("visible");
+      }
+    })*/
+    
 });
 
 $(window).resize(function() {
   if(nav_current == "#nav_sacha"){
-    alert("e");
     replaceSachaDots();
   }
+  else if(nav_current == "#nav_article"){
+    $(".se-pre-con").fadeIn(0);
+    setTimeout(function(){
+      makeResponsiveCarousel();
+      $(".se-pre-con").fadeOut('slow');
+    }, 300);
+  }
 });
+
+function isInViewport(elem){
+    console.log('IS IN VIEWPORT')
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
