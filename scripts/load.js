@@ -174,10 +174,12 @@ function affArticle(name){
 			break;
 		case "Blue_Train":
 			load_template_page("Blue_Train", "Blue Train - South Africa", function(){
+				loadCaroussel(function(){
 					setTimeout(function(){
 					    $(".se-pre-con").fadeOut("slow");
 					}, 1000);
 					nav_current='#nav_article';
+				});
 			});
 			break;
 		case "Hiram_Bingham":
