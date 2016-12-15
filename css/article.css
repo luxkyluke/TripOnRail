@@ -139,7 +139,6 @@
  	vertical-align:middle;
 }
 
-
 .conteneur_logo_desc{
 	margin-top:3%;
 }
@@ -160,6 +159,10 @@
 
 .ytp-watermark .yt-uix-sessionlink{
 	display: none;
+}
+
+#articletitle .mouse{
+	transform: translateY(200%);
 }
 
 #articletitle p{
@@ -184,6 +187,20 @@
 
 	.food_conteneur--right .food_img{
 		right: 8%;
+	}
+}
+
+@media (max-width: 1150px){
+	#articletitle .mouse{
+		transform: translateY(180%);
+	}
+
+	#articletitle .mouse #mouse{
+		width:25px;
+	}
+
+	#articletitle .mouse #arrow{
+		width: 30px;
 	}
 }
 
