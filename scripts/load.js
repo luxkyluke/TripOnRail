@@ -59,7 +59,7 @@ var pays = [
 
 				setTimeout(function(){
 					affArticle(page);
-				}, 500);
+				}, 400);
 			});
 
 			$('#burger').click(function(e){

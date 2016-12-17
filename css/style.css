@@ -52,11 +52,11 @@ p{
 	background-size: 100px 100px;
 	overflow: hidden;
 	transform: translateY(-100%);
-	-webkit-transition: all 500ms ease-out;
-    -moz-transition: all 500ms ease-out;
-    -ms-transition: all 500ms ease-out;
-    -o-transition: all 500ms ease-out;
-    transition: all 500ms ease-out;
+	-webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
 }
 
 /***********	HOME	************/
