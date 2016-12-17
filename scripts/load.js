@@ -59,7 +59,7 @@ var pays = [
 
 				setTimeout(function(){
 					affArticle(page);
-				}, 200);
+				}, 500);
 			});
 
 			$('#burger').click(function(e){
@@ -113,7 +113,7 @@ var pays = [
     $('content').load(file, function(){	    	
 		basic_load(page, function(){
 		    console.log("bacic load "+page+" OK");
-		    window.history.pushState({"page":page, "pageTitle":title},"", "");
+		    window.history.pushState({"nav_id":"#nav_"+page, "pageTitle":title},"", "");
 	    	loadImgsBackGrounds(page, function(){
 		    	_callback();
 		    	$(document).scrollTop(0);
@@ -127,10 +127,7 @@ var pays = [
 
 window.onpopstate = function(e){
     if(e.state){
-        $('content').load(TEMPLATE_PATH+e.state.page+'.html', function(){
-    		affArticle(e.state.page);
-
-    	});
+    	$(e.state.nav_id).click();
         document.title = e.state.pageTitle;
     }
 };

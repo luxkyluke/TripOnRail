@@ -173,12 +173,12 @@ p{
 
 #actualityc
 {
+	border: 2px solid black;
+	font-family: Montserrat;
 	margin-bottom: 100px;
 	margin-top: 10px;
 	padding: 20px;
 	height: auto;
-	font-family: Montserrat;
-	border: 2px solid black;
 }
 
 #actualityc p
