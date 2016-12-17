@@ -190,10 +190,14 @@
 	}
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1225px){
 	#articletitle .mouse{
 		transform: translateY(180%);
 	}
+}
+
+@media (max-width: 1150px){
+	
 
 	#articletitle .mouse #mouse{
 		width:25px;

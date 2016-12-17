@@ -14,11 +14,12 @@ $(document).ready(function(){
 
 $(document).scroll(function() {
     var st = $(this).scrollTop();
-    $("#headerc").css({
-      "top": (-st/4),
-      "bottom": (st/4)
-    });
-
+    if($(window).width()>1024){
+      $("#headerc").css({
+        "top": (-st/4),
+        "bottom": (st/4)
+      });
+    }
     //Scroll menu degradé
     var header_h = $('header').height();
     var top_page = $("#page").offset().top;
@@ -54,7 +55,7 @@ $(window).resize(function() {
   }
 });
 
-function isInViewport(elem){
+/*function isInViewport(elem){
     console.log('IS IN VIEWPORT')
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
@@ -63,4 +64,4 @@ function isInViewport(elem){
     var elemBottom = elemTop + $(elem).height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+}*/

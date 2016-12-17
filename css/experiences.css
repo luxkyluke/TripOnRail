@@ -63,11 +63,11 @@ margin-bottom: 1.5em; */
 
 
 .logo_categorie, .logo{
-    width: 100px;
+    width: 90px;
 }
 
 #main_logo_cat{
-    width: 50%;
+    width: 40%;
 }
 
 #top_title{
@@ -224,12 +224,25 @@ a .middle h2 {
     }
 }
 
+@media (max-width: 1600px){
+    .conteneur_categories li {
+        width : 12%;
+        padding: 10px 1.8%;
+    }
+}
+
 @media  screen and (min-width: 1200px) and (max-width: 1400px){
     p.title{
         font-size: 4em;
     }
 }
 
+@media (max-width: 1300px){
+    .conteneur_categories li {
+        width : 14%;
+        padding: 10px 1.8%;
+    }
+}
 
 @media  screen and (max-width: 1200px){
     .conteneur_categories li {
@@ -246,7 +259,7 @@ a .middle h2 {
         font-size: 3.8em;
     }
     #main_logo_cat{
-        width: 40%;
+        width: 35%;
     }
 }
 

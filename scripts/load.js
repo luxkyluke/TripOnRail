@@ -76,7 +76,14 @@ var pays = [
 		});
 		$('#menu a').on('click', function(e) {
 			e.preventDefault();
-
+			var id = $(this).attr('id');
+			var tmp = id.split('_');
+			var page =tmp[1];
+			$(".se-pre-con").addClass('visible');
+			setTimeout(function(){
+				affArticle(page);
+			}, 500);
+			
 		});
 		$('#burger').click(function(e){
 			e.preventDefault();
@@ -99,10 +106,9 @@ var pays = [
 		    console.log("bacic load "+page+" OK");
 		    window.history.pushState({"page":page, "pageTitle":title},"", "");
 	    	loadImgsBackGrounds(page, function(){
-	    	_callback();
-	    	$(document).scrollTop(0);
-	    	});
-	    	
+		    	_callback();
+		    	$(document).scrollTop(0);
+		    });	
 	    });
 	   	if(refresh !== undefined)
 	   		return false;
@@ -127,17 +133,17 @@ function updateCurrent(){
 }
 
 function affArticle(name){
-	$(".se-pre-con").fadeIn(0);
 	switch(name){
 		case "index":
 			load_template_page("index", "The Railway Chronicales", function(){
 				nav_current = '#nav_index';
 				updateCurrent();
 				setTimeout(function(){
-				    $(".se-pre-con").fadeOut("slow");
+				    $(".se-pre-con").removeClass("visible");
 				}, 1000);
 				console.log("Index chargé");
 				indexIsLoad = true;
+				animMouse();
 			});
 			break;
 
@@ -147,7 +153,7 @@ function affArticle(name){
 				updateCurrent();
 				replaceSachaDots();
 				setTimeout(function(){
-				    $(".se-pre-con").fadeOut("slow");
+				    $(".se-pre-con").removeClass("visible");
 				}, 1000);
 			});
 			break;
@@ -156,7 +162,7 @@ function affArticle(name){
 			load_template_page("article", "Title", function(){
 				loadCaroussel(function(){
 					setTimeout(function(){
-					    $(".se-pre-con").fadeOut("slow");
+					    $(".se-pre-con").removeClass("visible");
 					}, 1000);	
 					nav_current='#nav_article';
 				});			
@@ -166,7 +172,7 @@ function affArticle(name){
 			load_template_page("El_Chepe", "El Chepe - Mexique", function(){
 				loadCaroussel(function(){
 					setTimeout(function(){
-					    $(".se-pre-con").fadeOut("slow");
+					    $(".se-pre-con").removeClass("visible");
 					}, 1000);
 					nav_current='#nav_article';
 				});
@@ -176,7 +182,7 @@ function affArticle(name){
 			load_template_page("Blue_Train", "Blue Train - South Africa", function(){
 				loadCaroussel(function(){
 					setTimeout(function(){
-					    $(".se-pre-con").fadeOut("slow");
+					    $(".se-pre-con").removeClass("visible");
 					}, 1000);
 					nav_current='#nav_article';
 				});
@@ -186,7 +192,7 @@ function affArticle(name){
 			load_template_page("Hiram_Bingham", "Hiram Bingham - Pérou", function(){
 				loadCaroussel(function(){
 					setTimeout(function(){
-					    $(".se-pre-con").fadeOut("slow");
+					    $(".se-pre-con").removeClass("visible");
 					}, 1000);
 					nav_current='#nav_article';		
 				});
@@ -195,7 +201,7 @@ function affArticle(name){
 		case "Petite_Ceinture":
 			load_template_page("Petite_Ceinture", "Petite Ceinture - France", function(){
 				loadCaroussel(function(){
-					$(".se-pre-con").fadeOut("slow");
+					$(".se-pre-con").removeClass("visible");
 				});
 				nav_current='#nav_article';
 			});
@@ -204,7 +210,7 @@ function affArticle(name){
 			load_template_page("White_Pass", "White Pass and Yukon Route - Alaska", function(){
 				loadCaroussel(function(){
 					setTimeout(function(){
-					    $(".se-pre-con").fadeOut("slow");
+					    $(".se-pre-con").removeClass("visible");
 					}, 1000);
 					nav_current='#nav_article';
 				});
@@ -218,9 +224,8 @@ function affArticle(name){
 				nav_current = '#nav_experiences';
 				updateCurrent();
 				setTimeout(function(){
-				    $(".se-pre-con").fadeOut("slow");
+				    $(".se-pre-con").removeClass("visible");
 				}, 1000);
-
 			});
 			break;
 
@@ -231,7 +236,7 @@ function affArticle(name){
 				initMap(function(){
 					destinationsLoad(function(){
 						setTimeout(function(){
-						    $(".se-pre-con").fadeOut("slow");
+						    $(".se-pre-con").removeClass("visible");
 						}, 1000);
 					});
 				});
@@ -261,7 +266,7 @@ function affArticle(name){
 						scrollTop: $("#ourteam").offset().top-50
 					}, 2000, false);
 					setTimeout(function(){
-					    $(".se-pre-con").fadeOut("slow");
+					    $(".se-pre-con").removeClass("visible");
 					}, 1000);
 				});
 			}
@@ -289,7 +294,7 @@ function affArticle(name){
 						scrollTop: $("#contactus").offset().top-50
 					}, 1500);
 					setTimeout(function(){
-					    $(".se-pre-con").fadeOut("slow");
+					    $(".se-pre-con").removeClass("visible");
 					}, 1000);
 				}, false);
 			}
@@ -388,15 +393,19 @@ function experienceAnim(){
 }
 
 function scrollToPage(){
+	$('html,body').stop(true, false).animate({
+        scrollTop: $("#page").offset().top-50
+    }, 1000);
+}
+
+function scrollToDestTitle(){
 	if($(window).width()<850){
 		$('html,body').stop(true, false).animate({
 	        scrollTop: $("#region_title").offset().top-50
 	    }, 1000);
 	}
 	else{
-		$('html,body').stop(true, false).animate({
-	        scrollTop: $("#page").offset().top-50
-	    }, 1000);
+		scrollToPage();
 	}
 }
 
@@ -474,7 +483,7 @@ function destinationsLoad(_callback){
 			});
 
 		}
-		scrollToPage();
+		scrollToDestTitle();
 		return false;
 	});
 
@@ -516,7 +525,7 @@ function destinationsLoad(_callback){
 				$(this).addClass('visible');
 				/*$(this).css('display', 'inline-block');*/			});
 		}	
-		scrollToPage();
+		scrollToDestTitle();
 		return false;
 	});
 	_callback();
@@ -598,5 +607,12 @@ function replaceSachaDots(){
 		var id = $(this).data('id');
 		var top = $(this).offset().top - $("#page").offset().top;
 		$("#dot"+id).css('top', top);
+	});
+}
+
+function animMouse(){
+	$('.mouse').on('click', function(e){
+		e.preventDefault();
+		scrollToPage();
 	});
 }

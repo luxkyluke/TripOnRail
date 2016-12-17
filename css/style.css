@@ -30,15 +30,26 @@ p{
 .js #loader { 
 	display: block; position: absolute; left: 100px; top: 0; 
 }
+
+.se-pre-con.visible{
+	transform: translateY(0);
+}
+
 .se-pre-con {
 	position: fixed;
 	left: 0px;
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 9999;
-	background: url(../img/loader3.gif) center no-repeat #fff;
+	z-index: 90;
+	background: url(../img/loader3.gif) center no-repeat #2a282b;
 	overflow: hidden;
+	transform: translateY(-100%);
+	-webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
 }
 
 /***********	HOME	************/
@@ -71,6 +82,7 @@ p{
 	right: 50%;
 	top: 80%;
 	display: block;
+	cursor: pointer;
 }
 
 .mouse #mouse{
@@ -447,7 +459,7 @@ ul#menu{
 
 #burger_menu ul#menu{
 	list-style: none;
-	z-index: 10;
+	z-index: 100;
 	position: fixed;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -503,21 +515,16 @@ nav #burger_menu #menu .menu__link.current{
 }
 
 #menu .menu__link.current::before {
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0% 50%;
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    top: 3em;
+    transform-origin: 0% 50%;
 }
 
 #menu .menu__link.current::after {
-    bottom: -1px;
     -webkit-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
 }
-
 
 #menu .menu__link::before {
     content: '';
@@ -530,6 +537,8 @@ nav #burger_menu #menu .menu__link.current{
     -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.5s;
     height: 2px;
+    transform-origin: 100% 50%;
+    top: 3em;
 }
 
 
@@ -544,6 +553,8 @@ nav #burger_menu #menu .menu__link.current{
     -webkit-transition: -webkit-transform 0.2s;
     height: 2px;
     transition: transform 0.3s;
+    transform-origin: 100% 50%;
+    bottom: 0px;
 }
 
 nav #burger_menu #menu .menu__link:hover{
@@ -707,17 +718,7 @@ nav #burger_menu #burger{
 	}
 }
 
-
-@media screen and (max-width: 1255px){
-	nav #burger_menu #menu .menu__link{
-		font-size: 1em;
-		width: 100%;
-	}
-	
-	.images{
-		height: 250px;
-	}
-
+@media (max-width: 1600px){
 	#actuality{
 		margin-top: 50px;
 	}
@@ -728,6 +729,25 @@ nav #burger_menu #burger{
 
 	#contact{
 		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 1255px){
+	nav #burger_menu #menu .menu__link{
+		font-size: 1em;
+		width: 100%;
+	}
+	
+	.images{
+		height: 250px;
+	}
+	
+	#home .mouse{
+		display: block;
+	}
+
+	.mouse{
+		display: none;
 	}
 
 	.mouse #mouse{
