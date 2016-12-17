@@ -1,7 +1,6 @@
  const TEMPLATE_PATH = "templates/"
  var indexIsLoad = false;
  var nav_current;
- 
 
 ///!\ NE PAS CHANGER DE PLACE LES CONTINENTS EXISTANTS
 // 	NE PAS AJOUTER DE NOUVEAU CONTINENT
@@ -38,7 +37,45 @@ var pays = [
 ];
 
  function basic_load(page, _callback){
- 	var done = 3;
+ 	var done = 2;
+ 	if(!indexIsLoad){
+ 		done = 3;
+		$("nav").load(TEMPLATE_PATH+'nav.html', function()	{	
+			$(".burger-menu").on('click', function(e) {
+				e.preventDefault();
+			  	$(this).toggleClass("burger-menu--opened");
+			  	$(this).toggleClass("burger-menu--closed");	
+			  	$("#menu").toggleClass("burger");
+			});
+			$('#menu a').on('click', function(e) {
+				e.preventDefault();
+				var id = $(this).attr('id');
+				var tmp = id.split('_');
+				var page =tmp[1];
+				$(".se-pre-con").addClass('visible');
+
+				nav_current = "#"+id;
+				updateCurrent();
+
+				setTimeout(function(){
+					affArticle(page);
+				}, 200);
+			});
+
+			$('#burger').click(function(e){
+				e.preventDefault();
+			})
+
+			nav_current = '#nav_index';
+			updateCurrent();
+
+			console.log("load nav "+page+" OK");
+			--done;
+			if(done == 0){
+				_callback();
+			}
+		});
+	}
 	
  	$("footer").load(TEMPLATE_PATH+'footer.html', function(){
 		console.log("load footer "+page+" OK");
@@ -65,36 +102,8 @@ var pays = [
 			_callback();
 		}
 	}
-	
 
-	$("nav").load(TEMPLATE_PATH+'nav.html', function()	{	
-		$(".burger-menu").on('click', function(e) {
-			e.preventDefault();
-		  	$(this).toggleClass("burger-menu--opened");
-		  	$(this).toggleClass("burger-menu--closed");	
-		  	$("#menu").toggleClass("burger");
-		});
-		$('#menu a').on('click', function(e) {
-			e.preventDefault();
-			var id = $(this).attr('id');
-			var tmp = id.split('_');
-			var page =tmp[1];
-			$(".se-pre-con").addClass('visible');
-			setTimeout(function(){
-				affArticle(page);
-			}, 500);
-			
-		});
-		$('#burger').click(function(e){
-			e.preventDefault();
-		})
-		console.log("load nav "+page+" OK");
-		--done;
-		if(done == 0){
-			_callback();
-		}
 
-	});
 		
 }
 
@@ -128,34 +137,117 @@ window.onpopstate = function(e){
 
 function updateCurrent(){
 	if(nav_current != null){
+		$('.current').removeClass('current');
 		$(nav_current).addClass('current');
+		console.log(nav_current + " is current");
 	}
 }
 
 function affArticle(name){
 	switch(name){
 		case "index":
+			
 			load_template_page("index", "The Railway Chronicales", function(){
-				nav_current = '#nav_index';
-				updateCurrent();
 				setTimeout(function(){
 				    $(".se-pre-con").removeClass("visible");
 				}, 1000);
 				console.log("Index chargé");
 				indexIsLoad = true;
 				animMouse();
+				
 			});
 			break;
 
 		case "sacha":
+			/*nav_current = '#nav_sacha';
+			updateCurrent();*/
 			load_template_page("sacha", "Le Voyage de Sacha", function(){
-				nav_current = '#nav_sacha';
-				updateCurrent();
+				
 				replaceSachaDots();
 				setTimeout(function(){
 				    $(".se-pre-con").removeClass("visible");
 				}, 1000);
 			});
+			break;
+
+		case "experiences":
+			/*nav_current = '#nav_experiences';
+			updateCurrent();*/
+			load_template_page("experiences", "Experiences", function(){
+				experienceAnim();
+				clickCatExpAnim($("#cat_decouverte a li").first(), false);				
+				setTimeout(function(){
+				    $(".se-pre-con").removeClass("visible");
+				}, 1000);
+			});
+			break;
+
+		case "destinations":
+			/*nav_current = '#nav_destinations';
+			updateCurrent();*/
+			load_template_page("destinations", "Destinations", function(){
+				initMap(function(){
+					destinationsLoad(function(){
+						setTimeout(function(){
+						    $(".se-pre-con").removeClass("visible");
+						}, 1000);
+					});
+				});
+				
+			});
+			break;
+
+		case "about":
+			/*nav_current='#nav_about';
+			updateCurrent();*/
+			if(nav_current === '#nav_index' || nav_current === '#nav_contact'
+					|| nav_current === '#ourteam'){
+				$(".se-pre-con").fadeOut(1);
+				$('html, body').animate({
+					scrollTop: $("#ourteam").offset().top-50
+				}, 2000, false);
+				if($("#menu").hasClass('burger')){
+					$(".burger-menu").click();
+				}
+			}
+			else{
+				load_template_page("index", "The Railway Chronicales", function(){
+					$('html, body').animate({
+						scrollTop: $("#ourteam").offset().top-50
+					}, 2000, false);
+					setTimeout(function(){
+					    $(".se-pre-con").removeClass("visible");
+					}, 1000);
+				});
+			}
+			break;
+
+		case "contact":
+			//$(nav_current).removeClass('current');
+			/*nav_current= '#nav_contact';
+			updateCurrent();*/
+			if(nav_current === '#nav_index' || nav_current === '#nav_about'
+					|| nav_current === '#nav_contact'){
+				$(".se-pre-con").fadeOut(1);
+				$('html, body').animate({
+					scrollTop: $("#contactus").offset().top-50
+				}, 2000, false);
+				//$(nav_current).removeClass('current');
+				if($("#menu").hasClass('burger')){
+					$(".burger-menu").click();
+				}
+			}
+			else{
+				load_template_page("index", "The Railway Chronicales", function(){
+					$('html, body').animate({
+						scrollTop: $("#contactus").offset().top-50
+					}, 1500);
+					setTimeout(function(){
+					    $(".se-pre-con").removeClass("visible");
+					}, 1000);
+				}, false);
+			}
+
 			break;
 
 		case "article":
@@ -216,91 +308,6 @@ function affArticle(name){
 				});
 			});
 			break;
-
-		case "experiences":
-			load_template_page("experiences", "Experiences", function(){
-				experienceAnim();
-				clickCatExpAnim($("#cat_decouverte a li").first(), false);				
-				nav_current = '#nav_experiences';
-				updateCurrent();
-				setTimeout(function(){
-				    $(".se-pre-con").removeClass("visible");
-				}, 1000);
-			});
-			break;
-
-		case "destinations":
-			load_template_page("destinations", "Destinations", function(){
-				nav_current = '#nav_destinations';
-				updateCurrent();
-				initMap(function(){
-					destinationsLoad(function(){
-						setTimeout(function(){
-						    $(".se-pre-con").removeClass("visible");
-						}, 1000);
-					});
-				});
-				
-			});
-			break;
-
-		case "about":
-			if(nav_current === '#nav_index' || nav_current === '#nav_contact'
-					|| nav_current === '#ourteam'){
-				$(".se-pre-con").fadeOut(1);
-				$('html, body').animate({
-					scrollTop: $("#ourteam").offset().top-50
-				}, 2000, false);
-				$(nav_current).removeClass('current');
-				nav_current='#nav_about';
-				updateCurrent();
-				if($("#menu").hasClass('burger')){
-					$(".burger-menu").click();
-				}
-			}
-			else{
-				load_template_page("index", "The Railway Chronicales", function(){
-					nav_current='#nav_about';
-					updateCurrent();
-					$('html, body').animate({
-						scrollTop: $("#ourteam").offset().top-50
-					}, 2000, false);
-					setTimeout(function(){
-					    $(".se-pre-con").removeClass("visible");
-					}, 1000);
-				});
-			}
-			break;
-
-		case "contact":
-			if(nav_current === '#nav_index' || nav_current === '#nav_about'
-					|| nav_current === '#nav_contact'){
-				$(".se-pre-con").fadeOut(1);
-				$('html, body').animate({
-					scrollTop: $("#contactus").offset().top-50
-				}, 2000, false);
-				$(nav_current).removeClass('current');
-				nav_current= '#nav_contact';
-				updateCurrent();
-				if($("#menu").hasClass('burger')){
-					$(".burger-menu").click();
-				}
-			}
-			else{
-				load_template_page("index", "The Railway Chronicales", function(){
-					nav_current= '#nav_contact';
-					updateCurrent();
-					$('html, body').animate({
-						scrollTop: $("#contactus").offset().top-50
-					}, 1500);
-					setTimeout(function(){
-					    $(".se-pre-con").removeClass("visible");
-					}, 1000);
-				}, false);
-			}
-
-			break;
-
 		default :
 			console.log("ERROR, page non reconnue.");
 			break;
