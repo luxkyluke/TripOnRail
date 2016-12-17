@@ -159,7 +159,7 @@ p{
 	text-align: center;
 	line- ight: 100%;
 	margin: 0;
-	width: 80%;
+	width: 94%;
 	text-shadow: 5px 5px 10px #000000;
 	letter-spacing: 5px;
 }
@@ -173,17 +173,20 @@ p{
 
 #actualityc
 {
+	margin-bottom: 100px;
 	margin-top: 10px;
-	border: 5px solid black;
 	padding: 20px;
 	height: auto;
 	font-family: Montserrat;
-	margin-bottom: 100px;
+	border: 2px solid black;
 }
 
 #actualityc p
 {
 	text-align: justify;
+	border: 2px solid black;
+	margin: -16px;
+	padding: 23px;
 }
 
 #ourteam

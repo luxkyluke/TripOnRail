@@ -198,13 +198,12 @@ function affArticle(name){
 			break;
 
 		case "about":
-			/*nav_current='#nav_about';
-			updateCurrent();*/
+		var menuH = $('#menu').height();
 			if(nav_current === '#nav_index' || nav_current === '#nav_contact'
 					|| nav_current === '#ourteam'){
 				$(".se-pre-con").fadeOut(1);
 				$('html, body').animate({
-					scrollTop: $("#ourteam").offset().top-50
+					scrollTop: $("#ourteam").offset().top-menuH
 				}, 2000, false);
 				if($("#menu").hasClass('burger')){
 					$(".burger-menu").click();
@@ -213,7 +212,7 @@ function affArticle(name){
 			else{
 				load_template_page("index", "The Railway Chronicales", function(){
 					$('html, body').animate({
-						scrollTop: $("#ourteam").offset().top-50
+						scrollTop: $("#ourteam").offset().top-menuH
 					}, 2000, false);
 					setTimeout(function(){
 					    $(".se-pre-con").removeClass("visible");
@@ -223,14 +222,12 @@ function affArticle(name){
 			break;
 
 		case "contact":
-			//$(nav_current).removeClass('current');
-			/*nav_current= '#nav_contact';
-			updateCurrent();*/
+			var menuH = $('#menu').height();
 			if(nav_current === '#nav_index' || nav_current === '#nav_about'
 					|| nav_current === '#nav_contact'){
 				$(".se-pre-con").fadeOut(1);
 				$('html, body').animate({
-					scrollTop: $("#contactus").offset().top-50
+					scrollTop: $("#contactus").offset().top - menuH
 				}, 2000, false);
 				//$(nav_current).removeClass('current');
 				if($("#menu").hasClass('burger')){
@@ -240,7 +237,7 @@ function affArticle(name){
 			else{
 				load_template_page("index", "The Railway Chronicales", function(){
 					$('html, body').animate({
-						scrollTop: $("#contactus").offset().top-50
+						scrollTop: $("#contactus").offset().top - menuH
 					}, 1500);
 					setTimeout(function(){
 					    $(".se-pre-con").removeClass("visible");
