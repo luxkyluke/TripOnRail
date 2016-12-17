@@ -33,12 +33,6 @@ $(document).scroll(function() {
       $("#footer .parallax").removeClass('hidden');
       $('#menu').addClass('dark');
     }
-
-    /*$(".article_bloc").each(function(){
-      if(isInViewport($(this))){
-        $(this).addClass("visible");
-      }
-    })*/
     
 });
 
@@ -47,7 +41,6 @@ $(window).resize(function() {
     replaceSachaDots();
   }
   else if(nav_current == "#nav_article"){
-    $(".se-pre-con").fadeIn(0);
     setTimeout(function(){
       makeResponsiveCarousel();
       $(".se-pre-con").fadeOut('slow');
