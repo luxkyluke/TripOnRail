@@ -38,7 +38,6 @@ $(window).resize(function() {
   else if(nav_current == "#nav_article"){
     setTimeout(function(){
       makeResponsiveCarousel();
-      $(".se-pre-con").fadeOut('slow');
     }, 300);
   }
 });
