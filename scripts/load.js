@@ -226,7 +226,7 @@ function affArticle(name){
 			break;
 
 		case "article":
-			loadArticle("Blue_Train", "Blue Train");
+			loadArticle("article", "Blue Train");
 			break;
 		case "El_Chepe":
 			loadArticle("El_Chepe", "El Chepe");

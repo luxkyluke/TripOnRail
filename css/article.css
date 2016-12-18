@@ -167,7 +167,7 @@
 }
 
 #articletitle .mouse{
-	transform: translateY(200%);
+	transform: translateY(240%);
 }
 
 #articletitle p{
@@ -197,22 +197,26 @@
 
 @media (max-width: 1600px){
 	#articletitle .mouse {
-		transform: translateY(150%);
 	}
 }
 
+@media screen and (max-width: 1450px){
+	#articletitle .mouse {
+	transform: translateY(200%);
 
-@media screen and (max-width: 1320px), screen and (max-height: 680px){
-	#articletitle .mouse{
-		transform: translateY(180%);
 	}
+}
 
-	#articletitle .mouse #mouse{
-		width:25px;
+@media screen and (max-width: 1350px){
+	#articletitle .mouse {
+	transform: translateY(180%);
+		
 	}
+}
 
-	#articletitle .mouse #arrow{
-		width: 30px;
+@media screen and (max-width: 1200px){
+	#articletitle .mouse {
+		transform: translateY(150%);
 	}
 }
 

@@ -88,11 +88,11 @@ p{
 }
 
 .mouse #mouse{
-	width: 35px;
+	width: 31px;;
 }
 
 .mouse #arrow{
-	width: 45px;
+	width: 35px;
 	-webkit-animation: moov_mouse 2s infinite forwards; /* Safari 4+ */
   	-moz-animation:    moov_mouse 2s infinite forwards; /* Fx 5+ */
   	-o-animation:      moov_mouse 2s infinite forwards; /* Opera 12+ */
@@ -744,13 +744,9 @@ nav #burger_menu #burger{
 	}
 
 
-.mouse{
-	display: block;
-
-	
-}
-
-	
+	.mouse{
+		display: block;
+	}
 }
 
 @media (max-width: 1050px){
@@ -768,14 +764,12 @@ nav #burger_menu #burger{
 	}
 
 	#menu .menu__link.current::after {
-		before:  : 0px;
+		before:  0px;
 		height:  3px;
 	}
 
 	nav #burger_menu #menu{
-		/* display: none; */
 		visibility: hidden;
-		/* display: none; */
 		transition: all 0.5s;
 		/* display: none; */
 		transform: translateY(-100%);
@@ -808,12 +802,6 @@ nav #burger_menu #burger{
 		margin-left: 2em;
 		/* right: 0; */;
 	}
-
-/* 	nav #burger_menu #menu li:nth-child(2){
-	margin: auto !important;
-    	margin-bottom: 0.4em !important;
-}
- */
 
 	nav #burger_menu #menu a:hover > li{
 		border-bottom: 2px solid #FFF;
