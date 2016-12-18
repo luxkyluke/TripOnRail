@@ -502,6 +502,18 @@ function loadCaroussel(_callback){
         owl.trigger('next.owl');
 	    e.preventDefault();
 	});
+
+	$(document).keyup(function(e){
+		console.log(e);
+		if(e.keyCode === 39){
+			 owl.trigger('next.owl');
+			 return;
+		}
+		if(e.keyCode === 37){
+			owl.trigger('prev.owl');
+		}
+	})
+
 	$('.prevArrow').on('click', function (e) {
         owl.trigger('prev.owl');
 	    e.preventDefault();
