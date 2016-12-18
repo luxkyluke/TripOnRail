@@ -523,19 +523,18 @@ function loadCaroussel(_callback){
 		makeResponsiveCarousel();
 		_callback();
 	}
+	
 	owl.trigger('owl.play',6000);
+
 }
 
 function makeResponsiveCarousel(){
   var imgH = $(".owl-stage-outer").height();
   if(imgH == undefined)
     return ;
-  /*var delta = imgH - $("#carousel").height();
-  if(delta>0){
-  	$("#articletitle").css("top", '37.5%');
-  	return;
-  }*/
   $("#articletitle").css("top", imgH/2);
+  $(".overlay").css("height", imgH);
+
 }
 
 function replaceSachaDots(){
