@@ -15,6 +15,11 @@ $(document).scroll(function() {
         "bottom": (st/4)
       });
     }
+
+    if(nav_current == "#nav_article"){
+      setTitleVisible();
+    }
+
     //Scroll menu degradé
     var header_h = $('header').height();
     var top_page = $("#page").offset().top;
@@ -37,6 +42,7 @@ $(window).resize(function() {
   }
   else if(nav_current == "#nav_article"){
     setTimeout(function(){
+      setTitleVisible();
       makeResponsiveCarousel();
     }, 300);
   }

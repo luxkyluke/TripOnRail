@@ -491,7 +491,6 @@ function loadCaroussel(_callback){
 		slideSpeed : 5000,
 		singleItem: true,
 		loop:true,
-		lazyLoad : true,
 		autoPlaySpeed: 5000,
     	autoPlayTimeout: 5000
 	});
@@ -557,6 +556,18 @@ function affLoadingPage(){
 	$('#menu').removeClass('dark');
 }
 
+function setTitleHidden(){
+	$("#articletitle .title_logo").fadeOut('slow');
+	$("#articletitle p").fadeOut('slow');
+	$("#articletitle .mouse").fadeOut('slow');
+}
+
+function setTitleVisible(){
+	$("#articletitle .title_logo").fadeIn('slow');
+	$("#articletitle p").fadeIn('slow');
+	$("#articletitle .mouse").fadeIn('slow');
+}
+
 function loadArticle(page, title){
 	affLoadingPage();
 	setTimeout(function(){
@@ -565,6 +576,9 @@ function loadArticle(page, title){
 				setTimeout(function(){
 				    $(".se-pre-con").removeClass("visible");
 				}, 1000);	
+				$(".arrow").click(function(){
+					setTitleHidden();
+				});
 				nav_current='#nav_article';
 			});	
 			animMouse();		
