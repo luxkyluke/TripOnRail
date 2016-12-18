@@ -146,7 +146,7 @@ function affArticle(name){
 		case "index":
 			load_template_page("index", "The Railway Chronicales", function(){
 				setTimeout(function(){
-				    $(".se-pre-con").removeClass("visible");
+				    hideLoadingPage()
 				}, 1000);
 				indexIsLoad = true;
 				animMouse();
@@ -158,7 +158,7 @@ function affArticle(name){
 			load_template_page("sacha", "Le Voyage de Sacha", function(){				
 				replaceSachaDots();
 				setTimeout(function(){
-				    $(".se-pre-con").removeClass("visible");
+				    hideLoadingPage()
 				}, 1000);
 			});
 			break;
@@ -168,7 +168,7 @@ function affArticle(name){
 				experienceAnim();
 				clickCatExpAnim($("#cat_decouverte a li").first(), false);				
 				setTimeout(function(){
-				    $(".se-pre-con").removeClass("visible");
+				    hideLoadingPage()
 				}, 1000);
 			});
 			break;
@@ -178,7 +178,7 @@ function affArticle(name){
 				initMap(function(){
 					destinationsLoad(function(){
 						setTimeout(function(){
-						    $(".se-pre-con").removeClass("visible");
+						    hideLoadingPage()
 						}, 1000);
 					});
 				});
@@ -202,7 +202,7 @@ function affArticle(name){
 				});
 			}
 			setTimeout(function(){
-			    $(".se-pre-con").removeClass("visible");
+			    hideLoadingPage()
 			}, 500);
 			break;
 
@@ -222,7 +222,7 @@ function affArticle(name){
 				});
 			}
 			setTimeout(function(){
-			    $(".se-pre-con").removeClass("visible");
+			    hideLoadingPage()
 			}, 500);
 			break;
 
@@ -584,7 +584,13 @@ function animMouse(){
 
 function affLoadingPage(){
 	$(".se-pre-con").addClass('visible');
+	$('html, body').css({ 'overflow': 'hidden', 'height': '100%' });
 	$('#menu').removeClass('dark');
+}
+
+function hideLoadingPage(){
+	$(".se-pre-con").removeClass('visible');
+	$('html, body').removeAttr('style');
 }
 
 function setTitleHidden(){
@@ -605,7 +611,7 @@ function loadArticle(page, title){
 		load_template_page(page, title, function(){
 			loadCaroussel(function(){
 				setTimeout(function(){
-				    $(".se-pre-con").removeClass("visible");
+				    hideLoadingPage()
 				}, 1000);	
 				$(".arrow").click(function(){
 					setTitleHidden();
