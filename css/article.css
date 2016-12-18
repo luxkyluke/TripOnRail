@@ -282,7 +282,7 @@
 
 @media (max-width: 650px){
 	#articletitle .arrow{
-		width:40px;
+		width:35px;
 	}
 		
 	#articletitle p{
@@ -336,7 +336,7 @@
 
 @media (max-width: 400px){
 	#articletitle .arrow{
-		width:30px;
+		width:25px;
 	}
 		
 	#articletitle p{

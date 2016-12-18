@@ -154,8 +154,7 @@ function affArticle(name){
 			break;
 
 		case "sacha":
-			load_template_page("sacha", "Le Voyage de Sacha", function(){
-				
+			load_template_page("sacha", "Le Voyage de Sacha", function(){				
 				replaceSachaDots();
 				setTimeout(function(){
 				    $(".se-pre-con").removeClass("visible");
@@ -227,22 +226,22 @@ function affArticle(name){
 			break;
 
 		case "article":
-			loadArticle();
+			loadArticle("Blue_Train", "Blue Train");
 			break;
 		case "El_Chepe":
-			loadArticle();
+			loadArticle("El_Chepe", "El Chepe");
 			break;
 		case "Blue_Train":
-			loadArticle();
+			loadArticle("Blue_Train", "Blue Train");
 			break;
 		case "Hiram_Bingham":
-			loadArticle();
+			loadArticle("Hiram_Bingham", "Hiram Bingham");
 			break;
 		case "Petite_Ceinture":
-			loadArticle();
+			loadArticle("Petite_Ceinture", "Petite Ceinture");
 			break;
 		case "White_Pass":
-			loadArticle();
+			loadArticle("White_Pass", "White Pass");
 			break;
 		default :
 			console.log("ERROR, page non reconnue.");
@@ -558,10 +557,10 @@ function affLoadingPage(){
 	$('#menu').removeClass('dark');
 }
 
-function loadArticle(){
+function loadArticle(page, title){
 	affLoadingPage();
 	setTimeout(function(){
-		load_template_page("article", "Title", function(){
+		load_template_page(page, title, function(){
 			loadCaroussel(function(){
 				setTimeout(function(){
 				    $(".se-pre-con").removeClass("visible");
