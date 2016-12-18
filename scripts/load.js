@@ -493,7 +493,7 @@ function animCarousel(){
 			return;
 	    owl.trigger('next.owl');
 	    animCarousel();
-	}, 4000);
+	}, 5000);
 }
 
 function loadCaroussel(_callback){
@@ -501,6 +501,7 @@ function loadCaroussel(_callback){
 	owl.owlCarousel({
 		items: 1,
 		autoPlay: true,
+		smartSpeed: 2000,
 		slideSpeed : 5000,
 		singleItem: true,
 		loop:true,
@@ -524,7 +525,6 @@ function loadCaroussel(_callback){
 	});
 
 	$(document).keyup(function(e){
-		console.log(e);
 		if(e.keyCode === 39){
 			 $('.nextArrow').click();
 			 return;
