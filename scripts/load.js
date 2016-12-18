@@ -1,6 +1,7 @@
  const TEMPLATE_PATH = "templates/"
  var indexIsLoad = false;
  var nav_current;
+ var runCarousel = false;
 
 ///!\ NE PAS CHANGER DE PLACE LES CONTINENTS EXISTANTS
 // 	NE PAS AJOUTER DE NOUVEAU CONTINENT
@@ -483,6 +484,18 @@ function markerClickEvent(id){
 	$("#pays_"+id + " a").click();
 }
 
+function animCarousel(){
+	if(!runCarousel)
+		return;
+	var owl = $('#carousel');
+	setTimeout(function(){
+		if(!runCarousel)
+			return;
+	    owl.trigger('next.owl');
+	    animCarousel();
+	}, 4000);
+}
+
 function loadCaroussel(_callback){
 	var owl = $('#carousel');
 	owl.owlCarousel({
@@ -500,30 +513,35 @@ function loadCaroussel(_callback){
 	});
 	$('.nextArrow').on('click', function (e) {
         owl.trigger('next.owl');
+        runCarousel =false;
+	    e.preventDefault();
+	});
+
+	$('.prevArrow').on('click', function (e) {
+        owl.trigger('prev.owl');
+        runCarousel =false;
 	    e.preventDefault();
 	});
 
 	$(document).keyup(function(e){
 		console.log(e);
 		if(e.keyCode === 39){
-			 owl.trigger('next.owl');
+			 $('.nextArrow').click();
 			 return;
 		}
 		if(e.keyCode === 37){
-			owl.trigger('prev.owl');
+			$('.prevArrow').click();
 		}
 	})
 
-	$('.prevArrow').on('click', function (e) {
-        owl.trigger('prev.owl');
-	    e.preventDefault();
-	});
 	var cpt =0, i=0;
 	$("#carousel .item").each(function(){
 		$(this).imagesLoaded( function() {
 			cpt++;
 			if(cpt == i){
 				makeResponsiveCarousel();
+				runCarousel = true;
+				animCarousel();
 				_callback();
 			}
 		});
@@ -531,9 +549,10 @@ function loadCaroussel(_callback){
 	});
 	if(i == 0){
 		makeResponsiveCarousel();
+		runCarousel = true;
+		animCarousel();
 		_callback();
 	}
-	
 	owl.trigger('owl.play',6000);
 
 }
