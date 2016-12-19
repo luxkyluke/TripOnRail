@@ -543,28 +543,38 @@ function loadCaroussel(_callback){
 			$('.prevArrow').click();
 		}
 	})
+	loadImgCarousel(_callback);
+}
 
+function loadImgCarousel(_callback){
 	var cpt =0, i=0;
 	$("#carousel .item").each(function(){
+		if(i>2){
+			i--;
+			return;
+		}
 		$(this).imagesLoaded( function() {
 			cpt++;
 			if(cpt == i){
 				makeResponsiveCarousel();
+				_callback();
 				runCarousel = true;
 				animCarousel();
-				_callback();
 			}
 		});
 		i++;
 	});
+		
+	
+
+
+
 	if(i == 0){
 		makeResponsiveCarousel();
 		runCarousel = true;
 		animCarousel();
 		_callback();
 	}
-	owl.trigger('owl.play',6000);
-
 }
 
 function makeResponsiveCarousel(){
@@ -573,7 +583,6 @@ function makeResponsiveCarousel(){
     return ;
   $("#articletitle").css("top", imgH/2);
   $(".overlay").css("height", imgH);
-
 }
 
 function replaceSachaDots(){
